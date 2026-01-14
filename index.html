@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Marketing Manager – Growth & Performance</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet" />
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    :root{--bg:#0a0a0a;--card:#0f0f0f;--card2:#141414;--border:rgba(255,255,255,0.08);--border-h:rgba(255,255,255,0.15);--text:#fff;--muted:#999;--dim:#555;--green:#4ade80;--cyan:#38bdf8;--orange:#f97316;--pink:#ec4899;--purple:#a855f7;--yellow:#facc15}
+    html{scroll-behavior:smooth}
+    body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;overflow-x:hidden}
+    .serif{font-family:'Playfair Display',serif;font-style:italic;font-weight:400}
+    a{color:inherit;text-decoration:none}
+
+    @keyframes float{0%,100%{transform:translateY(0) rotate(6deg)}50%{transform:translateY(-20px) rotate(6deg)}}
+    @keyframes rotate{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(50px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+    @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+    @keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+    @keyframes draw{from{stroke-dashoffset:1000}to{stroke-dashoffset:0}}
+    
+    .anim{opacity:0;transform:translateY(40px);transition:all .8s cubic-bezier(.16,1,.3,1)}
+    .anim.visible{opacity:1;transform:translateY(0)}
+    .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+
+    .bg-grid{position:fixed;inset:0;background-image:linear-gradient(rgba(255,255,255,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.02) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;z-index:0}
+    .swoosh{position:absolute;top:0;left:0;right:0;height:100%;overflow:hidden;z-index:0}
+    .swoosh svg{position:absolute;width:200%;left:-50%;top:10%;opacity:.12}
+    .swoosh svg path{stroke:url(#swoosh-grad);stroke-width:1.5;fill:none;stroke-dasharray:2000;animation:draw 4s ease-out forwards}
+    .orb{position:fixed;border-radius:50%;filter:blur(120px);pointer-events:none;z-index:0}
+    .orb-1{width:600px;height:600px;background:radial-gradient(circle,rgba(74,222,128,.12),transparent 70%);top:-200px;left:-200px}
+    .orb-2{width:500px;height:500px;background:radial-gradient(circle,rgba(56,189,248,.08),transparent 70%);bottom:20%;right:-200px}
+    .orb-3{width:400px;height:400px;background:radial-gradient(circle,rgba(168,85,247,.08),transparent 70%);bottom:-100px;left:30%}
+
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 48px;display:flex;justify-content:space-between;align-items:center;background:linear-gradient(to bottom,rgba(10,10,10,.98),rgba(10,10,10,.8),transparent);backdrop-filter:blur(20px);animation:fadeUp .6s ease-out}
+    .logo{display:flex;align-items:center;gap:12px;font-weight:600;font-size:1.1rem}
+    .logo-icon{width:38px;height:38px;background:linear-gradient(135deg,var(--green),var(--cyan));border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--bg);font-size:1rem}
+    .nav-links{display:flex;gap:8px}
+    .nav-links a{padding:8px 16px;color:var(--muted);font-size:.9rem;border-radius:8px;transition:all .3s}
+    .nav-links a:hover{color:var(--text);background:var(--card)}
+    .nav-cta{display:flex;align-items:center;gap:8px;padding:10px 20px;background:linear-gradient(135deg,var(--green),var(--cyan));color:var(--bg);border-radius:30px;font-size:.9rem;font-weight:500;transition:all .3s}
+    .nav-cta:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(74,222,128,.3)}
+    @media(max-width:1024px){.nav-links{display:none}nav{padding:16px 24px}}
+
+    .hero{min-height:100vh;display:flex;align-items:center;padding:140px 48px 100px;position:relative}
+    .hero-container{max-width:1400px;margin:0 auto;width:100%;display:grid;grid-template-columns:1.4fr 1fr;gap:80px;align-items:center}
+    .hero-content{position:relative;z-index:2}
+    .status{display:inline-flex;align-items:center;gap:10px;padding:10px 18px;background:var(--card);border:1px solid var(--border);border-radius:30px;margin-bottom:28px;font-size:.85rem;color:var(--muted);animation:fadeUp .8s ease-out .2s both}
+    .status-dot{width:10px;height:10px;background:var(--green);border-radius:50%;animation:pulse 2s infinite;box-shadow:0 0 10px var(--green)}
+    .hero h1{font-size:clamp(2.8rem,5vw,4.2rem);font-weight:400;line-height:1.1;margin-bottom:28px;animation:fadeUp .8s ease-out .3s both;letter-spacing:-.02em}
+    .hero h1 .gradient{background:linear-gradient(135deg,var(--green),var(--cyan),var(--purple));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hero-desc{font-size:1.05rem;color:var(--muted);max-width:560px;margin-bottom:20px;line-height:1.8;animation:fadeUp .8s ease-out .4s both}
+    .hero-meta{font-size:.95rem;color:var(--dim);margin-bottom:32px;animation:fadeUp .8s ease-out .45s both;border-left:2px solid var(--green);padding-left:16px}
+    .hero-btns{display:flex;gap:14px;margin-bottom:36px;animation:fadeUp .8s ease-out .5s both;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 28px;border-radius:40px;font-size:.95rem;font-weight:500;transition:all .3s}
+    .btn-primary{background:linear-gradient(135deg,var(--green),var(--cyan));color:var(--bg)}
+    .btn-primary:hover{transform:translateY(-3px);box-shadow:0 20px 40px rgba(74,222,128,.25)}
+    .btn-outline{border:1px solid var(--border-h);color:var(--text);background:var(--card)}
+    .btn-outline:hover{border-color:var(--green);background:rgba(74,222,128,.1)}
+    .hero-tags{display:flex;flex-wrap:wrap;gap:10px;animation:fadeUp .8s ease-out .55s both}
+    .tag{padding:8px 16px;background:var(--card);border:1px solid var(--border);border-radius:20px;font-size:.8rem;color:var(--muted);transition:all .3s}
+    .tag:hover{border-color:var(--green);color:var(--green);transform:translateY(-2px)}
+    .social{display:flex;align-items:center;gap:20px;margin-top:32px;animation:fadeUp .8s ease-out .6s both}
+    .social a{width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:var(--card);border:1px solid var(--border);border-radius:12px;color:var(--muted);transition:all .3s}
+    .social a:hover{border-color:var(--green);color:var(--green);transform:translateY(-3px)}
+
+    .hero-visual{position:relative;display:flex;justify-content:center;align-items:center;animation:fadeIn 1s ease-out .5s both}
+    .stats-card{background:var(--card);border:1px solid var(--border);border-radius:24px;padding:32px;width:100%;max-width:400px}
+    .stats-card h3{font-size:1rem;color:var(--muted);margin-bottom:24px;text-transform:uppercase;letter-spacing:.1em}
+    .stat-row{display:flex;justify-content:space-between;align-items:center;padding:16px 0;border-bottom:1px solid var(--border)}
+    .stat-row:last-child{border-bottom:none}
+    .stat-row .label{color:var(--muted);font-size:.9rem}
+    .stat-row .value{font-size:1.3rem;font-weight:600}
+    .stat-row.green .value{color:var(--green)}
+    .stat-row.cyan .value{color:var(--cyan)}
+    .stat-row.orange .value{color:var(--orange)}
+    .stat-row.purple .value{color:var(--purple)}
+    .rotating-badge{position:absolute;top:-40px;right:-40px;width:120px;height:120px;animation:rotate 20s linear infinite}
+    .rotating-badge svg text{font-size:9px;letter-spacing:3px;text-transform:uppercase;fill:url(#badge-grad)}
+
+    .scroll-hint{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:10px;color:var(--dim);font-size:.75rem;animation:fadeUp 1s ease-out 1s both}
+    .scroll-mouse{width:24px;height:38px;border:2px solid var(--dim);border-radius:12px;display:flex;justify-content:center;padding-top:8px}
+    .scroll-dot{width:4px;height:8px;background:var(--green);border-radius:4px;animation:scrollMove 1.5s ease-in-out infinite}
+    @keyframes scrollMove{0%,100%{transform:translateY(0);opacity:1}50%{transform:translateY(10px);opacity:.3}}
+
+    section{padding:120px 48px;position:relative;z-index:1}
+    .container{max-width:1200px;margin:0 auto}
+    .sec-header{margin-bottom:60px}
+    .sec-label{display:inline-flex;align-items:center;gap:10px;padding:10px 20px;background:var(--card);border:1px solid var(--border);border-radius:30px;font-size:.75rem;text-transform:uppercase;letter-spacing:.25em;color:var(--muted);margin-bottom:20px}
+    .sec-label::before{content:'';width:8px;height:8px;background:linear-gradient(135deg,var(--green),var(--cyan));border-radius:50%}
+    .sec-title{font-size:clamp(2.2rem,4vw,3.2rem);font-weight:400;margin-bottom:16px;letter-spacing:-.02em}
+    .sec-sub{color:var(--muted);font-size:1rem;max-width:600px}
+
+    .marquee-wrap{padding:24px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);overflow:hidden;position:relative;z-index:1;background:linear-gradient(90deg,var(--bg),var(--card),var(--bg))}
+    .marquee{display:flex;animation:marquee 30s linear infinite}
+    .marquee:hover{animation-play-state:paused}
+    .marquee span{display:flex;align-items:center;gap:16px;padding:0 32px;white-space:nowrap;color:var(--muted);font-size:.9rem;font-weight:500}
+    .marquee span::before{content:'◆';font-size:.6rem;background:linear-gradient(135deg,var(--green),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
+
+    .skills-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .skill-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:24px;text-align:center;transition:all .4s}
+    .skill-card:hover{border-color:var(--green);transform:translateY(-4px);box-shadow:0 20px 40px rgba(0,0,0,.3)}
+    .skill-card svg{width:32px;height:32px;margin-bottom:12px;opacity:.7}
+    .skill-card.green svg{stroke:var(--green)}
+    .skill-card.cyan svg{stroke:var(--cyan)}
+    .skill-card.orange svg{stroke:var(--orange)}
+    .skill-card.purple svg{stroke:var(--purple)}
+    .skill-card.pink svg{stroke:var(--pink)}
+    .skill-card.yellow svg{stroke:var(--yellow)}
+    .skill-card h4{font-size:.9rem;font-weight:500;margin-bottom:6px}
+    .skill-card p{font-size:.8rem;color:var(--muted)}
+
+    .case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .case-card{background:var(--card);border:1px solid var(--border);border-radius:24px;overflow:hidden;transition:all .4s cubic-bezier(.16,1,.3,1)}
+    .case-card:hover{border-color:var(--border-h);transform:translateY(-8px)}
+    .case-card.green:hover{box-shadow:0 30px 60px rgba(74,222,128,.1)}
+    .case-card.cyan:hover{box-shadow:0 30px 60px rgba(56,189,248,.1)}
+    .case-card.orange:hover{box-shadow:0 30px 60px rgba(249,115,22,.1)}
+    .case-header{height:160px;background:var(--card2);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+    .case-header::before{content:'';position:absolute;inset:0;opacity:.15}
+    .case-card.green .case-header::before{background:radial-gradient(circle,var(--green),transparent 70%)}
+    .case-card.cyan .case-header::before{background:radial-gradient(circle,var(--cyan),transparent 70%)}
+    .case-card.orange .case-header::before{background:radial-gradient(circle,var(--orange),transparent 70%)}
+    .case-header svg{width:64px;height:64px;opacity:.5}
+    .case-card.green svg{stroke:var(--green)}
+    .case-card.cyan svg{stroke:var(--cyan)}
+    .case-card.orange svg{stroke:var(--orange)}
+    .case-badge{position:absolute;top:16px;left:16px;padding:6px 12px;background:rgba(0,0,0,.5);backdrop-filter:blur(10px);border-radius:20px;font-size:.7rem;color:var(--muted)}
+    .case-body{padding:28px}
+    .case-title{font-size:1.15rem;font-weight:600;margin-bottom:6px}
+    .case-meta{font-size:.85rem;color:var(--muted);margin-bottom:20px}
+    .case-section{margin-bottom:16px}
+    .case-section-title{font-size:.7rem;text-transform:uppercase;letter-spacing:.15em;color:var(--dim);margin-bottom:8px;display:flex;align-items:center;gap:8px}
+    .case-section-title::before{content:'';width:12px;height:1px;background:var(--dim)}
+    .case-body ul{padding-left:16px;font-size:.85rem;color:#bbb}
+    .case-body li{margin-bottom:6px}
+    .metrics{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+    .metric{padding:10px 16px;background:var(--bg);border:1px solid var(--border);border-radius:12px;font-size:.8rem}
+    .metric span{font-weight:600}
+    .case-card.green .metric span{color:var(--green)}
+    .case-card.cyan .metric span{color:var(--cyan)}
+    .case-card.orange .metric span{color:var(--orange)}
+    .case-insight{margin-top:20px;padding:16px;background:var(--bg);border-radius:12px;border-left:3px solid var(--green);font-size:.85rem;color:var(--muted);font-style:italic}
+    .case-card.cyan .case-insight{border-left-color:var(--cyan)}
+    .case-card.orange .case-insight{border-left-color:var(--orange)}
+
+    .perf-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+    .perf-card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:28px;text-align:center;transition:all .3s}
+    .perf-card:hover{border-color:var(--border-h);transform:translateY(-4px)}
+    .perf-card .value{font-size:2rem;font-weight:600;margin-bottom:8px}
+    .perf-card.green .value{color:var(--green)}
+    .perf-card.cyan .value{color:var(--cyan)}
+    .perf-card.orange .value{color:var(--orange)}
+    .perf-card.purple .value{color:var(--purple)}
+    .perf-card .label{font-size:.85rem;color:var(--muted)}
+
+    .ux-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:40px}
+    .ux-card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:32px;transition:all .3s}
+    .ux-card:hover{border-color:var(--border-h);transform:translateY(-4px)}
+    .ux-card h4{font-size:1.1rem;font-weight:500;margin-bottom:12px;display:flex;align-items:center;gap:12px}
+    .ux-card h4 svg{width:24px;height:24px}
+    .ux-card.green h4 svg{stroke:var(--green)}
+    .ux-card.cyan h4 svg{stroke:var(--cyan)}
+    .ux-card.pink h4 svg{stroke:var(--pink)}
+    .ux-card.purple h4 svg{stroke:var(--purple)}
+    .ux-card p{font-size:.9rem;color:var(--muted);line-height:1.7}
+
+    .tools-section{margin-top:60px}
+    .tools-section h3{font-size:1.2rem;font-weight:500;margin-bottom:20px}
+    .pills{display:flex;flex-wrap:wrap;gap:12px}
+    .pill{padding:12px 20px;background:var(--card);border:1px solid var(--border);border-radius:12px;font-size:.85rem;color:var(--muted);transition:all .3s}
+    .pill:hover{border-color:var(--green);color:var(--green);transform:translateY(-2px)}
+
+    .leadership-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .lead-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px;text-align:center;transition:all .3s}
+    .lead-card:hover{border-color:var(--border-h);transform:translateY(-4px)}
+    .lead-card svg{width:40px;height:40px;margin-bottom:16px;opacity:.6}
+    .lead-card.green svg{stroke:var(--green)}
+    .lead-card.cyan svg{stroke:var(--cyan)}
+    .lead-card.purple svg{stroke:var(--purple)}
+    .lead-card h4{font-size:.95rem;font-weight:500;margin-bottom:8px}
+    .lead-card p{font-size:.85rem;color:var(--muted)}
+
+    .contact{text-align:center;padding:140px 48px;position:relative}
+    .contact::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(74,222,128,.08),transparent 70%);pointer-events:none}
+    .contact .sec-label{margin:0 auto 24px}
+    .contact h2{font-size:clamp(2.5rem,5vw,4rem);font-weight:400;margin-bottom:24px}
+    .contact p{color:var(--muted);font-size:1.1rem;max-width:600px;margin:0 auto 16px}
+    .contact-btn{display:inline-flex;align-items:center;gap:12px;padding:18px 36px;background:linear-gradient(135deg,var(--green),var(--cyan));color:var(--bg);border-radius:40px;font-size:1.05rem;font-weight:500;margin-top:32px;transition:all .3s}
+    .contact-btn:hover{transform:translateY(-4px);box-shadow:0 25px 50px rgba(74,222,128,.3)}
+    .contact-info{margin-top:48px;display:flex;justify-content:center;gap:40px;flex-wrap:wrap}
+    .contact-item{text-align:center}
+    .contact-item span{display:block;font-size:.75rem;text-transform:uppercase;letter-spacing:.15em;color:var(--dim);margin-bottom:6px}
+    .contact-item a{color:var(--text);font-size:.95rem;transition:color .3s}
+    .contact-item a:hover{color:var(--green)}
+
+    footer{padding:40px 48px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+    footer span{font-size:.85rem;color:var(--dim)}
+
+    @media(max-width:1024px){
+      .hero-container{grid-template-columns:1fr}
+      .hero-visual{margin-top:60px}
+      .skills-grid,.perf-grid{grid-template-columns:repeat(2,1fr)}
+      .case-grid,.leadership-grid{grid-template-columns:1fr}
+      .ux-grid{grid-template-columns:1fr}
+    }
+    @media(max-width:768px){
+      section,.hero,.contact{padding:80px 24px}
+      .skills-grid,.perf-grid{grid-template-columns:1fr}
+      .contact-info{flex-direction:column;gap:24px}
+      footer{flex-direction:column;text-align:center}
+    }
+  </style>
+</head>
+<body>
+
+<div class="bg-grid"></div>
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+<div class="orb orb-3"></div>
+
+<div class="swoosh">
+  <svg viewBox="0 0 1400 600" preserveAspectRatio="none">
+    <defs>
+      <linearGradient id="swoosh-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#4ade80" stop-opacity="0.6"/>
+        <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.4"/>
+        <stop offset="100%" stop-color="#a855f7" stop-opacity="0.6"/>
+      </linearGradient>
+      <linearGradient id="badge-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#4ade80"/>
+        <stop offset="50%" stop-color="#38bdf8"/>
+        <stop offset="100%" stop-color="#a855f7"/>
+      </linearGradient>
+    </defs>
+    <path d="M-100,300 Q200,100 500,300 T1100,250 T1500,300"/>
+    <path d="M-100,380 Q300,180 600,380 T1200,320 T1600,380"/>
+  </svg>
+</div>
+
+<nav>
+  <div class="logo">
+    <div class="logo-icon">M</div>
+    Marketing Portfolio
+  </div>
+  <div class="nav-links">
+    <a href="#overview">Overview</a>
+    <a href="#case-studies">Case Studies</a>
+    <a href="#performance">Performance</a>
+    <a href="#tools">Tools</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <a href="#contact" class="nav-cta">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+    Get in Touch
+  </a>
+</nav>
+
+<section class="hero" id="overview">
+  <div class="hero-container">
+    <div class="hero-content">
+      <div class="status">
+        <span class="status-dot"></span>
+        available for opportunities
+      </div>
+      <h1>Driving <span class="gradient">measurable growth</span> through full-funnel marketing.</h1>
+      <p class="hero-desc">Senior Marketing and Growth leader with deep experience across Healthcare, Ecommerce, and Fintech. Proven track record of driving outsized growth through SEO, SEM, CRO-led UX/UI, landing page optimization, and full-funnel marketing execution.</p>
+      <p class="hero-meta">Built and led teams of 50+ contributors, managed $1M+ in monthly ad spend, and consistently delivered 4–5x+ ROAS across industries.</p>
+      <div class="hero-btns">
+        <a href="#case-studies" class="btn btn-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg>
+          View Case Studies
+        </a>
+        <a href="#contact" class="btn btn-outline">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+          Contact Me
+        </a>
+      </div>
+      <div class="hero-tags">
+        <span class="tag">SEO / AEO / GEO</span>
+        <span class="tag">SEM & Paid Media</span>
+        <span class="tag">CRO & UX/UI</span>
+        <span class="tag">Landing Page Strategy</span>
+        <span class="tag">Analytics & Attribution</span>
+      </div>
+      <div class="social">
+        <a href="#" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="#contact" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6L12 13 2 6"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="stats-card" style="position:relative">
+        <div class="rotating-badge">
+          <svg viewBox="0 0 100 100">
+            <defs><path id="circle" d="M 50,50 m -37,0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"/></defs>
+            <text><textPath href="#circle">• GROWTH EXPERT • RESULTS DRIVEN • </textPath></text>
+          </svg>
+        </div>
+        <h3>Career Highlights</h3>
+        <div class="stat-row green">
+          <span class="label">Organic Traffic Growth</span>
+          <span class="value">400%+</span>
+        </div>
+        <div class="stat-row cyan">
+          <span class="label">Monthly Revenue (SEO)</span>
+          <span class="value">$240K+</span>
+        </div>
+        <div class="stat-row orange">
+          <span class="label">Paid Media Managed</span>
+          <span class="value">$1M+/mo</span>
+        </div>
+        <div class="stat-row purple">
+          <span class="label">Clients Served</span>
+          <span class="value">40+</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-hint">
+    <div class="scroll-mouse"><div class="scroll-dot"></div></div>
+    <span>Scroll to explore</span>
+  </div>
+</section>
+
+<div class="marquee-wrap">
+  <div class="marquee">
+    <span>SEO Strategy</span><span>SEM & Google Ads</span><span>Conversion Rate Optimization</span><span>Landing Page Design</span><span>Analytics & Attribution</span><span>A/B Testing</span><span>Executive Reporting</span><span>Team Leadership</span>
+    <span>SEO Strategy</span><span>SEM & Google Ads</span><span>Conversion Rate Optimization</span><span>Landing Page Design</span><span>Analytics & Attribution</span><span>A/B Testing</span><span>Executive Reporting</span><span>Team Leadership</span>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div class="sec-header anim">
+      <span class="sec-label">Core Capabilities</span>
+      <h2 class="sec-title">What I <span class="serif">Deliver</span></h2>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card green anim d1">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+        <h4>SEO / AEO / GEO</h4>
+        <p>Enterprise-scale organic growth strategy</p>
+      </div>
+      <div class="skill-card cyan anim d2">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        <h4>SEM & Paid Acquisition</h4>
+        <p>Google Ads, Shopping, Performance Max</p>
+      </div>
+      <div class="skill-card orange anim d3">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        <h4>CRO & UX/UI</h4>
+        <p>Conversion-focused design and testing</p>
+      </div>
+      <div class="skill-card purple anim d4">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+        <h4>Landing Page Strategy</h4>
+        <p>High-converting page architecture</p>
+      </div>
+      <div class="skill-card pink anim d1">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+        <h4>Analytics & Attribution</h4>
+        <p>Data-driven decision making</p>
+      </div>
+      <div class="skill-card yellow anim d2">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        <h4>A/B Testing</h4>
+        <p>Experimentation and optimization</p>
+      </div>
+      <div class="skill-card green anim d3">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8"/></svg>
+        <h4>Executive Reporting</h4>
+        <p>Stakeholder alignment & forecasting</p>
+      </div>
+      <div class="skill-card cyan anim d4">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+        <h4>Cross-functional Leadership</h4>
+        <p>Product, design, engineering alignment</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="case-studies" style="background:linear-gradient(180deg,transparent,rgba(74,222,128,.02),transparent)">
+  <div class="container">
+    <div class="sec-header anim">
+      <span class="sec-label">Case Studies</span>
+      <h2 class="sec-title">Proven <span class="serif">Results</span></h2>
+      <p class="sec-sub">Deep dives into Healthcare, Ecommerce, and Fintech growth initiatives.</p>
+    </div>
+    <div class="case-grid">
+      <article class="case-card green anim d1">
+        <div class="case-header">
+          <span class="case-badge">Healthcare</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <div class="case-body">
+          <div class="case-title">Healthcare Growth Engine</div>
+          <div class="case-meta">AMI Hospital · amishospital.com</div>
+          <div class="case-section">
+            <div class="case-section-title">Starting Point</div>
+            <ul><li>Low non-branded organic visibility</li><li>Heavy dependence on offline referrals and paid</li><li>Poor conversion rates on service pages</li></ul>
+          </div>
+          <div class="case-section">
+            <div class="case-section-title">Actions</div>
+            <ul>
+              <li>Built SEO-driven service architecture across high-intent medical queries</li>
+              <li>Designed conversion-focused UX for appointment flows</li>
+              <li>Launched SEM campaigns targeting high-intent procedures</li>
+            </ul>
+          </div>
+          <div class="metrics">
+            <span class="metric"><span>15K→120K+</span> monthly visits</span>
+            <span class="metric"><span>1.8%→5.6%</span> conversion</span>
+            <span class="metric"><span>-38%</span> paid CAC</span>
+          </div>
+          <div class="case-insight">Top 3 rankings achieved across high-value treatment keywords.</div>
+        </div>
+      </article>
+
+      <article class="case-card cyan anim d2">
+        <div class="case-header">
+          <span class="case-badge">Ecommerce</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18M16 10a4 4 0 01-8 0"/></svg>
+        </div>
+        <div class="case-body">
+          <div class="case-title">Ecommerce Scale-Up</div>
+          <div class="case-meta">Snitch · DTC Fashion · snitch.com</div>
+          <div class="case-section">
+            <div class="case-section-title">Starting Point</div>
+            <ul><li>Strong brand but inconsistent organic growth</li><li>High CAC from paid channels</li><li>Product pages optimized for aesthetics, not conversion</li></ul>
+          </div>
+          <div class="case-section">
+            <div class="case-section-title">Actions</div>
+            <ul>
+              <li>Built category-level SEO strategy tied to revenue keywords</li>
+              <li>Redesigned PLPs and PDPs for speed and conversion</li>
+              <li>Scaled Google Shopping with margin-aware bidding</li>
+            </ul>
+          </div>
+          <div class="metrics">
+            <span class="metric"><span>80K→420K+</span> monthly visits</span>
+            <span class="metric"><span>22%→48%</span> organic revenue</span>
+            <span class="metric"><span>2.8x→5.1x</span> SEM ROAS</span>
+          </div>
+          <div class="case-insight">PDP conversion rate improved by ~41% through CRO experiments.</div>
+        </div>
+      </article>
+
+      <article class="case-card orange anim d3">
+        <div class="case-header">
+          <span class="case-badge">Fintech</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M6 8h.01M2 12h20"/></svg>
+        </div>
+        <div class="case-body">
+          <div class="case-title">Fintech B2B Growth</div>
+          <div class="case-meta">Xflow · B2B Payments · xflowpay.com</div>
+          <div class="case-section">
+            <div class="case-section-title">Starting Point</div>
+            <ul><li>Complex product with low organic discoverability</li><li>High drop-offs on solution pages</li><li>Long sales cycles, unclear value articulation</li></ul>
+          </div>
+          <div class="case-section">
+            <div class="case-section-title">Actions</div>
+            <ul>
+              <li>Built intent-driven SEO strategy for global payments queries</li>
+              <li>Re-architected solution pages around pain points</li>
+              <li>Launched SEM with tailored B2B landing pages</li>
+            </ul>
+          </div>
+          <div class="metrics">
+            <span class="metric"><span>5K→95K+</span> monthly visits</span>
+            <span class="metric"><span>0.9%→3.4%</span> demo CVR</span>
+            <span class="metric"><span>-46%</span> SEM CPL</span>
+          </div>
+          <div class="case-insight">Shortened sales cycle by improving lead quality and intent alignment.</div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="performance">
+  <div class="container">
+    <div class="sec-header anim">
+      <span class="sec-label">Performance Highlights</span>
+      <h2 class="sec-title">SEM & <span class="serif">Paid Media</span></h2>
+      <p class="sec-sub">Cross-client performance metrics from Google Ads campaigns.</p>
+    </div>
+    <div class="perf-grid anim">
+      <div class="perf-card green">
+        <div class="value">$1M+</div>
+        <div class="label">Monthly Ad Spend Managed</div>
+      </div>
+      <div class="perf-card cyan">
+        <div class="value">4–5x+</div>
+        <div class="label">Consistent ROAS</div>
+      </div>
+      <div class="perf-card orange">
+        <div class="value">30–45%</div>
+        <div class="label">CAC Reduction</div>
+      </div>
+      <div class="perf-card purple">
+        <div class="value">8–9</div>
+        <div class="label">Quality Score Improvement</div>
+      </div>
+    </div>
+
+    <div class="sec-header anim" style="margin-top:80px">
+      <span class="sec-label">UX/UI & Conversion</span>
+      <h2 class="sec-title">CRO <span class="serif">Impact</span></h2>
+    </div>
+    <div class="ux-grid">
+      <div class="ux-card green anim d1">
+        <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg>Landing Page Optimization</h4>
+        <p>Designed and optimized service pages, PDPs, and B2B solution pages for conversion. Improved conversion rates by 30–60% on key landing pages across industries.</p>
+      </div>
+      <div class="ux-card cyan anim d2">
+        <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>A/B Testing & Experimentation</h4>
+        <p>Led A/B testing across headlines, layouts, CTAs, and trust signals. Closely partnered with designers and engineers to ship changes quickly and measure impact.</p>
+      </div>
+      <div class="ux-card pink anim d3">
+        <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Trust Signal Implementation</h4>
+        <p>Introduced doctor profiles, credentials, patient outcomes, compliance badges, and social proof. Reduced friction in appointment booking and demo requests.</p>
+      </div>
+      <div class="ux-card purple anim d4">
+        <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>Mobile-First Optimization</h4>
+        <p>Optimized page layouts for mobile-first healthcare discovery and ecommerce browsing behavior. Improved speed, clarity, and conversion across devices.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="tools" style="background:linear-gradient(180deg,transparent,rgba(56,189,248,.03),transparent)">
+  <div class="container">
+    <div class="sec-header anim">
+      <span class="sec-label">Tools & Analytics</span>
+      <h2 class="sec-title">Tech <span class="serif">Stack</span></h2>
+    </div>
+    <div class="tools-section anim">
+      <h3>Analytics & Reporting</h3>
+      <div class="pills">
+        <span class="pill">Google Analytics</span>
+        <span class="pill">Search Console</span>
+        <span class="pill">Looker Studio</span>
+        <span class="pill">Data Studio</span>
+        <span class="pill">Google Tag Manager</span>
+      </div>
+    </div>
+    <div class="tools-section anim" style="margin-top:32px">
+      <h3>SEO & SEM</h3>
+      <div class="pills">
+        <span class="pill">Semrush</span>
+        <span class="pill">Ahrefs</span>
+        <span class="pill">Screaming Frog</span>
+        <span class="pill">Google Ads</span>
+        <span class="pill">Google Shopping</span>
+        <span class="pill">Performance Max</span>
+      </div>
+    </div>
+    <div class="tools-section anim" style="margin-top:32px">
+      <h3>Design & Creative</h3>
+      <div class="pills">
+        <span class="pill">Figma</span>
+        <span class="pill">Canva</span>
+        <span class="pill">Adobe Creative Suite</span>
+      </div>
+    </div>
+
+    <div class="sec-header anim" style="margin-top:80px">
+      <span class="sec-label">Leadership</span>
+      <h2 class="sec-title">Marketing <span class="serif">Leadership</span></h2>
+    </div>
+    <div class="leadership-grid">
+      <div class="lead-card green anim d1">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+        <h4>Team Building</h4>
+        <p>Built and led SEO, SEM, and content teams from scratch across 50+ contributors</p>
+      </div>
+      <div class="lead-card cyan anim d2">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8"/></svg>
+        <h4>Executive Reporting</h4>
+        <p>Owned weekly and monthly performance reporting to executives and clients</p>
+      </div>
+      <div class="lead-card purple anim d3">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        <h4>Roadmap Influence</h4>
+        <p>Forecasted growth impact and guided prioritization across marketing, design, and engineering</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container anim">
+    <span class="sec-label">Contact</span>
+    <h2>Let's <span class="serif">Connect</span></h2>
+    <p>Open to Marketing Manager, Growth Lead, and Performance Marketing roles.</p>
+    <p>Ideal fit: environments where SEO, SEM, CRO, and data-driven marketing are core to business growth.</p>
+    <a href="mailto:your.email@example.com" class="contact-btn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+      Get in Touch
+    </a>
+    <div class="contact-info">
+      <div class="contact-item">
+        <span>Email</span>
+        <a href="mailto:your.email@example.com">your.email@example.com</a>
+      </div>
+      <div class="contact-item">
+        <span>LinkedIn</span>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a>
+      </div>
+      <div class="contact-item">
+        <span>Portfolio</span>
+        <a href="#">Case studies & dashboards available</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>© <span id="year"></span> Marketing Portfolio · Growth & Performance</span>
+</footer>
+
+<script>
+document.getElementById("year").textContent=new Date().getFullYear();
+const obs=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting)el.target.classList.add('visible')})},{threshold:.1,rootMargin:'0px 0px -50px 0px'});
+document.querySelectorAll('.anim').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
