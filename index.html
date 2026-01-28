@@ -114,7 +114,6 @@
     .perf-card.yellow .value{color:var(--yellow)}
     .perf-card .label{font-size:.65rem;color:var(--muted)}
 
-    /* Awards */
     .awards-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
     .award-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px;text-align:center;transition:all .3s;position:relative;overflow:hidden}
     .award-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--cyan))}
@@ -124,7 +123,6 @@
     .award-card p{font-size:.7rem;color:var(--muted)}
     .award-card .year{font-size:.6rem;color:var(--dim);margin-top:6px}
 
-    /* Featured In */
     .featured-row{display:flex;justify-content:center;align-items:center;gap:32px;flex-wrap:wrap;padding:24px 0;opacity:.6}
     .featured-row span{font-size:.85rem;font-weight:500;color:var(--muted)}
 
@@ -136,10 +134,12 @@
     .case-card.green .case-header::before{background:radial-gradient(circle,var(--green),transparent 70%)}
     .case-card.cyan .case-header::before{background:radial-gradient(circle,var(--cyan),transparent 70%)}
     .case-card.orange .case-header::before{background:radial-gradient(circle,var(--orange),transparent 70%)}
+    .case-card.purple .case-header::before{background:radial-gradient(circle,var(--purple),transparent 70%)}
     .case-header svg{width:44px;height:44px;opacity:.5}
     .case-card.green svg{stroke:var(--green)}
     .case-card.cyan svg{stroke:var(--cyan)}
     .case-card.orange svg{stroke:var(--orange)}
+    .case-card.purple svg{stroke:var(--purple)}
     .case-badge{position:absolute;top:10px;left:10px;padding:4px 10px;background:rgba(0,0,0,.5);border-radius:14px;font-size:.6rem;color:var(--muted)}
     .case-body{padding:18px}
     .case-title{font-size:.95rem;font-weight:600;margin-bottom:3px}
@@ -153,6 +153,31 @@
     .case-card.green .metric span{color:var(--green)}
     .case-card.cyan .metric span{color:var(--cyan)}
     .case-card.orange .metric span{color:var(--orange)}
+    .case-card.purple .metric span{color:var(--purple)}
+
+    /* Featured Case Study */
+    .featured-case-card{background:var(--card);border:1px solid var(--border);border-radius:20px;overflow:hidden}
+    .featured-case-grid{display:grid;grid-template-columns:1fr 1.5fr}
+    .featured-case-left{padding:28px;border-right:1px solid var(--border)}
+    .featured-case-right{padding:28px;background:var(--card2)}
+    .fc-section-title{font-size:.7rem;text-transform:uppercase;letter-spacing:.15em;color:var(--dim);margin-bottom:10px}
+    .fc-stat-box{text-align:center;padding:12px 18px;background:var(--bg);border-radius:12px;border:1px solid var(--border)}
+    .fc-stat-value{display:block;font-size:1.5rem;font-weight:700}
+    .fc-stat-label{font-size:.65rem;color:var(--muted)}
+    .fc-result-row{display:flex;justify-content:space-between;padding:10px 14px;background:var(--bg);border-radius:8px;border:1px solid var(--border);margin-bottom:8px}
+    .fc-result-row:last-child{margin-bottom:0}
+    .gsc-carousel-container{border-radius:12px;overflow:hidden;border:1px solid var(--border);background:var(--bg)}
+    .gsc-carousel-track{display:flex;transition:transform .5s ease}
+    .gsc-slide{min-width:100%}
+    .gsc-slide img{width:100%;height:auto;display:block}
+    .gsc-slide-info{padding:12px 16px;background:var(--card);border-top:1px solid var(--border)}
+    .gsc-nav{display:flex;justify-content:center;gap:8px;margin-top:14px}
+    .gsc-nav button{width:8px;height:8px;border-radius:50%;border:none;cursor:pointer;transition:all .3s}
+    .timeline-wrapper{margin-top:24px;padding:18px;background:var(--bg);border-radius:12px;border:1px solid var(--border)}
+    .timeline-grid{display:flex;justify-content:space-between;gap:12px}
+    .timeline-item{text-align:center;flex:1}
+    .timeline-icon{width:40px;height:40px;margin:0 auto 8px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+    .timeline-arrow{flex:0 0 40px;display:flex;align-items:center;justify-content:center;color:var(--dim)}
 
     .website-carousel{margin-top:40px;position:relative}
     .carousel-container{overflow:hidden;border-radius:16px;border:1px solid var(--border);background:var(--card)}
@@ -198,7 +223,6 @@
     .framework-step h4{font-size:.8rem;font-weight:500;margin-bottom:5px}
     .framework-step p{font-size:.7rem;color:var(--muted)}
 
-    /* Speaking */
     .speaking-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
     .speaking-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px;transition:all .3s}
     .speaking-card:hover{border-color:var(--border-h);transform:translateY(-3px)}
@@ -269,6 +293,8 @@
       .framework-step::after{display:none}
       .cert-grid{grid-template-columns:repeat(3,1fr)}
       .awards-grid{grid-template-columns:repeat(2,1fr)}
+      .featured-case-grid{grid-template-columns:1fr}
+      .featured-case-left{border-right:none;border-bottom:1px solid var(--border)}
     }
     @media(max-width:768px){
       section{padding:45px 20px}
@@ -287,6 +313,8 @@
       .website-frame{height:320px}
       .perf-card .value{font-size:1.1rem}
       .awards-grid{grid-template-columns:1fr}
+      .timeline-grid{flex-direction:column;gap:16px}
+      .timeline-arrow{transform:rotate(90deg);flex:0 0 30px}
     }
     @media(max-width:480px){
       .perf-grid{grid-template-columns:repeat(2,1fr)}
@@ -421,7 +449,6 @@
   </div>
 </section>
 
-<!-- Growth Framework -->
 <section style="background:linear-gradient(180deg,transparent,rgba(56,189,248,.02),transparent)">
   <div class="container">
     <div class="sec-header anim">
@@ -495,6 +522,144 @@
       </article>
     </div>
 
+    <!-- Featured Case Study: ImpactGuru -->
+    <div class="featured-case anim" style="margin-top:50px">
+      <div class="sec-header" style="margin-bottom:24px">
+        <span class="sec-label">Featured Case Study</span>
+        <h2 class="sec-title">ImpactGuru: <span class="serif">SEO Growth Engine</span></h2>
+        <p class="sec-sub">Driving 3-5x organic traffic growth for India's leading medical crowdfunding platform.</p>
+      </div>
+      
+      <div class="featured-case-card">
+        <div style="background:linear-gradient(135deg,rgba(74,222,128,.1),rgba(56,189,248,.1));padding:24px 28px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;">
+          <div>
+            <span style="display:inline-block;padding:4px 12px;background:rgba(74,222,128,.15);border:1px solid rgba(74,222,128,.3);border-radius:20px;font-size:.65rem;color:var(--green);margin-bottom:8px;">Crowdfunding / HealthTech</span>
+            <h3 style="font-size:1.4rem;font-weight:600;margin-bottom:4px;">ImpactGuru.com</h3>
+            <p style="font-size:.85rem;color:var(--muted);">SEO Strategy · Technical Optimization · Content Architecture</p>
+          </div>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;">
+            <div class="fc-stat-box">
+              <span class="fc-stat-value" style="color:var(--green);">3-5x</span>
+              <span class="fc-stat-label">Traffic Growth</span>
+            </div>
+            <div class="fc-stat-box">
+              <span class="fc-stat-value" style="color:var(--cyan);">233K+</span>
+              <span class="fc-stat-label">Clicks (6mo)</span>
+            </div>
+            <div class="fc-stat-box">
+              <span class="fc-stat-value" style="color:var(--purple);">6.31M</span>
+              <span class="fc-stat-label">Impressions</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="featured-case-grid">
+          <div class="featured-case-left">
+            <div style="margin-bottom:24px;">
+              <h4 class="fc-section-title">The Challenge</h4>
+              <p style="font-size:.85rem;color:#bbb;line-height:1.7;">ImpactGuru needed to scale organic visibility in a competitive crowdfunding space while maintaining high-quality traffic that converts to donations.</p>
+            </div>
+            
+            <div style="margin-bottom:24px;">
+              <h4 class="fc-section-title">Strategic Approach</h4>
+              <ul style="padding-left:16px;font-size:.8rem;color:#bbb;line-height:1.8;">
+                <li>Technical SEO audit & site architecture optimization</li>
+                <li>Campaign page SEO templates for scalability</li>
+                <li>High-intent keyword targeting for medical fundraising</li>
+                <li>Internal linking strategy for campaign discovery</li>
+                <li>Core Web Vitals & page speed optimization</li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 class="fc-section-title" style="margin-bottom:12px;">Key Results</h4>
+              <div class="fc-result-row">
+                <span style="font-size:.75rem;color:var(--muted);">Daily Clicks</span>
+                <span style="font-size:.75rem;font-weight:600;color:var(--green);">800 → 3,800+</span>
+              </div>
+              <div class="fc-result-row">
+                <span style="font-size:.75rem;color:var(--muted);">Daily Impressions</span>
+                <span style="font-size:.75rem;font-weight:600;color:var(--cyan);">25K → 90K+</span>
+              </div>
+              <div class="fc-result-row">
+                <span style="font-size:.75rem;color:var(--muted);">Average CTR</span>
+                <span style="font-size:.75rem;font-weight:600;color:var(--purple);">3.7%</span>
+              </div>
+              <div class="fc-result-row">
+                <span style="font-size:.75rem;color:var(--muted);">Avg Position</span>
+                <span style="font-size:.75rem;font-weight:600;color:var(--orange);">16.9 → 18.7</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="featured-case-right">
+            <h4 class="fc-section-title" style="margin-bottom:16px;">Google Search Console Data</h4>
+            <div class="gsc-carousel">
+              <div class="gsc-carousel-container">
+                <div class="gsc-carousel-track" id="gscTrack">
+                  <div class="gsc-slide">
+                    <img src="images/ImpactGuru Growth/Impactguru - 48 Days Traffic Growth.png" alt="48 Days Growth">
+                    <div class="gsc-slide-info">
+                      <h5 style="font-size:.8rem;font-weight:500;margin-bottom:2px;">48-Day Performance</h5>
+                      <p style="font-size:.7rem;color:var(--muted);">106K clicks · 3.03M impressions · 3.5% CTR</p>
+                    </div>
+                  </div>
+                  <div class="gsc-slide">
+                    <img src="images/ImpactGuru Growth/Impactguru - Last 3 Month Traffic Growth.png" alt="3 Month Growth">
+                    <div class="gsc-slide-info">
+                      <h5 style="font-size:.8rem;font-weight:500;margin-bottom:2px;">3-Month Performance</h5>
+                      <p style="font-size:.7rem;color:var(--muted);">154K clicks · 4.51M impressions · 3.4% CTR</p>
+                    </div>
+                  </div>
+                  <div class="gsc-slide">
+                    <img src="images/ImpactGuru Growth/Impactguru - Last 6 Month Traffic Growth.png" alt="6 Month Growth">
+                    <div class="gsc-slide-info">
+                      <h5 style="font-size:.8rem;font-weight:500;margin-bottom:2px;">6-Month Performance</h5>
+                      <p style="font-size:.7rem;color:var(--muted);">233K clicks · 6.31M impressions · 3.7% CTR</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="gsc-nav" id="gscNav">
+                <button class="active" style="background:var(--green);transform:scale(1.3)"></button>
+                <button style="background:var(--dim)"></button>
+                <button style="background:var(--dim)"></button>
+              </div>
+            </div>
+            
+            <div class="timeline-wrapper">
+              <h4 class="fc-section-title" style="margin-bottom:14px;">Growth Timeline</h4>
+              <div class="timeline-grid">
+                <div class="timeline-item">
+                  <div class="timeline-icon" style="background:linear-gradient(135deg,var(--green),var(--cyan));">
+                    <span style="font-size:.7rem;font-weight:600;color:var(--bg);">Q1</span>
+                  </div>
+                  <p style="font-size:.65rem;color:var(--muted);">Foundation</p>
+                  <p style="font-size:.8rem;font-weight:600;color:var(--text);">~800/day</p>
+                </div>
+                <div class="timeline-arrow">→</div>
+                <div class="timeline-item">
+                  <div class="timeline-icon" style="background:linear-gradient(135deg,var(--cyan),var(--purple));">
+                    <span style="font-size:.7rem;font-weight:600;color:var(--bg);">Q2</span>
+                  </div>
+                  <p style="font-size:.65rem;color:var(--muted);">Scaling</p>
+                  <p style="font-size:.8rem;font-weight:600;color:var(--text);">~2,500/day</p>
+                </div>
+                <div class="timeline-arrow">→</div>
+                <div class="timeline-item">
+                  <div class="timeline-icon" style="background:linear-gradient(135deg,var(--purple),var(--pink));">
+                    <span style="font-size:.7rem;font-weight:600;color:var(--bg);">Q3</span>
+                  </div>
+                  <p style="font-size:.65rem;color:var(--muted);">Peak Growth</p>
+                  <p style="font-size:.8rem;font-weight:600;color:var(--green);">3,800+/day</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="website-carousel anim" style="margin-top:40px">
       <div class="sec-header" style="margin-bottom:18px">
         <span class="sec-label">Portfolio</span>
@@ -526,7 +691,6 @@
   </div>
 </section>
 
-<!-- Testimonials -->
 <section>
   <div class="container">
     <div class="sec-header anim">
@@ -604,7 +768,6 @@
   </div>
 </section>
 
-<!-- Certifications -->
 <section style="background:linear-gradient(180deg,transparent,rgba(250,204,21,.02),transparent)">
   <div class="container">
     <div class="sec-header anim">
@@ -758,6 +921,7 @@ document.getElementById("year").textContent=new Date().getFullYear();
 const obs=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting)el.target.classList.add('visible')})},{threshold:.1});
 document.querySelectorAll('.anim').forEach(el=>obs.observe(el));
 
+// Website Carousel
 let webIdx=0;
 const webTrack=document.getElementById('webTrack');
 const webNav=document.getElementById('webNav');
@@ -765,6 +929,21 @@ function goWeb(i){webIdx=i;webTrack.style.transform=`translateX(-${i*100}%)`;web
 function moveWeb(d){webIdx=(webIdx+d+3)%3;goWeb(webIdx);}
 webNav.querySelectorAll('button').forEach((b,i)=>b.onclick=()=>goWeb(i));
 setInterval(()=>moveWeb(1),4000);
+
+// GSC Carousel
+let gscIdx=0;
+const gscTrack=document.getElementById('gscTrack');
+const gscNavBtns=document.querySelectorAll('#gscNav button');
+function goGSC(i){
+  gscIdx=i;
+  gscTrack.style.transform=`translateX(-${i*100}%)`;
+  gscNavBtns.forEach((b,j)=>{
+    b.style.background=i===j?'var(--green)':'var(--dim)';
+    b.style.transform=i===j?'scale(1.3)':'scale(1)';
+  });
+}
+gscNavBtns.forEach((b,i)=>b.onclick=()=>goGSC(i));
+setInterval(()=>{gscIdx=(gscIdx+1)%3;goGSC(gscIdx);},5000);
 </script>
 </body>
 </html>
