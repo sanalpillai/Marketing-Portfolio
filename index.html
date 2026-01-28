@@ -14,23 +14,18 @@
     body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;overflow-x:hidden}
     .serif{font-family:'Playfair Display',serif;font-style:italic;font-weight:400}
     a{color:inherit;text-decoration:none}
-
     @keyframes float{0%,100%{transform:translateY(0) rotate(6deg)}50%{transform:translateY(-20px) rotate(6deg)}}
     @keyframes rotate{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
     @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
     @keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
     @keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-    @keyframes countUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
-    
     .anim{opacity:0;transform:translateY(30px);transition:all .7s cubic-bezier(.16,1,.3,1)}
     .anim.visible{opacity:1;transform:translateY(0)}
     .d1{transition-delay:.1s}.d2{transition-delay:.15s}.d3{transition-delay:.2s}.d4{transition-delay:.25s}
-
     .bg-grid{position:fixed;inset:0;background-image:linear-gradient(rgba(255,255,255,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.02) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;z-index:0}
     .orb{position:fixed;border-radius:50%;filter:blur(120px);pointer-events:none;z-index:0}
     .orb-1{width:600px;height:600px;background:radial-gradient(circle,rgba(74,222,128,.12),transparent 70%);top:-200px;left:-200px}
     .orb-2{width:500px;height:500px;background:radial-gradient(circle,rgba(56,189,248,.08),transparent 70%);bottom:20%;right:-200px}
-
     nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:14px 48px;display:flex;justify-content:space-between;align-items:center;background:linear-gradient(to bottom,rgba(10,10,10,.98),rgba(10,10,10,.8),transparent);backdrop-filter:blur(20px)}
     .logo{display:flex;align-items:center;gap:10px;font-weight:600;font-size:1rem}
     .logo-icon{width:34px;height:34px;background:linear-gradient(135deg,var(--green),var(--cyan));border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--bg);font-size:.9rem}
@@ -40,7 +35,6 @@
     .nav-cta{padding:10px 20px;background:linear-gradient(135deg,var(--green),var(--cyan));color:var(--bg);border-radius:30px;font-size:.8rem;font-weight:500;transition:all .3s}
     .nav-cta:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(74,222,128,.3)}
     @media(max-width:768px){.nav-links{display:none}nav{padding:12px 20px}}
-
     .hero{min-height:100vh;display:flex;align-items:center;padding:100px 48px 60px;position:relative}
     .hero-container{max-width:1400px;margin:0 auto;width:100%;display:grid;grid-template-columns:1.4fr 1fr;gap:60px;align-items:center}
     .hero-content{position:relative;z-index:2}
@@ -59,7 +53,6 @@
     .hero-tags{display:flex;flex-wrap:wrap;gap:8px}
     .tag{padding:6px 12px;background:var(--card);border:1px solid var(--border);border-radius:20px;font-size:.7rem;color:var(--muted);transition:all .3s}
     .tag:hover{border-color:var(--green);color:var(--green)}
-
     .hero-visual{position:relative;display:flex;justify-content:center;align-items:center}
     .photo-wrapper{position:relative}
     .photo-card{width:250px;height:320px;background:linear-gradient(135deg,#1a1a1a,#0d0d0d);border:1px solid var(--border);border-radius:20px;overflow:hidden;transform:rotate(6deg);animation:float 6s ease-in-out infinite;box-shadow:0 40px 80px rgba(0,0,0,.5)}
@@ -71,7 +64,6 @@
     .photo-stat{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:10px 12px;text-align:center;backdrop-filter:blur(20px)}
     .photo-stat .value{font-size:.95rem;font-weight:600;color:var(--green);display:block}
     .photo-stat .label{font-size:.6rem;color:var(--muted)}
-
     section{padding:60px 48px;position:relative;z-index:1}
     .container{max-width:1200px;margin:0 auto}
     .sec-header{margin-bottom:32px}
@@ -79,17 +71,14 @@
     .sec-label::before{content:'';width:6px;height:6px;background:linear-gradient(135deg,var(--green),var(--cyan));border-radius:50%}
     .sec-title{font-size:clamp(1.7rem,3.5vw,2.4rem);font-weight:400;margin-bottom:10px}
     .sec-sub{color:var(--muted);font-size:.9rem;max-width:550px}
-
     .marquee-wrap{padding:18px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);overflow:hidden;background:linear-gradient(90deg,var(--bg),var(--card),var(--bg))}
     .marquee{display:flex;animation:marquee 25s linear infinite}
     .marquee span{display:flex;align-items:center;gap:12px;padding:0 24px;white-space:nowrap;color:var(--muted);font-size:.8rem;font-weight:500}
     .marquee span::before{content:'◆';font-size:.45rem;color:var(--green)}
-
     .trusted-section{padding:40px 48px;border-bottom:1px solid var(--border)}
     .trusted-label{text-align:center;font-size:.65rem;text-transform:uppercase;letter-spacing:.2em;color:var(--dim);margin-bottom:20px}
     .trusted-logos{display:flex;justify-content:center;align-items:center;gap:40px;flex-wrap:wrap;opacity:.5}
     .trusted-logos span{font-size:1rem;font-weight:600;color:var(--muted)}
-
     .skills-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
     .skill-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px;text-align:center;transition:all .3s}
     .skill-card:hover{border-color:var(--green);transform:translateY(-3px)}
@@ -101,7 +90,6 @@
     .skill-card.pink svg{stroke:var(--pink)}
     .skill-card h4{font-size:.8rem;font-weight:500;margin-bottom:3px}
     .skill-card p{font-size:.7rem;color:var(--muted)}
-
     .perf-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
     .perf-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px;text-align:center;transition:all .3s}
     .perf-card:hover{border-color:var(--border-h);transform:translateY(-2px)}
@@ -113,19 +101,6 @@
     .perf-card.pink .value{color:var(--pink)}
     .perf-card.yellow .value{color:var(--yellow)}
     .perf-card .label{font-size:.65rem;color:var(--muted)}
-
-    .awards-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-    .award-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px;text-align:center;transition:all .3s;position:relative;overflow:hidden}
-    .award-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--cyan))}
-    .award-card:hover{border-color:var(--border-h);transform:translateY(-3px)}
-    .award-card svg{width:32px;height:32px;margin-bottom:10px;stroke:var(--yellow)}
-    .award-card h4{font-size:.8rem;font-weight:500;margin-bottom:4px}
-    .award-card p{font-size:.7rem;color:var(--muted)}
-    .award-card .year{font-size:.6rem;color:var(--dim);margin-top:6px}
-
-    .featured-row{display:flex;justify-content:center;align-items:center;gap:32px;flex-wrap:wrap;padding:24px 0;opacity:.6}
-    .featured-row span{font-size:.85rem;font-weight:500;color:var(--muted)}
-
     .case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
     .case-card{background:var(--card);border:1px solid var(--border);border-radius:18px;overflow:hidden;transition:all .4s}
     .case-card:hover{border-color:var(--border-h);transform:translateY(-5px)}
@@ -134,12 +109,10 @@
     .case-card.green .case-header::before{background:radial-gradient(circle,var(--green),transparent 70%)}
     .case-card.cyan .case-header::before{background:radial-gradient(circle,var(--cyan),transparent 70%)}
     .case-card.orange .case-header::before{background:radial-gradient(circle,var(--orange),transparent 70%)}
-    .case-card.purple .case-header::before{background:radial-gradient(circle,var(--purple),transparent 70%)}
     .case-header svg{width:44px;height:44px;opacity:.5}
     .case-card.green svg{stroke:var(--green)}
     .case-card.cyan svg{stroke:var(--cyan)}
     .case-card.orange svg{stroke:var(--orange)}
-    .case-card.purple svg{stroke:var(--purple)}
     .case-badge{position:absolute;top:10px;left:10px;padding:4px 10px;background:rgba(0,0,0,.5);border-radius:14px;font-size:.6rem;color:var(--muted)}
     .case-body{padding:18px}
     .case-title{font-size:.95rem;font-weight:600;margin-bottom:3px}
@@ -153,9 +126,6 @@
     .case-card.green .metric span{color:var(--green)}
     .case-card.cyan .metric span{color:var(--cyan)}
     .case-card.orange .metric span{color:var(--orange)}
-    .case-card.purple .metric span{color:var(--purple)}
-
-    /* Featured Case Study */
     .featured-case-card{background:var(--card);border:1px solid var(--border);border-radius:20px;overflow:hidden}
     .featured-case-grid{display:grid;grid-template-columns:1fr 1.5fr}
     .featured-case-left{padding:28px;border-right:1px solid var(--border)}
@@ -178,10 +148,8 @@
     .timeline-item{text-align:center;flex:1}
     .timeline-icon{width:40px;height:40px;margin:0 auto 8px;border-radius:50%;display:flex;align-items:center;justify-content:center}
     .timeline-arrow{flex:0 0 40px;display:flex;align-items:center;justify-content:center;color:var(--dim)}
-
     .case-label{background:none;border:none}
     .case-label.active-label{background:var(--card);border:1px solid var(--border);color:var(--text)}
-
     .case-carousel-slide .featured-case-card{height:100%}
     .case-carousel-slide .featured-case-grid{min-height:480px}
     .case-carousel-slide .featured-case-left{display:flex;flex-direction:column}
@@ -189,11 +157,7 @@
     .case-carousel-slide .featured-case-right{display:flex;flex-direction:column;gap:20px}
     .case-carousel-slide .featured-case-right > div:first-child{flex:1}
     .case-carousel-slide .timeline-wrapper{margin-top:auto}
-
-    @media(max-width:1024px){
-      .case-carousel-slide .featured-case-grid{min-height:auto}
-    }
-
+    @media(max-width:1024px){.case-carousel-slide .featured-case-grid{min-height:auto}}
     .website-carousel{margin-top:40px;position:relative}
     .carousel-container{overflow:hidden;border-radius:16px;border:1px solid var(--border);background:var(--card)}
     .carousel-track{display:flex;transition:transform .5s ease}
@@ -219,7 +183,6 @@
     .carousel-arrows{position:absolute;top:50%;left:0;right:0;display:flex;justify-content:space-between;padding:0 10px;transform:translateY(-50%);pointer-events:none;z-index:10}
     .carousel-arrows button{width:36px;height:36px;border-radius:50%;border:1px solid var(--border);background:var(--card);color:var(--text);cursor:pointer;pointer-events:auto;transition:all .3s;font-size:1.1rem}
     .carousel-arrows button:hover{background:var(--green);color:var(--bg)}
-
     .testimonial-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
     .testimonial-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px;position:relative}
     .testimonial-card::before{content:'"';position:absolute;top:12px;right:16px;font-size:2.5rem;color:var(--green);opacity:.2;font-family:serif}
@@ -228,7 +191,6 @@
     .testimonial-avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--green),var(--cyan));display:flex;align-items:center;justify-content:center;font-weight:600;font-size:.75rem;color:var(--bg)}
     .testimonial-info h5{font-size:.75rem;font-weight:500}
     .testimonial-info p{font-size:.65rem;color:var(--muted)}
-
     .framework-card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:28px;margin-top:20px}
     .framework-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:20px}
     .framework-step{text-align:center;position:relative}
@@ -237,21 +199,11 @@
     .framework-num{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--green),var(--cyan));display:flex;align-items:center;justify-content:center;margin:0 auto 10px;font-weight:600;font-size:.85rem;color:var(--bg)}
     .framework-step h4{font-size:.8rem;font-weight:500;margin-bottom:5px}
     .framework-step p{font-size:.7rem;color:var(--muted)}
-
-    .speaking-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .speaking-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px;transition:all .3s}
-    .speaking-card:hover{border-color:var(--border-h);transform:translateY(-3px)}
-    .speaking-card h4{font-size:.85rem;font-weight:500;margin-bottom:6px}
-    .speaking-card p{font-size:.7rem;color:var(--muted);margin-bottom:8px}
-    .speaking-meta{display:flex;align-items:center;gap:8px;font-size:.65rem;color:var(--dim)}
-    .speaking-meta svg{width:12px;height:12px;stroke:var(--green)}
-
     .cert-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
     .cert-badge{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px;text-align:center;transition:all .3s}
     .cert-badge:hover{border-color:var(--green);transform:translateY(-2px)}
     .cert-badge svg{width:24px;height:24px;margin-bottom:6px;opacity:.7}
     .cert-badge p{font-size:.65rem;color:var(--muted)}
-
     .creative-gallery{overflow:hidden;margin-top:20px}
     .gallery-row{display:flex;gap:12px;animation:scroll 30s linear infinite;width:max-content}
     .gallery-row:hover{animation-play-state:paused}
@@ -260,7 +212,6 @@
     .gallery-item img{width:100%;height:100%;object-fit:contain;background:var(--card2)}
     .gallery-item .label{position:absolute;bottom:5px;left:5px;padding:3px 7px;background:rgba(0,0,0,.7);border-radius:4px;font-size:.6rem;color:var(--muted)}
     .gallery-row.reverse{animation-direction:reverse}
-
     .video-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px}
     .video-card{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:all .3s}
     .video-card:hover{border-color:var(--border-h)}
@@ -271,7 +222,6 @@
     .video-header span{font-size:.75rem;font-weight:500}
     .video-frame{position:relative;padding-bottom:56.25%;height:0}
     .video-frame iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none}
-
     .tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:8px}
     .tool-chip{display:flex;align-items:center;gap:5px;padding:7px 10px;background:var(--card);border:1px solid var(--border);border-radius:8px;font-size:.7rem;color:var(--muted);transition:all .3s}
     .tool-chip:hover{border-color:var(--green);color:var(--green);transform:translateY(-2px)}
@@ -279,7 +229,6 @@
     .tool-category{margin-bottom:20px}
     .tool-category h3{font-size:.8rem;font-weight:600;margin-bottom:10px;color:var(--text);display:flex;align-items:center;gap:8px}
     .tool-category h3::before{content:'';width:3px;height:12px;background:linear-gradient(to bottom,var(--green),var(--cyan));border-radius:2px}
-
     .contact{text-align:center;padding:70px 48px}
     .contact::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:400px;height:400px;background:radial-gradient(circle,rgba(74,222,128,.08),transparent 70%);pointer-events:none}
     .contact .sec-label{margin:0 auto 14px}
@@ -291,10 +240,8 @@
     .contact-item span{display:block;font-size:.6rem;text-transform:uppercase;letter-spacing:.15em;color:var(--dim);margin-bottom:3px}
     .contact-item a{color:var(--text);font-size:.8rem}
     .contact-item a:hover{color:var(--green)}
-
     footer{padding:20px 48px;border-top:1px solid var(--border);text-align:center}
     footer span{font-size:.7rem;color:var(--dim)}
-
     @media(max-width:1024px){
       .hero-container{grid-template-columns:1fr;text-align:center}
       .hero-content{display:flex;flex-direction:column;align-items:center}
@@ -302,12 +249,11 @@
       .hero-tags{justify-content:center}
       .skills-grid{grid-template-columns:repeat(3,1fr)}
       .perf-grid{grid-template-columns:repeat(3,1fr)}
-      .case-grid,.testimonial-grid,.speaking-grid{grid-template-columns:1fr}
+      .case-grid,.testimonial-grid{grid-template-columns:1fr}
       .video-row{grid-template-columns:1fr}
       .framework-grid{grid-template-columns:repeat(2,1fr)}
       .framework-step::after{display:none}
       .cert-grid{grid-template-columns:repeat(3,1fr)}
-      .awards-grid{grid-template-columns:repeat(2,1fr)}
       .featured-case-grid{grid-template-columns:1fr}
       .featured-case-left{border-right:none;border-bottom:1px solid var(--border)}
     }
@@ -327,7 +273,6 @@
       .trusted-logos span{font-size:.85rem}
       .website-frame{height:320px}
       .perf-card .value{font-size:1.1rem}
-      .awards-grid{grid-template-columns:1fr}
       .timeline-grid{flex-direction:column;gap:16px}
       .timeline-arrow{transform:rotate(90deg);flex:0 0 30px}
     }
@@ -340,11 +285,9 @@
   </style>
 </head>
 <body>
-
 <div class="bg-grid"></div>
 <div class="orb orb-1"></div>
 <div class="orb orb-2"></div>
-
 <svg width="0" height="0">
   <defs>
     <linearGradient id="badge-grad" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -358,7 +301,6 @@
     </linearGradient>
   </defs>
 </svg>
-
 <nav>
   <div class="logo"><div class="logo-icon">M</div>Marketing Portfolio</div>
   <div class="nav-links">
@@ -370,7 +312,6 @@
   </div>
   <a href="#contact" class="nav-cta">Get in Touch</a>
 </nav>
-
 <section class="hero" id="overview">
   <div class="hero-container">
     <div class="hero-content">
@@ -411,20 +352,17 @@
     </div>
   </div>
 </section>
-
 <div class="trusted-section">
   <div class="trusted-label">Trusted by teams at</div>
   <div class="trusted-logos">
     <span>Google</span><span>Meta</span><span>Shopify</span><span>HubSpot</span><span>Stripe</span><span>Notion</span>
   </div>
 </div>
-
 <div class="marquee-wrap">
   <div class="marquee">
     <span>SEO Strategy</span><span>Google Ads</span><span>Meta Ads</span><span>TikTok Marketing</span><span>LinkedIn Ads</span><span>CRO</span><span>Content Strategy</span><span>Influencer Marketing</span><span>Email Marketing</span><span>Analytics</span><span>SEO Strategy</span><span>Google Ads</span><span>Meta Ads</span><span>TikTok Marketing</span><span>LinkedIn Ads</span><span>CRO</span><span>Content Strategy</span><span>Influencer Marketing</span><span>Email Marketing</span><span>Analytics</span>
   </div>
 </div>
-
 <section>
   <div class="container">
     <div class="sec-header anim">
@@ -440,7 +378,6 @@
     </div>
   </div>
 </section>
-
 <section style="background:linear-gradient(180deg,transparent,rgba(74,222,128,.03),transparent)">
   <div class="container">
     <div class="sec-header anim">
@@ -463,7 +400,6 @@
     </div>
   </div>
 </section>
-
 <section style="background:linear-gradient(180deg,transparent,rgba(56,189,248,.02),transparent)">
   <div class="container">
     <div class="sec-header anim">
@@ -497,7 +433,6 @@
     </div>
   </div>
 </section>
-
 <section id="case-studies">
   <div class="container">
     <div class="sec-header anim">
@@ -536,7 +471,6 @@
         </div>
       </article>
     </div>
-
     <!-- Featured Case Study: ImpactGuru -->
     <div class="featured-case anim" style="margin-top:50px">
       <div class="sec-header" style="margin-bottom:24px">
@@ -544,7 +478,6 @@
         <h2 class="sec-title">ImpactGuru: <span class="serif">SEO Growth Engine</span></h2>
         <p class="sec-sub">Driving 3-5x organic traffic growth for India's leading medical crowdfunding platform.</p>
       </div>
-      
       <div class="featured-case-card">
         <div style="background:linear-gradient(135deg,rgba(74,222,128,.1),rgba(56,189,248,.1));padding:24px 28px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;">
           <div>
@@ -567,14 +500,16 @@
             </div>
           </div>
         </div>
-        
         <div class="featured-case-grid">
           <div class="featured-case-left">
             <div style="margin-bottom:24px;">
               <h4 class="fc-section-title">The Challenge</h4>
               <p style="font-size:.85rem;color:#bbb;line-height:1.7;">ImpactGuru needed to scale organic visibility in a competitive crowdfunding space while maintaining high-quality traffic that converts to donations.</p>
             </div>
-            
+            <div style="margin-bottom:24px;padding:14px 16px;background:linear-gradient(135deg,rgba(74,222,128,.08),rgba(56,189,248,.08));border-left:3px solid var(--green);border-radius:0 8px 8px 0;">
+              <h4 style="font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--green);margin-bottom:6px;">🏆 Industry First</h4>
+              <p style="font-size:.8rem;color:#ddd;line-height:1.6;">Pioneered <strong style="color:var(--green);">adjacent audience targeting</strong> strategy, scaling SEO revenue from <strong style="color:var(--cyan);">$0 → $240K in 4 months</strong> — first ever achieved in South Asian crowdfunding.</p>
+            </div>
             <div style="margin-bottom:24px;">
               <h4 class="fc-section-title">Strategic Approach</h4>
               <ul style="padding-left:16px;font-size:.8rem;color:#bbb;line-height:1.8;">
@@ -585,7 +520,6 @@
                 <li>Core Web Vitals & page speed optimization</li>
               </ul>
             </div>
-            
             <div>
               <h4 class="fc-section-title" style="margin-bottom:12px;">Key Results</h4>
               <div class="fc-result-row">
@@ -601,12 +535,11 @@
                 <span style="font-size:.75rem;font-weight:600;color:var(--purple);">3.7%</span>
               </div>
               <div class="fc-result-row">
-                <span style="font-size:.75rem;color:var(--muted);">Avg Position</span>
-                <span style="font-size:.75rem;font-weight:600;color:var(--orange);">16.9 → 18.7</span>
+                <span style="font-size:.75rem;color:var(--muted);">Keywords Ranked</span>
+                <span style="font-size:.75rem;font-weight:600;color:var(--orange);">2,400 → 8,500+</span>
               </div>
             </div>
           </div>
-          
           <div class="featured-case-right">
             <h4 class="fc-section-title" style="margin-bottom:16px;">Google Search Console Data</h4>
             <div class="gsc-carousel">
@@ -641,7 +574,6 @@
                 <button style="background:var(--dim)"></button>
               </div>
             </div>
-            
             <div class="timeline-wrapper">
               <h4 class="fc-section-title" style="margin-bottom:14px;">Growth Timeline</h4>
               <div class="timeline-grid">
@@ -674,7 +606,6 @@
         </div>
       </div>
     </div>
-
     <!-- Additional Case Studies Carousel -->
     <div class="anim" style="margin-top:50px">
       <div class="sec-header" style="margin-bottom:24px">
@@ -682,10 +613,8 @@
         <h2 class="sec-title">Industry <span class="serif">Impact</span></h2>
         <p class="sec-sub">Driving measurable growth across Ecommerce, Healthcare, and SaaS verticals.</p>
       </div>
-      
       <div class="case-carousel-container" style="position:relative;overflow:hidden;">
         <div class="case-carousel-track" id="caseTrack" style="display:flex;transition:transform .5s ease;align-items:stretch;">
-          
           <!-- Case 1: Apollo Hospitals -->
           <div class="case-carousel-slide" style="min-width:100%;padding:0 10px;box-sizing:border-box;display:flex;">
             <div class="featured-case-card">
@@ -710,14 +639,12 @@
                   </div>
                 </div>
               </div>
-              
               <div class="featured-case-grid">
                 <div class="featured-case-left">
                   <div style="margin-bottom:24px;">
                     <h4 class="fc-section-title">The Challenge</h4>
                     <p style="font-size:.85rem;color:#bbb;line-height:1.7;">Apollo Hospitals needed to scale qualified patient leads across 70+ locations while reducing dependency on expensive paid campaigns and improving lead quality.</p>
                   </div>
-                  
                   <div style="margin-bottom:24px;">
                     <h4 class="fc-section-title">Strategic Approach</h4>
                     <ul style="padding-left:16px;font-size:.8rem;color:#bbb;line-height:1.8;">
@@ -728,7 +655,6 @@
                       <li>Conversion rate optimization for lead forms</li>
                     </ul>
                   </div>
-                  
                   <div>
                     <h4 class="fc-section-title" style="margin-bottom:12px;">Key Results</h4>
                     <div class="fc-result-row">
@@ -749,7 +675,6 @@
                     </div>
                   </div>
                 </div>
-                
                 <div class="featured-case-right">
                   <h4 class="fc-section-title" style="margin-bottom:16px;">Lead Generation Funnel</h4>
                   <div style="background:var(--bg);border-radius:12px;border:1px solid var(--border);padding:20px;min-height:220px;display:flex;flex-direction:column;justify-content:center;">
@@ -775,7 +700,6 @@
                       </div>
                     </div>
                   </div>
-                  
                   <div class="timeline-wrapper">
                     <h4 class="fc-section-title" style="margin-bottom:14px;">CPL Reduction Timeline</h4>
                     <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;">
@@ -794,7 +718,6 @@
               </div>
             </div>
           </div>
-          
           <!-- Case 2: Amerix Cancer Hospital -->
           <div class="case-carousel-slide" style="min-width:100%;padding:0 10px;box-sizing:border-box;display:flex;">
             <div class="featured-case-card">
@@ -819,14 +742,12 @@
                   </div>
                 </div>
               </div>
-              
               <div class="featured-case-grid">
                 <div class="featured-case-left">
                   <div style="margin-bottom:24px;">
                     <h4 class="fc-section-title">The Challenge</h4>
                     <p style="font-size:.85rem;color:#bbb;line-height:1.7;">Amerix, a new entrant in Delhi's competitive oncology market, had limited brand awareness and modest organic traffic (~2.4K/month) with most clicks from brand queries only.</p>
                   </div>
-                  
                   <div style="margin-bottom:24px;">
                     <h4 class="fc-section-title">Strategic Approach</h4>
                     <ul style="padding-left:16px;font-size:.8rem;color:#bbb;line-height:1.8;">
@@ -837,7 +758,6 @@
                       <li>Landing page optimization with empathetic CTAs</li>
                     </ul>
                   </div>
-                  
                   <div>
                     <h4 class="fc-section-title" style="margin-bottom:12px;">Key Results</h4>
                     <div class="fc-result-row">
@@ -858,7 +778,6 @@
                     </div>
                   </div>
                 </div>
-                
                 <div class="featured-case-right">
                   <h4 class="fc-section-title" style="margin-bottom:16px;">Organic Traffic Growth</h4>
                   <div style="background:var(--bg);border-radius:12px;border:1px solid var(--border);padding:20px;min-height:220px;display:flex;flex-direction:column;justify-content:center;">
@@ -888,7 +807,6 @@
                       <span style="font-size:.75rem;font-weight:600;color:var(--green);">+312% Growth in 8 Months</span>
                     </div>
                   </div>
-                  
                   <div class="timeline-wrapper">
                     <h4 class="fc-section-title" style="margin-bottom:14px;">Multi-Channel Impact</h4>
                     <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
@@ -914,7 +832,6 @@
               </div>
             </div>
           </div>
-          
           <!-- Case 3: Bombay Shirts -->
           <div class="case-carousel-slide" style="min-width:100%;padding:0 10px;box-sizing:border-box;display:flex;">
             <div class="featured-case-card">
@@ -939,14 +856,12 @@
                   </div>
                 </div>
               </div>
-              
               <div class="featured-case-grid">
                 <div class="featured-case-left">
                   <div style="margin-bottom:24px;">
                     <h4 class="fc-section-title">The Challenge</h4>
                     <p style="font-size:.85rem;color:#bbb;line-height:1.7;">Bombay Shirts, a premium custom shirt brand, struggled with organic visibility in a crowded D2C fashion market dominated by established players and aggregators.</p>
                   </div>
-                  
                   <div style="margin-bottom:24px;">
                     <h4 class="fc-section-title">Strategic Approach</h4>
                     <ul style="padding-left:16px;font-size:.8rem;color:#bbb;line-height:1.8;">
@@ -957,7 +872,6 @@
                       <li>Mobile-first UX improvements for conversions</li>
                     </ul>
                   </div>
-                  
                   <div>
                     <h4 class="fc-section-title" style="margin-bottom:12px;">Key Results</h4>
                     <div class="fc-result-row">
@@ -978,7 +892,6 @@
                     </div>
                   </div>
                 </div>
-                
                 <div class="featured-case-right">
                   <h4 class="fc-section-title" style="margin-bottom:16px;">Growth Visualization</h4>
                   <div style="background:var(--bg);border-radius:12px;border:1px solid var(--border);padding:20px;min-height:220px;display:flex;flex-direction:column;justify-content:center;">
@@ -1008,7 +921,6 @@
                       <span style="font-size:.7rem;color:var(--muted);">Monthly Organic Traffic Growth</span>
                     </div>
                   </div>
-                  
                   <div class="timeline-wrapper">
                     <h4 class="fc-section-title" style="margin-bottom:14px;">Revenue Milestones</h4>
                     <div style="display:flex;flex-direction:column;gap:10px;">
@@ -1036,24 +948,17 @@
               </div>
             </div>
           </div>
-          
         </div>
-        
-        <!-- Carousel Navigation Arrows -->
         <div class="carousel-arrows" style="top:50%;">
           <button onclick="moveCase(-1)">‹</button>
           <button onclick="moveCase(1)">›</button>
         </div>
       </div>
-      
-      <!-- Carousel Dots -->
       <div class="carousel-nav" id="caseNav" style="margin-top:20px;">
         <button class="active"></button>
         <button></button>
         <button></button>
       </div>
-      
-      <!-- Case Study Labels -->
       <div style="display:flex;justify-content:center;gap:24px;margin-top:16px;flex-wrap:wrap;">
         <button onclick="goCase(0)" style="background:none;border:none;cursor:pointer;padding:8px 16px;border-radius:20px;font-size:.75rem;color:var(--muted);transition:all .3s;" class="case-label active-label" id="caseLabel0">
           <span style="display:inline-block;width:8px;height:8px;background:var(--green);border-radius:50%;margin-right:6px;"></span>Apollo Hospitals
@@ -1066,7 +971,6 @@
         </button>
       </div>
     </div>
-
     <div class="website-carousel anim" style="margin-top:40px">
       <div class="sec-header" style="margin-bottom:18px">
         <span class="sec-label">Portfolio</span>
@@ -1097,7 +1001,6 @@
     </div>
   </div>
 </section>
-
 <section>
   <div class="container">
     <div class="sec-header anim">
@@ -1129,14 +1032,12 @@
     </div>
   </div>
 </section>
-
 <section id="creatives">
   <div class="container">
     <div class="sec-header anim">
       <span class="sec-label">Creative Portfolio</span>
       <h2 class="sec-title">Visual <span class="serif">Creatives</span></h2>
     </div>
-
     <div class="creative-gallery anim">
       <div class="gallery-row" id="row1">
         <div class="gallery-item"><img src="https://raw.githubusercontent.com/sanalpillai/sanalpillai/main/graphics/display-ad-creative-1.png" alt="Display Ad 1"/><span class="label">Display Ad</span></div>
@@ -1161,7 +1062,6 @@
         <div class="gallery-item"><img src="https://raw.githubusercontent.com/sanalpillai/sanalpillai/main/graphics/event-banner-1.png" alt="Event"/><span class="label">Event</span></div>
       </div>
     </div>
-
     <div class="video-row anim">
       <div class="video-card">
         <div class="video-header youtube"><svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg><span>YouTube</span></div>
@@ -1174,7 +1074,6 @@
     </div>
   </div>
 </section>
-
 <section style="background:linear-gradient(180deg,transparent,rgba(250,204,21,.02),transparent)">
   <div class="container">
     <div class="sec-header anim">
@@ -1191,14 +1090,12 @@
     </div>
   </div>
 </section>
-
 <section id="tools">
   <div class="container">
     <div class="sec-header anim">
       <span class="sec-label">Tech Expertise</span>
       <h2 class="sec-title">Tools & <span class="serif">Platforms</span></h2>
     </div>
-
     <div class="tool-category anim">
       <h3>Analytics & Tracking</h3>
       <div class="tools-grid">
@@ -1212,7 +1109,6 @@
         <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2"><path d="M12 20V10M18 20V4M6 20v-4"/></svg>Heap</div>
       </div>
     </div>
-
     <div class="tool-category anim">
       <h3>SEO & Content</h3>
       <div class="tools-grid">
@@ -1224,29 +1120,8 @@
         <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--yellow)" stroke-width="2"><circle cx="12" cy="12" r="3"/></svg>Clearscope</div>
         <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/></svg>MarketMuse</div>
         <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>Moz Pro</div>
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>SpyFu</div>
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/></svg>SE Ranking</div>
       </div>
     </div>
-
-    <div class="tool-category anim">
-      <h3>Social Media Marketing</h3>
-      <div class="tools-grid">
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--pink)" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/></svg>Instagram</div>
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1"/></svg>TikTok</div>
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>YouTube</div>
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2"/></svg>LinkedIn</div>
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>Sprout Social</div>
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/></svg>Hootsuite</div>
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>Buffer</div>
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--pink)" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8"/></svg>Later</div>
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>Brandwatch</div>
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--yellow)" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/></svg>Influencer.co</div>
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>Social Blade</div>
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>Creator Studio</div>
-      </div>
-    </div>
-
     <div class="tool-category anim">
       <h3>Paid Media & Ads</h3>
       <div class="tools-grid">
@@ -1257,27 +1132,19 @@
         <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/></svg>Instagram Ads</div>
         <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2"/></svg>LinkedIn Ads</div>
         <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2"><path d="M23 3a10.9 10.9 0 01-3.14 1.53"/></svg>TikTok Ads</div>
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--pink)" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/></svg>Pinterest Ads</div>
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>Snapchat Ads</div>
       </div>
     </div>
-
     <div class="tool-category anim">
       <h3>AI & Automation</h3>
       <div class="tools-grid">
         <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>ChatGPT</div>
         <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2"><path d="M12 2a10 10 0 1010 10 4 4 0 01-5-5 4 4 0 01-5-5"/></svg>Claude AI</div>
         <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/></svg>Jasper AI</div>
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><path d="M17 3a2.828 2.828 0 114 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>Copy.ai</div>
         <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--pink)" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>Midjourney</div>
         <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0"/></svg>Zapier</div>
         <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>Make</div>
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="2"><path d="M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z"/></svg>Perplexity</div>
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/></svg>Gemini</div>
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--yellow)" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/></svg>DALL-E</div>
       </div>
     </div>
-
     <div class="tool-category anim">
       <h3>CRM & Email</h3>
       <div class="tools-grid">
@@ -1287,11 +1154,8 @@
         <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2"><path d="M22 6l-10 7L2 6"/></svg>Klaviyo</div>
         <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8"/></svg>Intercom</div>
         <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--pink)" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>ActiveCampaign</div>
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/></svg>Sendgrid</div>
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4"/></svg>Brevo</div>
       </div>
     </div>
-
     <div class="tool-category anim">
       <h3>Design & Creative</h3>
       <div class="tools-grid">
@@ -1300,14 +1164,11 @@
         <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--pink)" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>Photoshop</div>
         <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/></svg>Illustrator</div>
         <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>Premiere Pro</div>
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>After Effects</div>
         <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/></svg>Loom</div>
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--yellow)" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4"/></svg>CapCut</div>
       </div>
     </div>
   </div>
 </section>
-
 <section class="contact" id="contact">
   <div class="container anim">
     <span class="sec-label">Contact</span>
@@ -1320,9 +1181,7 @@
     </div>
   </div>
 </section>
-
 <footer><span>© <span id="year"></span> Marketing Portfolio</span></footer>
-
 <script>
 document.getElementById("year").textContent=new Date().getFullYear();
 const obs=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting)el.target.classList.add('visible')})},{threshold:.1});
