@@ -182,6 +182,18 @@
     .case-label{background:none;border:none}
     .case-label.active-label{background:var(--card);border:1px solid var(--border);color:var(--text)}
 
+    .case-carousel-slide .featured-case-card{height:100%}
+    .case-carousel-slide .featured-case-grid{min-height:480px}
+    .case-carousel-slide .featured-case-left{display:flex;flex-direction:column}
+    .case-carousel-slide .featured-case-left > div:last-child{margin-top:auto}
+    .case-carousel-slide .featured-case-right{display:flex;flex-direction:column;gap:20px}
+    .case-carousel-slide .featured-case-right > div:first-child{flex:1}
+    .case-carousel-slide .timeline-wrapper{margin-top:auto}
+
+    @media(max-width:1024px){
+      .case-carousel-slide .featured-case-grid{min-height:auto}
+    }
+
     .website-carousel{margin-top:40px;position:relative}
     .carousel-container{overflow:hidden;border-radius:16px;border:1px solid var(--border);background:var(--card)}
     .carousel-track{display:flex;transition:transform .5s ease}
@@ -671,11 +683,11 @@
         <p class="sec-sub">Driving measurable growth across Ecommerce, Healthcare, and SaaS verticals.</p>
       </div>
       
-      <div class="case-carousel-container" style="position:relative;">
-        <div class="case-carousel-track" id="caseTrack" style="display:flex;transition:transform .5s ease;">
+      <div class="case-carousel-container" style="position:relative;overflow:hidden;">
+        <div class="case-carousel-track" id="caseTrack" style="display:flex;transition:transform .5s ease;align-items:stretch;">
           
           <!-- Case 1: Bombay Shirts -->
-          <div class="case-carousel-slide" style="min-width:100%;padding:0 10px;box-sizing:border-box;">
+          <div class="case-carousel-slide" style="min-width:100%;padding:0 10px;box-sizing:border-box;display:flex;">
             <div class="featured-case-card">
               <div style="background:linear-gradient(135deg,rgba(168,85,247,.1),rgba(236,72,153,.1));padding:24px 28px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;">
                 <div>
@@ -740,7 +752,7 @@
                 
                 <div class="featured-case-right">
                   <h4 class="fc-section-title" style="margin-bottom:16px;">Growth Visualization</h4>
-                  <div style="background:var(--bg);border-radius:12px;border:1px solid var(--border);padding:20px;">
+                  <div style="background:var(--bg);border-radius:12px;border:1px solid var(--border);padding:20px;min-height:220px;display:flex;flex-direction:column;justify-content:center;">
                     <div style="display:flex;justify-content:space-between;align-items:flex-end;height:180px;padding:0 10px;border-bottom:1px solid var(--border);">
                       <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
                         <div style="width:40px;background:linear-gradient(to top,var(--purple),var(--pink));border-radius:4px 4px 0 0;height:15px;"></div>
@@ -797,7 +809,7 @@
           </div>
           
           <!-- Case 2: Apollo Hospitals -->
-          <div class="case-carousel-slide" style="min-width:100%;padding:0 10px;box-sizing:border-box;">
+          <div class="case-carousel-slide" style="min-width:100%;padding:0 10px;box-sizing:border-box;display:flex;">
             <div class="featured-case-card">
               <div style="background:linear-gradient(135deg,rgba(74,222,128,.1),rgba(56,189,248,.1));padding:24px 28px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;">
                 <div>
@@ -862,7 +874,7 @@
                 
                 <div class="featured-case-right">
                   <h4 class="fc-section-title" style="margin-bottom:16px;">Lead Generation Funnel</h4>
-                  <div style="background:var(--bg);border-radius:12px;border:1px solid var(--border);padding:20px;">
+                  <div style="background:var(--bg);border-radius:12px;border:1px solid var(--border);padding:20px;min-height:220px;display:flex;flex-direction:column;justify-content:center;">
                     <div style="display:flex;flex-direction:column;gap:12px;">
                       <div style="background:linear-gradient(90deg,var(--green),var(--cyan));border-radius:8px;padding:14px 18px;text-align:center;">
                         <span style="font-size:1.1rem;font-weight:600;color:var(--bg);">790K</span>
@@ -906,7 +918,7 @@
           </div>
           
           <!-- Case 3: Amerix Cancer Hospital -->
-          <div class="case-carousel-slide" style="min-width:100%;padding:0 10px;box-sizing:border-box;">
+          <div class="case-carousel-slide" style="min-width:100%;padding:0 10px;box-sizing:border-box;display:flex;">
             <div class="featured-case-card">
               <div style="background:linear-gradient(135deg,rgba(249,115,22,.1),rgba(239,68,68,.1));padding:24px 28px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;">
                 <div>
@@ -971,7 +983,7 @@
                 
                 <div class="featured-case-right">
                   <h4 class="fc-section-title" style="margin-bottom:16px;">Organic Traffic Growth</h4>
-                  <div style="background:var(--bg);border-radius:12px;border:1px solid var(--border);padding:20px;">
+                  <div style="background:var(--bg);border-radius:12px;border:1px solid var(--border);padding:20px;min-height:220px;display:flex;flex-direction:column;justify-content:center;">
                     <div style="display:flex;justify-content:space-between;align-items:flex-end;height:160px;padding:0 10px;border-bottom:1px solid var(--border);">
                       <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
                         <div style="width:50px;background:linear-gradient(to top,var(--orange),var(--red));border-radius:4px 4px 0 0;height:30px;"></div>
