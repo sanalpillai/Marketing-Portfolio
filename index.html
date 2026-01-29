@@ -193,6 +193,9 @@
     .gallery-item img{width:100%;height:100%;object-fit:cover}
     .gallery-item .label{position:absolute;bottom:8px;left:10px;padding:4px 10px;background:rgba(0,0,0,.8);border-radius:6px;font-size:.65rem;color:var(--muted)}
 
+    .writing-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .copy-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+
     .tools-section{background:linear-gradient(180deg,transparent,rgba(56,189,248,.02),transparent)}
     .tool-category{margin-bottom:24px}
     .tool-category h3{font-size:.85rem;font-weight:600;margin-bottom:12px;color:var(--text);display:flex;align-items:center;gap:8px}
@@ -230,8 +233,6 @@
       .skills-grid{grid-template-columns:repeat(2,1fr)}
       .perf-grid{grid-template-columns:repeat(3,1fr)}
       .case-grid,.testimonial-grid{grid-template-columns:1fr}
-      .copy-example > div:last-child{grid-template-columns:1fr !important}
-      .copy-example > div:last-child > div:nth-child(4){grid-template-columns:repeat(2,1fr) !important}
     }
     @media(max-width:768px){
       section{padding:40px 20px}
@@ -252,7 +253,7 @@
       .gallery-item{width:180px;height:110px}
       .video-row{grid-template-columns:1fr !important}
       .copy-example{padding:20px !important}
-      .copy-example > div:nth-child(2){grid-template-columns:1fr !important}
+      .copy-grid,.writing-grid{grid-template-columns:1fr}
     }
     @media(max-width:480px){
       .perf-grid{grid-template-columns:1fr 1fr}
@@ -308,7 +309,7 @@
     <div class="hero-content">
       <div class="status"><span class="status-dot"></span>Available for work</div>
       <h1>Turning intent into<br><span class="gradient">predictable revenue</span><br>and distinctive stories.</h1>
-      <p class="hero-desc">Senior Marketing and Growth professional across B2B SaaS, marketplaces, HealthTech, and consumer platforms, combining positioning, SEO-led acquisition, PLG, and content to build motions that compound.</p>
+      <p class="hero-desc">Senior Product Marketing and Growth professional across B2B SaaS, marketplaces, HealthTech, and consumer platforms — combining positioning, SEO‑led acquisition, PLG, and content to build motions that compound.</p>
       <p class="hero-meta">Treats channels and launches as products with ownership, metrics, and roadmaps.</p>
       <div class="hero-btns">
         <a href="#case-studies" class="btn btn-primary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg>View Case Studies</a>
@@ -580,7 +581,7 @@
         </div>
         <div style="background:var(--bg);border-radius:12px;padding:20px;border-left:3px solid var(--green)">
           <span style="font-size:.65rem;text-transform:uppercase;letter-spacing:.1em;color:var(--green);display:block;margin-bottom:10px">✓ After</span>
-          <p style="font-size:.9rem;color:#ddd;line-height:1.6"><strong style="color:var(--text)">"Ship projects 40% faster.</strong><br>Stop drowning in Slack threads and scattered spreadsheets. ProjectFlow gives your team one source of truth, so you can spend less time chasing updates and more time building."</p>
+          <p style="font-size:.9rem;color:#ddd;line-height:1.6"><strong style="color:var(--text)">"Ship projects 40% faster.</strong><br>Stop drowning in Slack threads and scattered spreadsheets. ProjectFlow gives your team one source of truth—so you can spend less time chasing updates and more time building."</p>
           <div style="margin-top:12px;padding:10px;background:var(--card);border-radius:8px;font-size:.7rem;color:var(--muted)"><strong style="color:var(--green)">Why it works:</strong> Leads with outcome, addresses pain, creates urgency, benefit-driven</div>
         </div>
       </div>
@@ -598,7 +599,7 @@
         </div>
         <span style="margin-left:auto;padding:6px 12px;background:rgba(74,222,128,.15);border-radius:20px;font-size:.7rem;color:var(--green)">+62% Open Rate</span>
       </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+      <div class="copy-grid">
         <div style="background:var(--bg);border-radius:12px;padding:20px;border-left:3px solid var(--dim)">
           <span style="font-size:.65rem;text-transform:uppercase;letter-spacing:.1em;color:var(--dim);display:block;margin-bottom:10px">❌ Before</span>
           <p style="font-size:.85rem;color:#888;line-height:1.6"><strong>Subject:</strong> Your fundraising update<br><br>"Dear User, Your campaign has received 3 new donations totaling $150. Log in to your dashboard to view details and share your campaign on social media."</p>
@@ -624,7 +625,7 @@
         </div>
         <span style="margin-left:auto;padding:6px 12px;background:rgba(249,115,22,.15);border-radius:20px;font-size:.7rem;color:var(--orange)">+38% Add-to-Cart</span>
       </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+      <div class="copy-grid">
         <div style="background:var(--bg);border-radius:12px;padding:20px;border-left:3px solid var(--dim)">
           <span style="font-size:.65rem;text-transform:uppercase;letter-spacing:.1em;color:var(--dim);display:block;margin-bottom:10px">❌ Before</span>
           <p style="font-size:.85rem;color:#888;line-height:1.6"><strong>Slim Fit Oxford Shirt - Navy</strong><br><br>"This oxford shirt is made from 100% cotton. Features include button-down collar, chest pocket, and adjustable cuffs. Available in sizes S-XXL. Machine washable."</p>
@@ -659,6 +660,89 @@
         <div style="font-size:1.4rem;margin-bottom:8px">🗣️</div>
         <h4 style="font-size:.8rem;font-weight:500;margin-bottom:4px">Sound Human</h4>
         <p style="font-size:.7rem;color:var(--muted)">Write like you talk, not a robot</p>
+      </div>
+    </div>
+
+    <!-- Writing Portfolio Samples -->
+    <div class="sec-header anim" style="margin-top:48px">
+      <span class="sec-label">Writing Portfolio</span>
+      <h2 class="sec-title">Long-Form <span class="serif">Samples</span></h2>
+      <p class="sec-sub">Brand storytelling and product messaging that connects.</p>
+    </div>
+
+    <!-- Sample 1: Bombay Shirt Company -->
+    <div class="writing-sample anim" style="background:var(--card);border:1px solid var(--border);border-radius:18px;overflow:hidden;margin-bottom:20px">
+      <div style="background:linear-gradient(135deg,rgba(74,222,128,.1),rgba(56,189,248,.1));padding:20px 24px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
+        <div style="display:flex;align-items:center;gap:14px">
+          <div style="width:48px;height:48px;background:linear-gradient(135deg,var(--green),var(--cyan));border-radius:12px;display:flex;align-items:center;justify-content:center">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#fff" stroke-width="2"><path d="M20.38 3.46L16 2a4 4 0 01-8 0L3.62 3.46a2 2 0 00-1.34 2.23l.58 3.47a1 1 0 00.99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 002-2V10h2.15a1 1 0 00.99-.84l.58-3.47a2 2 0 00-1.34-2.23z"/></svg>
+          </div>
+          <div>
+            <h3 style="font-size:1.05rem;font-weight:600;margin-bottom:2px">Bombay Shirt Company</h3>
+            <p style="font-size:.75rem;color:var(--muted)">Custom Shirt Experience | Brand Messaging</p>
+          </div>
+        </div>
+        <span style="padding:6px 14px;background:var(--card);border:1px solid var(--border);border-radius:20px;font-size:.7rem;color:var(--green)">E-commerce / DTC</span>
+      </div>
+      <div style="padding:24px">
+        <h4 style="font-size:1.1rem;font-weight:500;color:var(--green);margin-bottom:16px">The Shirt That Fits You, and Only You</h4>
+        <p style="font-size:.9rem;color:#ccc;line-height:1.8;margin-bottom:20px">At Bombay Shirt Company, every shirt begins with a simple idea: no two people are alike, so their clothes shouldn't be either. We craft each garment from scratch, tailored to your exact size, style, and personality. No guesswork, no compromises.</p>
+        
+        <h5 style="font-size:.85rem;font-weight:600;color:var(--text);margin-bottom:10px">Tailored by Technology, Refined by You</h5>
+        <p style="font-size:.85rem;color:#bbb;line-height:1.7;margin-bottom:18px">Using our proprietary FitSmart algorithm, we calculate your perfect fit in under a minute. Just answer a few simple questions, and we'll take care of the rest. From there, you have complete control. Choose your fabric, customize the collar, cuffs, buttons, placket, and pockets. Add a personal monogram if you like. It's your design, brought to life with precision and care.</p>
+        
+        <h5 style="font-size:.85rem;font-weight:600;color:var(--text);margin-bottom:10px">Made with Intention, Worn with Pride</h5>
+        <p style="font-size:.85rem;color:#bbb;line-height:1.7;margin-bottom:18px">We operate on a zero-inventory model, producing shirts only when they're ordered. This reduces waste and ensures every piece is made with purpose. Our fabrics are sourced responsibly, and every stitch is crafted in Bombay with care.</p>
+        
+        <div class="writing-grid" style="margin-top:20px">
+          <div style="background:var(--bg);border-radius:10px;padding:16px;border-left:3px solid var(--green)">
+            <h5 style="font-size:.8rem;font-weight:600;margin-bottom:6px">Luxury Without the Markup</h5>
+            <p style="font-size:.75rem;color:var(--muted);line-height:1.6">Custom clothing shouldn't be exclusive. Our made-to-measure shirts offer premium craftsmanship at honest prices.</p>
+          </div>
+          <div style="background:var(--bg);border-radius:10px;padding:16px;border-left:3px solid var(--cyan)">
+            <h5 style="font-size:.8rem;font-weight:600;margin-bottom:6px">Effortless Shopping, Flawless Fit</h5>
+            <p style="font-size:.75rem;color:var(--muted);line-height:1.6">Whether you're looking for weekday formals or weekend casuals, our curated collection has something for every moment.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sample 2: LootMogul -->
+    <div class="writing-sample anim" style="background:var(--card);border:1px solid var(--border);border-radius:18px;overflow:hidden">
+      <div style="background:linear-gradient(135deg,rgba(168,85,247,.1),rgba(236,72,153,.1));padding:20px 24px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
+        <div style="display:flex;align-items:center;gap:14px">
+          <div style="width:48px;height:48px;background:linear-gradient(135deg,var(--purple),var(--pink));border-radius:12px;display:flex;align-items:center;justify-content:center">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+          </div>
+          <div>
+            <h3 style="font-size:1.05rem;font-weight:600;margin-bottom:2px">LootMogul</h3>
+            <p style="font-size:.75rem;color:var(--muted)">Platform Overview | Product Messaging</p>
+          </div>
+        </div>
+        <span style="padding:6px 14px;background:var(--card);border:1px solid var(--border);border-radius:20px;font-size:.7rem;color:var(--purple)">Web3 / Sports Tech</span>
+      </div>
+      <div style="padding:24px">
+        <h4 style="font-size:1.1rem;font-weight:500;color:var(--purple);margin-bottom:16px">Where Sports Fandom Meets AI</h4>
+        <p style="font-size:.9rem;color:#ccc;line-height:1.8;margin-bottom:20px">LootMogul is redefining fan engagement by giving users the tools to build, play, and monetize their own experiences in a sports-first digital economy. Powered by AI and Web3, the platform allows athletes, fans, and creators to connect in ways never seen before.</p>
+        
+        <div class="writing-grid" style="margin-bottom:20px">
+          <div style="background:var(--bg);border-radius:10px;padding:16px">
+            <h5 style="font-size:.8rem;font-weight:600;color:var(--pink);margin-bottom:8px">From Fans to Creators</h5>
+            <p style="font-size:.75rem;color:var(--muted);line-height:1.6">Fans are no longer passive spectators. Anyone can become a game designer or merch creator using intuitive, AI-driven tools. No coding knowledge needed.</p>
+          </div>
+          <div style="background:var(--bg);border-radius:10px;padding:16px">
+            <h5 style="font-size:.8rem;font-weight:600;color:var(--cyan);margin-bottom:8px">AI at the Core</h5>
+            <p style="font-size:.75rem;color:var(--muted);line-height:1.6">Vertical AI models power personalized game logic, automated design suggestions, and predictive content generation based on real-time sports data.</p>
+          </div>
+        </div>
+        
+        <h5 style="font-size:.85rem;font-weight:600;color:var(--text);margin-bottom:10px">Web3 Infrastructure, Real-World Rewards</h5>
+        <p style="font-size:.85rem;color:#bbb;line-height:1.7;margin-bottom:18px">Built on secure Web3 rails, LootMogul offers a transparent economy that rewards creators with real-world benefits. Fans can earn rewards for participation, creators can monetize their games or merch, and athletes can build direct relationships with their communities.</p>
+        
+        <div style="background:var(--bg);border-radius:10px;padding:16px;border-left:3px solid var(--purple)">
+          <h5 style="font-size:.8rem;font-weight:600;margin-bottom:6px">A Scalable Platform for Global Fandom</h5>
+          <p style="font-size:.75rem;color:var(--muted);line-height:1.6">LootMogul supports a growing network of athletes, fans, brands, and leagues. From local sports clubs to global franchises, the platform offers scalable engagement tools that are modular, white-label friendly, and built for the next era of sports marketing.</p>
+        </div>
       </div>
     </div>
   </div>
