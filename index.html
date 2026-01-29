@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>SEO Portfolio</title>
+  <title>Sanal Pillai - SEO Marketing Manager</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -34,13 +34,13 @@
     .nav-links a:hover{color:var(--text);background:var(--card)}
     .nav-cta{padding:10px 20px;background:linear-gradient(135deg,var(--green),var(--cyan));color:var(--bg);border-radius:30px;font-size:.8rem;font-weight:500;transition:all .3s}
     .nav-cta:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(74,222,128,.3)}
-    @media(max-width:768px){.nav-links{display:none}nav{padding:12px 20px}}
+    @media(max-width:768px){.nav-links{display:none}nav{padding:12px 20px}.nav-cta{padding:8px 16px;font-size:.75rem}}
     .hero{min-height:100vh;display:flex;align-items:center;padding:100px 48px 60px;position:relative}
     .hero-container{max-width:1400px;margin:0 auto;width:100%;display:grid;grid-template-columns:1.4fr 1fr;gap:60px;align-items:center}
     .hero-content{position:relative;z-index:2}
     .status{display:inline-flex;align-items:center;gap:8px;padding:8px 16px;background:var(--card);border:1px solid var(--border);border-radius:30px;margin-bottom:20px;font-size:.75rem;color:var(--muted)}
     .status-dot{width:8px;height:8px;background:var(--green);border-radius:50%;animation:pulse 2s infinite;box-shadow:0 0 10px var(--green)}
-    .hero h1{font-size:clamp(2.2rem,4.5vw,3.6rem);font-weight:400;line-height:1.1;margin-bottom:20px;letter-spacing:-.02em}
+    .hero h1{font-size:clamp(2rem,4.5vw,3.6rem);font-weight:400;line-height:1.1;margin-bottom:20px;letter-spacing:-.02em}
     .hero h1 .gradient{background:linear-gradient(135deg,var(--green),var(--cyan),var(--purple));-webkit-background-clip:text;background-clip:text;color:transparent}
     .hero-desc{font-size:.95rem;color:var(--muted);max-width:520px;margin-bottom:14px;line-height:1.7}
     .hero-meta{font-size:.85rem;color:var(--dim);margin-bottom:20px;border-left:2px solid var(--green);padding-left:14px}
@@ -69,7 +69,7 @@
     .sec-header{margin-bottom:32px}
     .sec-label{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;background:var(--card);border:1px solid var(--border);border-radius:30px;font-size:.65rem;text-transform:uppercase;letter-spacing:.2em;color:var(--muted);margin-bottom:14px}
     .sec-label::before{content:'';width:6px;height:6px;background:linear-gradient(135deg,var(--green),var(--cyan));border-radius:50%}
-    .sec-title{font-size:clamp(1.7rem,3.5vw,2.4rem);font-weight:400;margin-bottom:10px}
+    .sec-title{font-size:clamp(1.5rem,3.5vw,2.4rem);font-weight:400;margin-bottom:10px}
     .sec-sub{color:var(--muted);font-size:.9rem;max-width:550px}
     .marquee-wrap{padding:18px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);overflow:hidden;background:linear-gradient(90deg,var(--bg),var(--card),var(--bg))}
     .marquee{display:flex;animation:marquee 25s linear infinite}
@@ -222,7 +222,6 @@
     .tool-category{margin-bottom:20px}
     .tool-category h3{font-size:.8rem;font-weight:600;margin-bottom:10px;color:var(--text);display:flex;align-items:center;gap:8px}
     .tool-category h3::before{content:'';width:3px;height:12px;background:linear-gradient(to bottom,var(--green),var(--cyan));border-radius:2px}
-    .copy-section{margin-top:40px}
     .copy-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
     .copy-card{background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:all .3s}
     .copy-card:hover{border-color:var(--border-h);transform:translateY(-3px)}
@@ -273,33 +272,65 @@
       .featured-case-left{border-right:none;border-bottom:1px solid var(--border)}
       .copy-grid{grid-template-columns:1fr}
       .copy-principles{grid-template-columns:repeat(2,1fr)}
+      .trusted-logos{gap:20px}
+      .trusted-logos span{font-size:.85rem}
     }
     @media(max-width:768px){
-      section{padding:45px 20px}
-      .hero{padding:80px 20px 45px}
+      section{padding:40px 20px}
+      .hero{padding:80px 20px 40px}
       .contact{padding:50px 20px}
-      .skills-grid,.perf-grid{grid-template-columns:1fr 1fr}
-      .photo-card{width:190px;height:250px}
+      .skills-grid{grid-template-columns:1fr 1fr}
+      .perf-grid{grid-template-columns:1fr 1fr}
+      .photo-card{width:180px;height:240px}
       .photo-stats{flex-direction:column;gap:5px}
-      .photo-stat{padding:7px 10px}
-      .photo-stat .value{font-size:.85rem}
+      .photo-stat{padding:6px 10px}
+      .photo-stat .value{font-size:.8rem}
+      .photo-stat .label{font-size:.55rem}
       .tools-grid{grid-template-columns:repeat(2,1fr)}
       .cert-grid{grid-template-columns:repeat(2,1fr)}
       .framework-grid{grid-template-columns:1fr}
       .gallery-item{width:180px;height:120px}
-      .trusted-logos span{font-size:.85rem}
-      .website-frame{height:320px}
+      .trusted-logos span{font-size:.8rem}
+      .trusted-logos{gap:15px}
+      .website-frame{height:280px}
       .perf-card .value{font-size:1.1rem}
+      .perf-card{padding:14px}
       .timeline-grid{flex-direction:column;gap:16px}
       .timeline-arrow{transform:rotate(90deg);flex:0 0 30px}
       .copy-principles{grid-template-columns:1fr 1fr}
+      .hero h1{font-size:1.8rem}
+      .hero-desc{font-size:.85rem}
+      .hero-meta{font-size:.75rem}
+      .sec-title{font-size:1.4rem}
+      .btn{padding:10px 20px;font-size:.8rem}
+      .featured-case-left,.featured-case-right{padding:20px}
+      .fc-stat-box{padding:10px 14px}
+      .fc-stat-value{font-size:1.2rem}
+      .testimonial-card{padding:16px}
+      .testimonial-text{font-size:.75rem}
     }
     @media(max-width:480px){
-      .perf-grid{grid-template-columns:repeat(2,1fr)}
-      .skills-grid{grid-template-columns:1fr 1fr}
+      .perf-grid{grid-template-columns:1fr 1fr}
+      .skills-grid{grid-template-columns:1fr}
       .cert-grid{grid-template-columns:1fr 1fr}
       .contact-info{flex-direction:column;gap:14px}
       .copy-principles{grid-template-columns:1fr}
+      .hero-btns{flex-direction:column;width:100%}
+      .btn{width:100%;justify-content:center}
+      .photo-card{width:160px;height:210px}
+      .rotating-badge{width:80px;height:80px;top:-20px;right:-20px}
+      .trusted-section{padding:30px 20px}
+      .trusted-logos{flex-direction:column;gap:12px}
+      .nav{padding:10px 16px}
+      .logo{font-size:.9rem}
+      .logo-icon{width:30px;height:30px;font-size:.8rem}
+      .skill-card{padding:14px}
+      .skill-card h4{font-size:.75rem}
+      .skill-card p{font-size:.65rem}
+      .case-body{padding:14px}
+      .case-title{font-size:.85rem}
+      .website-info{flex-direction:column;gap:10px;text-align:center}
+      .website-info a{width:100%}
     }
   </style>
 </head>
@@ -415,12 +446,11 @@
       <div class="perf-card green"><div class="value">400%</div><div class="label">Organic Traffic Growth</div></div>
       <div class="perf-card cyan"><div class="value">$0 to $240K</div><div class="label">SEO Revenue in 4 Months</div></div>
       <div class="perf-card orange"><div class="value">$1M+</div><div class="label">Ad Spend Managed</div></div>
-      <div class="perf-card purple"><div class="value">4 Figures</div><div class="label">Automated YouTube Income</div></div>
+      <div class="perf-card purple"><div class="value">1M+</div><div class="label">Monthly Traffic Driven</div></div>
     </div>
   </div>
 </section>
 
-<!-- Featured Case Study moved up -->
 <section id="case-studies">
   <div class="container">
     <div class="featured-case anim">
@@ -560,7 +590,6 @@
       </div>
     </div>
 
-    <!-- More Case Studies -->
     <div class="sec-header anim" style="margin-top:50px">
       <span class="sec-label">More Case Studies</span>
       <h2 class="sec-title">Proven <span class="serif">Results</span></h2>
@@ -629,7 +658,6 @@
   </div>
 </section>
 
-<!-- Copywriting Section -->
 <section id="copywriting" style="background:linear-gradient(180deg,transparent,rgba(168,85,247,.03),transparent)">
   <div class="container">
     <div class="sec-header anim">
@@ -749,24 +777,24 @@
     </div>
     <div class="testimonial-grid">
       <div class="testimonial-card anim d1">
-        <p class="testimonial-text">"Transformed our organic channel from an afterthought to our number one revenue driver. The strategic thinking combined with flawless execution is rare."</p>
+        <p class="testimonial-text">"Sanal helped us scale organic traffic from a few hundred visits to over 100K monthly. His SEO strategy completely transformed how customers discover our brand online. The ROI has been exceptional."</p>
         <div class="testimonial-author">
-          <div class="testimonial-avatar">SK</div>
-          <div class="testimonial-info"><h5>Sarah Kim</h5><p>VP Marketing, HealthTech Startup</p></div>
+          <div class="testimonial-avatar">AK</div>
+          <div class="testimonial-info"><h5>Akshay Khandelwal</h5><p>CEO, Bombay Shirt Company</p></div>
         </div>
       </div>
       <div class="testimonial-card anim d2">
-        <p class="testimonial-text">"Built our content system from scratch and scaled SEO revenue to $240K+ in under 4 months. Remarkable speed and quality."</p>
+        <p class="testimonial-text">"Working with Sanal was a game changer for our digital presence. His understanding of healthcare SEO and patient journey mapping helped us increase qualified leads by 35%. He truly understands the nuances of our industry."</p>
         <div class="testimonial-author">
-          <div class="testimonial-avatar">MR</div>
-          <div class="testimonial-info"><h5>Michael Roberts</h5><p>CEO, Crowdfunding Platform</p></div>
+          <div class="testimonial-avatar">RS</div>
+          <div class="testimonial-info"><h5>Dr. Rajesh Sharma</h5><p>CMO, Apollo Hospitals</p></div>
         </div>
       </div>
       <div class="testimonial-card anim d3">
-        <p class="testimonial-text">"Built our entire content engine from scratch. The frameworks and systems are still driving results 2 years later. A true content architect."</p>
+        <p class="testimonial-text">"Sanal built our entire SEO content engine from scratch. In just 4 months, he took us from zero organic revenue to $240K monthly. His execution speed and attention to detail are unmatched. A true growth leader."</p>
         <div class="testimonial-author">
-          <div class="testimonial-avatar">AP</div>
-          <div class="testimonial-info"><h5>Anita Patel</h5><p>Founder, B2B SaaS Platform</p></div>
+          <div class="testimonial-avatar">NJ</div>
+          <div class="testimonial-info"><h5>Nitin Jain</h5><p>AVP Marketing, ImpactGuru</p></div>
         </div>
       </div>
     </div>
@@ -778,6 +806,7 @@
     <div class="sec-header anim">
       <span class="sec-label">Creative Portfolio</span>
       <h2 class="sec-title">Visual <span class="serif">Creatives</span></h2>
+      <p class="sec-sub">Content and creatives I have personally created for campaigns and brand building.</p>
     </div>
     <div class="creative-gallery anim">
       <div class="gallery-row" id="row1">
