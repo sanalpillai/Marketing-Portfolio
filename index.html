@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Marketing Manager – Growth & Performance</title>
+  <title>SEO Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,23 +14,18 @@
     body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;overflow-x:hidden}
     .serif{font-family:'Playfair Display',serif;font-style:italic;font-weight:400}
     a{color:inherit;text-decoration:none}
-
     @keyframes float{0%,100%{transform:translateY(0) rotate(6deg)}50%{transform:translateY(-20px) rotate(6deg)}}
     @keyframes rotate{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
     @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
     @keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
     @keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-    @keyframes countUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
-    
     .anim{opacity:0;transform:translateY(30px);transition:all .7s cubic-bezier(.16,1,.3,1)}
     .anim.visible{opacity:1;transform:translateY(0)}
     .d1{transition-delay:.1s}.d2{transition-delay:.15s}.d3{transition-delay:.2s}.d4{transition-delay:.25s}
-
     .bg-grid{position:fixed;inset:0;background-image:linear-gradient(rgba(255,255,255,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.02) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;z-index:0}
     .orb{position:fixed;border-radius:50%;filter:blur(120px);pointer-events:none;z-index:0}
     .orb-1{width:600px;height:600px;background:radial-gradient(circle,rgba(74,222,128,.12),transparent 70%);top:-200px;left:-200px}
     .orb-2{width:500px;height:500px;background:radial-gradient(circle,rgba(56,189,248,.08),transparent 70%);bottom:20%;right:-200px}
-
     nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:14px 48px;display:flex;justify-content:space-between;align-items:center;background:linear-gradient(to bottom,rgba(10,10,10,.98),rgba(10,10,10,.8),transparent);backdrop-filter:blur(20px)}
     .logo{display:flex;align-items:center;gap:10px;font-weight:600;font-size:1rem}
     .logo-icon{width:34px;height:34px;background:linear-gradient(135deg,var(--green),var(--cyan));border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--bg);font-size:.9rem}
@@ -40,7 +35,6 @@
     .nav-cta{padding:10px 20px;background:linear-gradient(135deg,var(--green),var(--cyan));color:var(--bg);border-radius:30px;font-size:.8rem;font-weight:500;transition:all .3s}
     .nav-cta:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(74,222,128,.3)}
     @media(max-width:768px){.nav-links{display:none}nav{padding:12px 20px}}
-
     .hero{min-height:100vh;display:flex;align-items:center;padding:100px 48px 60px;position:relative}
     .hero-container{max-width:1400px;margin:0 auto;width:100%;display:grid;grid-template-columns:1.4fr 1fr;gap:60px;align-items:center}
     .hero-content{position:relative;z-index:2}
@@ -59,7 +53,6 @@
     .hero-tags{display:flex;flex-wrap:wrap;gap:8px}
     .tag{padding:6px 12px;background:var(--card);border:1px solid var(--border);border-radius:20px;font-size:.7rem;color:var(--muted);transition:all .3s}
     .tag:hover{border-color:var(--green);color:var(--green)}
-
     .hero-visual{position:relative;display:flex;justify-content:center;align-items:center}
     .photo-wrapper{position:relative}
     .photo-card{width:250px;height:320px;background:linear-gradient(135deg,#1a1a1a,#0d0d0d);border:1px solid var(--border);border-radius:20px;overflow:hidden;transform:rotate(6deg);animation:float 6s ease-in-out infinite;box-shadow:0 40px 80px rgba(0,0,0,.5)}
@@ -71,7 +64,6 @@
     .photo-stat{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:10px 12px;text-align:center;backdrop-filter:blur(20px)}
     .photo-stat .value{font-size:.95rem;font-weight:600;color:var(--green);display:block}
     .photo-stat .label{font-size:.6rem;color:var(--muted)}
-
     section{padding:60px 48px;position:relative;z-index:1}
     .container{max-width:1200px;margin:0 auto}
     .sec-header{margin-bottom:32px}
@@ -79,18 +71,15 @@
     .sec-label::before{content:'';width:6px;height:6px;background:linear-gradient(135deg,var(--green),var(--cyan));border-radius:50%}
     .sec-title{font-size:clamp(1.7rem,3.5vw,2.4rem);font-weight:400;margin-bottom:10px}
     .sec-sub{color:var(--muted);font-size:.9rem;max-width:550px}
-
     .marquee-wrap{padding:18px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);overflow:hidden;background:linear-gradient(90deg,var(--bg),var(--card),var(--bg))}
     .marquee{display:flex;animation:marquee 25s linear infinite}
     .marquee span{display:flex;align-items:center;gap:12px;padding:0 24px;white-space:nowrap;color:var(--muted);font-size:.8rem;font-weight:500}
     .marquee span::before{content:'◆';font-size:.45rem;color:var(--green)}
-
     .trusted-section{padding:40px 48px;border-bottom:1px solid var(--border)}
     .trusted-label{text-align:center;font-size:.65rem;text-transform:uppercase;letter-spacing:.2em;color:var(--dim);margin-bottom:20px}
     .trusted-logos{display:flex;justify-content:center;align-items:center;gap:40px;flex-wrap:wrap;opacity:.5}
     .trusted-logos span{font-size:1rem;font-weight:600;color:var(--muted)}
-
-    .skills-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+    .skills-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
     .skill-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px;text-align:center;transition:all .3s}
     .skill-card:hover{border-color:var(--green);transform:translateY(-3px)}
     .skill-card svg{width:26px;height:26px;margin-bottom:8px;opacity:.7}
@@ -101,8 +90,7 @@
     .skill-card.pink svg{stroke:var(--pink)}
     .skill-card h4{font-size:.8rem;font-weight:500;margin-bottom:3px}
     .skill-card p{font-size:.7rem;color:var(--muted)}
-
-    .perf-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+    .perf-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
     .perf-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px;text-align:center;transition:all .3s}
     .perf-card:hover{border-color:var(--border-h);transform:translateY(-2px)}
     .perf-card .value{font-size:1.4rem;font-weight:600;margin-bottom:3px}
@@ -113,19 +101,6 @@
     .perf-card.pink .value{color:var(--pink)}
     .perf-card.yellow .value{color:var(--yellow)}
     .perf-card .label{font-size:.65rem;color:var(--muted)}
-
-    .awards-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-    .award-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px;text-align:center;transition:all .3s;position:relative;overflow:hidden}
-    .award-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--cyan))}
-    .award-card:hover{border-color:var(--border-h);transform:translateY(-3px)}
-    .award-card svg{width:32px;height:32px;margin-bottom:10px;stroke:var(--yellow)}
-    .award-card h4{font-size:.8rem;font-weight:500;margin-bottom:4px}
-    .award-card p{font-size:.7rem;color:var(--muted)}
-    .award-card .year{font-size:.6rem;color:var(--dim);margin-top:6px}
-
-    .featured-row{display:flex;justify-content:center;align-items:center;gap:32px;flex-wrap:wrap;padding:24px 0;opacity:.6}
-    .featured-row span{font-size:.85rem;font-weight:500;color:var(--muted)}
-
     .case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
     .case-card{background:var(--card);border:1px solid var(--border);border-radius:18px;overflow:hidden;transition:all .4s}
     .case-card:hover{border-color:var(--border-h);transform:translateY(-5px)}
@@ -154,8 +129,6 @@
     .case-card.cyan .metric span{color:var(--cyan)}
     .case-card.orange .metric span{color:var(--orange)}
     .case-card.purple .metric span{color:var(--purple)}
-
-    /* Featured Case Study */
     .featured-case-card{background:var(--card);border:1px solid var(--border);border-radius:20px;overflow:hidden}
     .featured-case-grid{display:grid;grid-template-columns:1fr 1.5fr}
     .featured-case-left{padding:28px;border-right:1px solid var(--border)}
@@ -178,22 +151,6 @@
     .timeline-item{text-align:center;flex:1}
     .timeline-icon{width:40px;height:40px;margin:0 auto 8px;border-radius:50%;display:flex;align-items:center;justify-content:center}
     .timeline-arrow{flex:0 0 40px;display:flex;align-items:center;justify-content:center;color:var(--dim)}
-
-    .case-label{background:none;border:none}
-    .case-label.active-label{background:var(--card);border:1px solid var(--border);color:var(--text)}
-
-    .case-carousel-slide .featured-case-card{height:100%}
-    .case-carousel-slide .featured-case-grid{min-height:480px}
-    .case-carousel-slide .featured-case-left{display:flex;flex-direction:column}
-    .case-carousel-slide .featured-case-left > div:last-child{margin-top:auto}
-    .case-carousel-slide .featured-case-right{display:flex;flex-direction:column;gap:20px}
-    .case-carousel-slide .featured-case-right > div:first-child{flex:1}
-    .case-carousel-slide .timeline-wrapper{margin-top:auto}
-
-    @media(max-width:1024px){
-      .case-carousel-slide .featured-case-grid{min-height:auto}
-    }
-
     .website-carousel{margin-top:40px;position:relative}
     .carousel-container{overflow:hidden;border-radius:16px;border:1px solid var(--border);background:var(--card)}
     .carousel-track{display:flex;transition:transform .5s ease}
@@ -219,7 +176,6 @@
     .carousel-arrows{position:absolute;top:50%;left:0;right:0;display:flex;justify-content:space-between;padding:0 10px;transform:translateY(-50%);pointer-events:none;z-index:10}
     .carousel-arrows button{width:36px;height:36px;border-radius:50%;border:1px solid var(--border);background:var(--card);color:var(--text);cursor:pointer;pointer-events:auto;transition:all .3s;font-size:1.1rem}
     .carousel-arrows button:hover{background:var(--green);color:var(--bg)}
-
     .testimonial-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
     .testimonial-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px;position:relative}
     .testimonial-card::before{content:'"';position:absolute;top:12px;right:16px;font-size:2.5rem;color:var(--green);opacity:.2;font-family:serif}
@@ -228,7 +184,6 @@
     .testimonial-avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--green),var(--cyan));display:flex;align-items:center;justify-content:center;font-weight:600;font-size:.75rem;color:var(--bg)}
     .testimonial-info h5{font-size:.75rem;font-weight:500}
     .testimonial-info p{font-size:.65rem;color:var(--muted)}
-
     .framework-card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:28px;margin-top:20px}
     .framework-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:20px}
     .framework-step{text-align:center;position:relative}
@@ -237,21 +192,11 @@
     .framework-num{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--green),var(--cyan));display:flex;align-items:center;justify-content:center;margin:0 auto 10px;font-weight:600;font-size:.85rem;color:var(--bg)}
     .framework-step h4{font-size:.8rem;font-weight:500;margin-bottom:5px}
     .framework-step p{font-size:.7rem;color:var(--muted)}
-
-    .speaking-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .speaking-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px;transition:all .3s}
-    .speaking-card:hover{border-color:var(--border-h);transform:translateY(-3px)}
-    .speaking-card h4{font-size:.85rem;font-weight:500;margin-bottom:6px}
-    .speaking-card p{font-size:.7rem;color:var(--muted);margin-bottom:8px}
-    .speaking-meta{display:flex;align-items:center;gap:8px;font-size:.65rem;color:var(--dim)}
-    .speaking-meta svg{width:12px;height:12px;stroke:var(--green)}
-
     .cert-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
     .cert-badge{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px;text-align:center;transition:all .3s}
     .cert-badge:hover{border-color:var(--green);transform:translateY(-2px)}
     .cert-badge svg{width:24px;height:24px;margin-bottom:6px;opacity:.7}
     .cert-badge p{font-size:.65rem;color:var(--muted)}
-
     .creative-gallery{overflow:hidden;margin-top:20px}
     .gallery-row{display:flex;gap:12px;animation:scroll 30s linear infinite;width:max-content}
     .gallery-row:hover{animation-play-state:paused}
@@ -260,7 +205,6 @@
     .gallery-item img{width:100%;height:100%;object-fit:contain;background:var(--card2)}
     .gallery-item .label{position:absolute;bottom:5px;left:5px;padding:3px 7px;background:rgba(0,0,0,.7);border-radius:4px;font-size:.6rem;color:var(--muted)}
     .gallery-row.reverse{animation-direction:reverse}
-
     .video-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px}
     .video-card{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:all .3s}
     .video-card:hover{border-color:var(--border-h)}
@@ -271,7 +215,6 @@
     .video-header span{font-size:.75rem;font-weight:500}
     .video-frame{position:relative;padding-bottom:56.25%;height:0}
     .video-frame iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none}
-
     .tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:8px}
     .tool-chip{display:flex;align-items:center;gap:5px;padding:7px 10px;background:var(--card);border:1px solid var(--border);border-radius:8px;font-size:.7rem;color:var(--muted);transition:all .3s}
     .tool-chip:hover{border-color:var(--green);color:var(--green);transform:translateY(-2px)}
@@ -279,7 +222,28 @@
     .tool-category{margin-bottom:20px}
     .tool-category h3{font-size:.8rem;font-weight:600;margin-bottom:10px;color:var(--text);display:flex;align-items:center;gap:8px}
     .tool-category h3::before{content:'';width:3px;height:12px;background:linear-gradient(to bottom,var(--green),var(--cyan));border-radius:2px}
-
+    .copy-section{margin-top:40px}
+    .copy-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+    .copy-card{background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:all .3s}
+    .copy-card:hover{border-color:var(--border-h);transform:translateY(-3px)}
+    .copy-card-header{padding:16px 20px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
+    .copy-card-header h4{font-size:.85rem;font-weight:600}
+    .copy-card-header p{font-size:.7rem;color:var(--muted)}
+    .copy-metric{padding:5px 10px;background:linear-gradient(135deg,var(--green),var(--cyan));border-radius:20px;font-size:.7rem;font-weight:600;color:var(--bg)}
+    .copy-body{padding:20px}
+    .copy-before,.copy-after{padding:16px;border-radius:10px;margin-bottom:12px}
+    .copy-before{background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.2)}
+    .copy-after{background:rgba(74,222,128,.1);border:1px solid rgba(74,222,128,.2)}
+    .copy-label{font-size:.65rem;text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px;display:flex;align-items:center;gap:6px}
+    .copy-before .copy-label{color:var(--red)}
+    .copy-after .copy-label{color:var(--green)}
+    .copy-text{font-size:.8rem;color:#ccc;line-height:1.6}
+    .copy-issues{font-size:.7rem;color:var(--muted);margin-top:8px;font-style:italic}
+    .copy-principles{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:24px}
+    .copy-principle{text-align:center;padding:16px;background:var(--card);border:1px solid var(--border);border-radius:10px}
+    .copy-principle-icon{font-size:1.5rem;margin-bottom:8px}
+    .copy-principle h5{font-size:.75rem;font-weight:600;margin-bottom:4px}
+    .copy-principle p{font-size:.65rem;color:var(--muted)}
     .contact{text-align:center;padding:70px 48px}
     .contact::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:400px;height:400px;background:radial-gradient(circle,rgba(74,222,128,.08),transparent 70%);pointer-events:none}
     .contact .sec-label{margin:0 auto 14px}
@@ -291,25 +255,24 @@
     .contact-item span{display:block;font-size:.6rem;text-transform:uppercase;letter-spacing:.15em;color:var(--dim);margin-bottom:3px}
     .contact-item a{color:var(--text);font-size:.8rem}
     .contact-item a:hover{color:var(--green)}
-
     footer{padding:20px 48px;border-top:1px solid var(--border);text-align:center}
     footer span{font-size:.7rem;color:var(--dim)}
-
     @media(max-width:1024px){
       .hero-container{grid-template-columns:1fr;text-align:center}
       .hero-content{display:flex;flex-direction:column;align-items:center}
       .hero-visual{margin-top:40px}
       .hero-tags{justify-content:center}
-      .skills-grid{grid-template-columns:repeat(3,1fr)}
-      .perf-grid{grid-template-columns:repeat(3,1fr)}
-      .case-grid,.testimonial-grid,.speaking-grid{grid-template-columns:1fr}
+      .skills-grid{grid-template-columns:repeat(2,1fr)}
+      .perf-grid{grid-template-columns:repeat(2,1fr)}
+      .case-grid,.testimonial-grid{grid-template-columns:1fr}
       .video-row{grid-template-columns:1fr}
       .framework-grid{grid-template-columns:repeat(2,1fr)}
       .framework-step::after{display:none}
       .cert-grid{grid-template-columns:repeat(3,1fr)}
-      .awards-grid{grid-template-columns:repeat(2,1fr)}
       .featured-case-grid{grid-template-columns:1fr}
       .featured-case-left{border-right:none;border-bottom:1px solid var(--border)}
+      .copy-grid{grid-template-columns:1fr}
+      .copy-principles{grid-template-columns:repeat(2,1fr)}
     }
     @media(max-width:768px){
       section{padding:45px 20px}
@@ -327,24 +290,23 @@
       .trusted-logos span{font-size:.85rem}
       .website-frame{height:320px}
       .perf-card .value{font-size:1.1rem}
-      .awards-grid{grid-template-columns:1fr}
       .timeline-grid{flex-direction:column;gap:16px}
       .timeline-arrow{transform:rotate(90deg);flex:0 0 30px}
+      .copy-principles{grid-template-columns:1fr 1fr}
     }
     @media(max-width:480px){
       .perf-grid{grid-template-columns:repeat(2,1fr)}
       .skills-grid{grid-template-columns:1fr 1fr}
       .cert-grid{grid-template-columns:1fr 1fr}
       .contact-info{flex-direction:column;gap:14px}
+      .copy-principles{grid-template-columns:1fr}
     }
   </style>
 </head>
 <body>
-
 <div class="bg-grid"></div>
 <div class="orb orb-1"></div>
 <div class="orb orb-2"></div>
-
 <svg width="0" height="0">
   <defs>
     <linearGradient id="badge-grad" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -358,13 +320,12 @@
     </linearGradient>
   </defs>
 </svg>
-
 <nav>
-  <div class="logo"><div class="logo-icon">M</div>Marketing Portfolio</div>
+  <div class="logo"><div class="logo-icon">S</div>SEO Portfolio</div>
   <div class="nav-links">
     <a href="#overview">Overview</a>
     <a href="#case-studies">Cases</a>
-    <a href="#creatives">Creatives</a>
+    <a href="#copywriting">Copywriting</a>
     <a href="#tools">Tools</a>
     <a href="#contact">Contact</a>
   </div>
@@ -375,20 +336,20 @@
   <div class="hero-container">
     <div class="hero-content">
       <div class="status"><span class="status-dot"></span>available for opportunities</div>
-      <h1>Driving <span class="gradient">measurable growth</span> through full-funnel marketing.</h1>
-      <p class="hero-desc">Senior Marketing and Growth leader specializing in SEO, SEM, Social Media, and CRO across Healthcare, Ecommerce, and Fintech. Full-stack marketer from strategy to execution.</p>
-      <p class="hero-meta">50+ team members led · $1M+ monthly ad spend · 400%+ organic growth · 10M+ social reach</p>
+      <h1>Driving <span class="gradient">measurable growth</span> through full funnel marketing.</h1>
+      <p class="hero-desc">SEO Marketing Manager with 7+ years of experience in content strategy, technical SEO, paid marketing, customer journey mapping, conversion optimization, and design experience across enterprise platforms.</p>
+      <p class="hero-meta">40+ enterprise clients · $1M+ ad spend managed · $240K monthly SEO revenue · 400% organic growth</p>
       <div class="hero-btns">
-        <a href="#case-studies" class="btn btn-primary">View Case Studies</a>
-        <a href="#contact" class="btn btn-outline">Contact Me</a>
+        <a href="#case-studies" class="btn btn-primary">See Growth Results</a>
+        <a href="#contact" class="btn btn-outline">Start a Project</a>
       </div>
       <div class="hero-tags">
-        <span class="tag">SEO / AEO / GEO</span>
-        <span class="tag">SEM & Paid Media</span>
-        <span class="tag">Social Media Marketing</span>
-        <span class="tag">CRO & UX/UI</span>
+        <span class="tag">SEO Strategy</span>
+        <span class="tag">Technical SEO</span>
+        <span class="tag">Paid Media</span>
         <span class="tag">Content Strategy</span>
-        <span class="tag">Marketing Automation</span>
+        <span class="tag">CRO & UX</span>
+        <span class="tag">Analytics</span>
       </div>
     </div>
     <div class="hero-visual">
@@ -399,12 +360,12 @@
         <div class="rotating-badge">
           <svg viewBox="0 0 100 100">
             <defs><path id="circle" d="M 50,50 m -37,0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"/></defs>
-            <text><textPath href="#circle">• GROWTH EXPERT • RESULTS DRIVEN • </textPath></text>
+            <text><textPath href="#circle">• SEO EXPERT • RESULTS DRIVEN • </textPath></text>
           </svg>
         </div>
         <div class="photo-stats">
-          <div class="photo-stat"><span class="value">400%+</span><span class="label">Traffic</span></div>
-          <div class="photo-stat"><span class="value">10M+</span><span class="label">Social Reach</span></div>
+          <div class="photo-stat"><span class="value">400%</span><span class="label">Traffic Growth</span></div>
+          <div class="photo-stat"><span class="value">$240K</span><span class="label">Monthly Rev</span></div>
           <div class="photo-stat"><span class="value">40+</span><span class="label">Clients</span></div>
         </div>
       </div>
@@ -413,15 +374,15 @@
 </section>
 
 <div class="trusted-section">
-  <div class="trusted-label">Trusted by teams at</div>
+  <div class="trusted-label">Experience at</div>
   <div class="trusted-logos">
-    <span>Google</span><span>Meta</span><span>Shopify</span><span>HubSpot</span><span>Stripe</span><span>Notion</span>
+    <span>Amazon</span><span>Google</span><span>ImpactGuru</span><span>Avanzar Health</span>
   </div>
 </div>
 
 <div class="marquee-wrap">
   <div class="marquee">
-    <span>SEO Strategy</span><span>Google Ads</span><span>Meta Ads</span><span>TikTok Marketing</span><span>LinkedIn Ads</span><span>CRO</span><span>Content Strategy</span><span>Influencer Marketing</span><span>Email Marketing</span><span>Analytics</span><span>SEO Strategy</span><span>Google Ads</span><span>Meta Ads</span><span>TikTok Marketing</span><span>LinkedIn Ads</span><span>CRO</span><span>Content Strategy</span><span>Influencer Marketing</span><span>Email Marketing</span><span>Analytics</span>
+    <span>SEO Strategy</span><span>Technical SEO</span><span>Google Ads</span><span>Meta Ads</span><span>Content Strategy</span><span>CRO</span><span>UX Design</span><span>Analytics</span><span>Customer Journey</span><span>Conversion Optimization</span><span>SEO Strategy</span><span>Technical SEO</span><span>Google Ads</span><span>Meta Ads</span><span>Content Strategy</span><span>CRO</span><span>UX Design</span><span>Analytics</span>
   </div>
 </div>
 
@@ -432,11 +393,14 @@
       <h2 class="sec-title">What I <span class="serif">Deliver</span></h2>
     </div>
     <div class="skills-grid">
-      <div class="skill-card green anim d1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg><h4>SEO / AEO / GEO</h4><p>Enterprise organic growth</p></div>
-      <div class="skill-card cyan anim d2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg><h4>Paid Media</h4><p>Google, Meta, LinkedIn</p></div>
-      <div class="skill-card pink anim d3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg><h4>Social Media</h4><p>Strategy & Community</p></div>
-      <div class="skill-card orange anim d4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg><h4>CRO & UX</h4><p>Conversion optimization</p></div>
-      <div class="skill-card purple anim d1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 20V10M12 20V4M6 20v-6"/></svg><h4>Analytics</h4><p>Data-driven decisions</p></div>
+      <div class="skill-card green anim d1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg><h4>SEO & Technical SEO</h4><p>Content strategy, crawl optimization, rankings</p></div>
+      <div class="skill-card cyan anim d2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg><h4>Paid Media</h4><p>Google, Meta, LinkedIn campaigns</p></div>
+      <div class="skill-card pink anim d3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg><h4>Social Media</h4><p>Strategy and community building</p></div>
+      <div class="skill-card orange anim d4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg><h4>CRO & UX</h4><p>Conversion optimization and design</p></div>
+      <div class="skill-card purple anim d1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 20V10M12 20V4M6 20v-6"/></svg><h4>Analytics</h4><p>Data driven decisions and optimization</p></div>
+      <div class="skill-card green anim d2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg><h4>Customer Journey</h4><p>Mapping and funnel optimization</p></div>
+      <div class="skill-card cyan anim d3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg><h4>Content Strategy</h4><p>End to end content systems</p></div>
+      <div class="skill-card pink anim d4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg><h4>CMS Management</h4><p>WordPress, Drupal, Shopify</p></div>
     </div>
   </div>
 </section>
@@ -448,101 +412,22 @@
       <h2 class="sec-title">Results at <span class="serif">Scale</span></h2>
     </div>
     <div class="perf-grid anim">
-      <div class="perf-card green"><div class="value">400%+</div><div class="label">Organic Traffic Growth</div></div>
-      <div class="perf-card cyan"><div class="value">$240K+</div><div class="label">Monthly SEO Revenue</div></div>
-      <div class="perf-card pink"><div class="value">10M+</div><div class="label">Social Media Reach</div></div>
-      <div class="perf-card orange"><div class="value">$1M+</div><div class="label">Monthly Ad Spend</div></div>
-      <div class="perf-card purple"><div class="value">4–5x</div><div class="label">Consistent ROAS</div></div>
-    </div>
-    <div class="perf-grid anim" style="margin-top:12px">
-      <div class="perf-card green"><div class="value">Top 3</div><div class="label">Keyword Rankings</div></div>
-      <div class="perf-card cyan"><div class="value">850K+</div><div class="label">Social Followers Grown</div></div>
-      <div class="perf-card pink"><div class="value">30-60%</div><div class="label">Conversion Rate Lift</div></div>
-      <div class="perf-card orange"><div class="value">45%</div><div class="label">CAC Reduction</div></div>
-      <div class="perf-card yellow"><div class="value">50+</div><div class="label">Team Members Led</div></div>
+      <div class="perf-card green"><div class="value">400%</div><div class="label">Organic Traffic Growth</div></div>
+      <div class="perf-card cyan"><div class="value">$0 to $240K</div><div class="label">SEO Revenue in 4 Months</div></div>
+      <div class="perf-card orange"><div class="value">$1M+</div><div class="label">Ad Spend Managed</div></div>
+      <div class="perf-card purple"><div class="value">4 Figures</div><div class="label">Automated YouTube Income</div></div>
     </div>
   </div>
 </section>
 
-<section style="background:linear-gradient(180deg,transparent,rgba(56,189,248,.02),transparent)">
-  <div class="container">
-    <div class="sec-header anim">
-      <span class="sec-label">Methodology</span>
-      <h2 class="sec-title">The Growth <span class="serif">Framework</span></h2>
-      <p class="sec-sub">A proven 4-phase approach to predictable, scalable growth.</p>
-    </div>
-    <div class="framework-card anim">
-      <div class="framework-grid">
-        <div class="framework-step">
-          <div class="framework-num">1</div>
-          <h4>Discover</h4>
-          <p>ICP research, competitive audit, channel analysis</p>
-        </div>
-        <div class="framework-step">
-          <div class="framework-num">2</div>
-          <h4>Strategize</h4>
-          <p>GTM strategy, KPIs, channel mix, budget allocation</p>
-        </div>
-        <div class="framework-step">
-          <div class="framework-num">3</div>
-          <h4>Execute</h4>
-          <p>Campaign launch, content creation, automation setup</p>
-        </div>
-        <div class="framework-step">
-          <div class="framework-num">4</div>
-          <h4>Scale</h4>
-          <p>Analyze, optimize, expand winning channels</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
+<!-- Featured Case Study moved up -->
 <section id="case-studies">
   <div class="container">
-    <div class="sec-header anim">
-      <span class="sec-label">Case Studies</span>
-      <h2 class="sec-title">Proven <span class="serif">Results</span></h2>
-    </div>
-    <div class="case-grid">
-      <article class="case-card green anim d1">
-        <div class="case-header"><span class="case-badge">Healthcare</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
-        <div class="case-body">
-          <div class="case-title">Healthcare Growth Engine</div>
-          <div class="case-meta">AMI Hospital · SEO + Social + Paid</div>
-          <div class="case-section-title">Actions</div>
-          <ul><li>SEO-driven service architecture</li><li>Social media community building</li><li>Multi-channel paid campaigns</li></ul>
-          <div class="metrics"><span class="metric"><span>15K→120K+</span> visits</span><span class="metric"><span>1.8%→5.6%</span> CVR</span><span class="metric"><span>50K+</span> followers</span></div>
-        </div>
-      </article>
-      <article class="case-card cyan anim d2">
-        <div class="case-header"><span class="case-badge">Ecommerce</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18"/></svg></div>
-        <div class="case-body">
-          <div class="case-title">DTC Fashion Scale-Up</div>
-          <div class="case-meta">Snitch · SEO + Meta Ads + Influencer</div>
-          <div class="case-section-title">Actions</div>
-          <ul><li>Category-level SEO strategy</li><li>Instagram & TikTok campaigns</li><li>Influencer partnership program</li></ul>
-          <div class="metrics"><span class="metric"><span>80K→420K+</span> visits</span><span class="metric"><span>2.8x→5.1x</span> ROAS</span><span class="metric"><span>200K+</span> followers</span></div>
-        </div>
-      </article>
-      <article class="case-card orange anim d3">
-        <div class="case-header"><span class="case-badge">Fintech</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 12h20"/></svg></div>
-        <div class="case-body">
-          <div class="case-title">B2B Fintech Growth</div>
-          <div class="case-meta">Xflow · SEO + LinkedIn + Content</div>
-          <div class="case-section-title">Actions</div>
-          <ul><li>Intent-driven SEO strategy</li><li>LinkedIn thought leadership</li><li>Webinar & content funnel</li></ul>
-          <div class="metrics"><span class="metric"><span>5K→95K+</span> visits</span><span class="metric"><span>-46%</span> CPL</span><span class="metric"><span>15K+</span> LinkedIn</span></div>
-        </div>
-      </article>
-    </div>
-
-    <!-- Featured Case Study: ImpactGuru -->
-    <div class="featured-case anim" style="margin-top:50px">
+    <div class="featured-case anim">
       <div class="sec-header" style="margin-bottom:24px">
         <span class="sec-label">Featured Case Study</span>
-        <h2 class="sec-title">ImpactGuru: <span class="serif">SEO Growth Engine</span></h2>
-        <p class="sec-sub">Driving 3-5x organic traffic growth for India's leading medical crowdfunding platform.</p>
+        <h2 class="sec-title">ImpactGuru: <span class="serif">SEO Content Engine</span></h2>
+        <p class="sec-sub">Building a scalable content system that drove $240K+ monthly SEO revenue in under 4 months.</p>
       </div>
       
       <div class="featured-case-card">
@@ -550,20 +435,20 @@
           <div>
             <span style="display:inline-block;padding:4px 12px;background:rgba(74,222,128,.15);border:1px solid rgba(74,222,128,.3);border-radius:20px;font-size:.65rem;color:var(--green);margin-bottom:8px;">Crowdfunding / HealthTech</span>
             <h3 style="font-size:1.4rem;font-weight:600;margin-bottom:4px;">ImpactGuru.com</h3>
-            <p style="font-size:.85rem;color:var(--muted);">SEO Strategy · Technical Optimization · Content Architecture</p>
+            <p style="font-size:.85rem;color:var(--muted);">Content Strategy · CMS Architecture · Technical SEO</p>
           </div>
           <div style="display:flex;gap:12px;flex-wrap:wrap;">
             <div class="fc-stat-box">
-              <span class="fc-stat-value" style="color:var(--green);">3-5x</span>
-              <span class="fc-stat-label">Traffic Growth</span>
+              <span class="fc-stat-value" style="color:var(--green);">$240K+</span>
+              <span class="fc-stat-label">Monthly Revenue</span>
             </div>
             <div class="fc-stat-box">
-              <span class="fc-stat-value" style="color:var(--cyan);">233K+</span>
-              <span class="fc-stat-label">Clicks (6mo)</span>
+              <span class="fc-stat-value" style="color:var(--cyan);">24%</span>
+              <span class="fc-stat-label">Bounce Reduction</span>
             </div>
             <div class="fc-stat-box">
-              <span class="fc-stat-value" style="color:var(--purple);">6.31M</span>
-              <span class="fc-stat-label">Impressions</span>
+              <span class="fc-stat-value" style="color:var(--purple);">4 mo</span>
+              <span class="fc-stat-label">Time to Scale</span>
             </div>
           </div>
         </div>
@@ -572,37 +457,37 @@
           <div class="featured-case-left">
             <div style="margin-bottom:24px;">
               <h4 class="fc-section-title">The Challenge</h4>
-              <p style="font-size:.85rem;color:#bbb;line-height:1.7;">ImpactGuru needed to scale organic visibility in a competitive crowdfunding space while maintaining high-quality traffic that converts to donations.</p>
+              <p style="font-size:.85rem;color:#bbb;line-height:1.7;">ImpactGuru needed to build a scalable SEO content channel from scratch under compliance constraints, with speed and scale as critical requirements.</p>
             </div>
             
             <div style="margin-bottom:24px;">
               <h4 class="fc-section-title">Strategic Approach</h4>
               <ul style="padding-left:16px;font-size:.8rem;color:#bbb;line-height:1.8;">
-                <li>Technical SEO audit & site architecture optimization</li>
-                <li>Campaign page SEO templates for scalability</li>
-                <li>High-intent keyword targeting for medical fundraising</li>
-                <li>Internal linking strategy for campaign discovery</li>
-                <li>Core Web Vitals & page speed optimization</li>
+                <li>Designed content system and CMS architecture</li>
+                <li>Built and trained content team</li>
+                <li>Implemented structured data optimization</li>
+                <li>Optimized content architecture and internal linking</li>
+                <li>Removed publishing bottlenecks with engineering</li>
               </ul>
             </div>
             
             <div>
               <h4 class="fc-section-title" style="margin-bottom:12px;">Key Results</h4>
               <div class="fc-result-row">
-                <span style="font-size:.75rem;color:var(--muted);">Daily Clicks</span>
-                <span style="font-size:.75rem;font-weight:600;color:var(--green);">800 → 3,800+</span>
+                <span style="font-size:.75rem;color:var(--muted);">SEO Revenue</span>
+                <span style="font-size:.75rem;font-weight:600;color:var(--green);">$0 to $240K+/mo</span>
               </div>
               <div class="fc-result-row">
-                <span style="font-size:.75rem;color:var(--muted);">Daily Impressions</span>
-                <span style="font-size:.75rem;font-weight:600;color:var(--cyan);">25K → 90K+</span>
+                <span style="font-size:.75rem;color:var(--muted);">Bounce Rate</span>
+                <span style="font-size:.75rem;font-weight:600;color:var(--cyan);">24% reduction</span>
               </div>
               <div class="fc-result-row">
-                <span style="font-size:.75rem;color:var(--muted);">Average CTR</span>
-                <span style="font-size:.75rem;font-weight:600;color:var(--purple);">3.7%</span>
+                <span style="font-size:.75rem;color:var(--muted);">Time to Results</span>
+                <span style="font-size:.75rem;font-weight:600;color:var(--purple);">Under 4 months</span>
               </div>
               <div class="fc-result-row">
-                <span style="font-size:.75rem;color:var(--muted);">Avg Position</span>
-                <span style="font-size:.75rem;font-weight:600;color:var(--orange);">16.9 → 18.7</span>
+                <span style="font-size:.75rem;color:var(--muted);">Content System</span>
+                <span style="font-size:.75rem;font-weight:600;color:var(--orange);">Fully scalable</span>
               </div>
             </div>
           </div>
@@ -615,21 +500,21 @@
                   <div class="gsc-slide">
                     <img src="https://raw.githubusercontent.com/sanalpillai/sanalpillai/refs/heads/main/images/ImpactGuru%20Growth/Impactguru%20-%2048%20Days%20Traffic%20Growth.png" alt="48 Days Growth">
                     <div class="gsc-slide-info">
-                      <h5 style="font-size:.8rem;font-weight:500;margin-bottom:2px;">48-Day Performance</h5>
+                      <h5 style="font-size:.8rem;font-weight:500;margin-bottom:2px;">48 Day Performance</h5>
                       <p style="font-size:.7rem;color:var(--muted);">106K clicks · 3.03M impressions · 3.5% CTR</p>
                     </div>
                   </div>
                   <div class="gsc-slide">
                     <img src="https://raw.githubusercontent.com/sanalpillai/sanalpillai/refs/heads/main/images/ImpactGuru%20Growth/Impactguru%20-%20Last%203%20Month%20Traffic%20Growth.png" alt="3 Month Growth">
                     <div class="gsc-slide-info">
-                      <h5 style="font-size:.8rem;font-weight:500;margin-bottom:2px;">3-Month Performance</h5>
+                      <h5 style="font-size:.8rem;font-weight:500;margin-bottom:2px;">3 Month Performance</h5>
                       <p style="font-size:.7rem;color:var(--muted);">154K clicks · 4.51M impressions · 3.4% CTR</p>
                     </div>
                   </div>
                   <div class="gsc-slide">
                     <img src="https://raw.githubusercontent.com/sanalpillai/sanalpillai/refs/heads/main/images/ImpactGuru%20Growth/Impactguru%20-%20Last%206%20Month%20Traffic%20Growth.png" alt="6 Month Growth">
                     <div class="gsc-slide-info">
-                      <h5 style="font-size:.8rem;font-weight:500;margin-bottom:2px;">6-Month Performance</h5>
+                      <h5 style="font-size:.8rem;font-weight:500;margin-bottom:2px;">6 Month Performance</h5>
                       <p style="font-size:.7rem;color:var(--muted);">233K clicks · 6.31M impressions · 3.7% CTR</p>
                     </div>
                   </div>
@@ -643,30 +528,30 @@
             </div>
             
             <div class="timeline-wrapper">
-              <h4 class="fc-section-title" style="margin-bottom:14px;">Growth Timeline</h4>
+              <h4 class="fc-section-title" style="margin-bottom:14px;">Revenue Timeline</h4>
               <div class="timeline-grid">
                 <div class="timeline-item">
                   <div class="timeline-icon" style="background:linear-gradient(135deg,var(--green),var(--cyan));">
-                    <span style="font-size:.7rem;font-weight:600;color:var(--bg);">Q1</span>
+                    <span style="font-size:.7rem;font-weight:600;color:var(--bg);">M1</span>
                   </div>
                   <p style="font-size:.65rem;color:var(--muted);">Foundation</p>
-                  <p style="font-size:.8rem;font-weight:600;color:var(--text);">~800/day</p>
+                  <p style="font-size:.8rem;font-weight:600;color:var(--text);">$0</p>
                 </div>
                 <div class="timeline-arrow">→</div>
                 <div class="timeline-item">
                   <div class="timeline-icon" style="background:linear-gradient(135deg,var(--cyan),var(--purple));">
-                    <span style="font-size:.7rem;font-weight:600;color:var(--bg);">Q2</span>
+                    <span style="font-size:.7rem;font-weight:600;color:var(--bg);">M2</span>
                   </div>
                   <p style="font-size:.65rem;color:var(--muted);">Scaling</p>
-                  <p style="font-size:.8rem;font-weight:600;color:var(--text);">~2,500/day</p>
+                  <p style="font-size:.8rem;font-weight:600;color:var(--text);">$80K</p>
                 </div>
                 <div class="timeline-arrow">→</div>
                 <div class="timeline-item">
                   <div class="timeline-icon" style="background:linear-gradient(135deg,var(--purple),var(--pink));">
-                    <span style="font-size:.7rem;font-weight:600;color:var(--bg);">Q3</span>
+                    <span style="font-size:.7rem;font-weight:600;color:var(--bg);">M4</span>
                   </div>
-                  <p style="font-size:.65rem;color:var(--muted);">Peak Growth</p>
-                  <p style="font-size:.8rem;font-weight:600;color:var(--green);">3,800+/day</p>
+                  <p style="font-size:.65rem;color:var(--muted);">Target</p>
+                  <p style="font-size:.8rem;font-weight:600;color:var(--green);">$240K+</p>
                 </div>
               </div>
             </div>
@@ -675,425 +560,183 @@
       </div>
     </div>
 
-    <!-- Additional Case Studies Carousel -->
-    <div class="anim" style="margin-top:50px">
-      <div class="sec-header" style="margin-bottom:24px">
-        <span class="sec-label">More Success Stories</span>
-        <h2 class="sec-title">Industry <span class="serif">Impact</span></h2>
-        <p class="sec-sub">Driving measurable growth across Ecommerce, Healthcare, and SaaS verticals.</p>
-      </div>
-      
-      <div class="case-carousel-container" style="position:relative;overflow:hidden;">
-        <div class="case-carousel-track" id="caseTrack" style="display:flex;transition:transform .5s ease;align-items:stretch;">
-          
-          <!-- Case 1: Apollo Hospitals -->
-          <div class="case-carousel-slide" style="min-width:100%;padding:0 10px;box-sizing:border-box;display:flex;">
-            <div class="featured-case-card">
-              <div style="background:linear-gradient(135deg,rgba(74,222,128,.1),rgba(56,189,248,.1));padding:24px 28px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;">
-                <div>
-                  <span style="display:inline-block;padding:4px 12px;background:rgba(74,222,128,.15);border:1px solid rgba(74,222,128,.3);border-radius:20px;font-size:.65rem;color:var(--green);margin-bottom:8px;">Healthcare / Lead Generation</span>
-                  <h3 style="font-size:1.4rem;font-weight:600;margin-bottom:4px;">Apollo Hospitals</h3>
-                  <p style="font-size:.85rem;color:var(--muted);">SEO Strategy · Local SEO · Lead Generation Optimization</p>
-                </div>
-                <div style="display:flex;gap:12px;flex-wrap:wrap;">
-                  <div class="fc-stat-box">
-                    <span class="fc-stat-value" style="color:var(--green);">12,000+</span>
-                    <span class="fc-stat-label">Leads/Month</span>
-                  </div>
-                  <div class="fc-stat-box">
-                    <span class="fc-stat-value" style="color:var(--cyan);">-58%</span>
-                    <span class="fc-stat-label">Cost Per Lead</span>
-                  </div>
-                  <div class="fc-stat-box">
-                    <span class="fc-stat-value" style="color:var(--orange);">340%</span>
-                    <span class="fc-stat-label">Organic Growth</span>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="featured-case-grid">
-                <div class="featured-case-left">
-                  <div style="margin-bottom:24px;">
-                    <h4 class="fc-section-title">The Challenge</h4>
-                    <p style="font-size:.85rem;color:#bbb;line-height:1.7;">Apollo Hospitals needed to scale qualified patient leads across 70+ locations while reducing dependency on expensive paid campaigns and improving lead quality.</p>
-                  </div>
-                  
-                  <div style="margin-bottom:24px;">
-                    <h4 class="fc-section-title">Strategic Approach</h4>
-                    <ul style="padding-left:16px;font-size:.8rem;color:#bbb;line-height:1.8;">
-                      <li>Service page optimization for 200+ treatments</li>
-                      <li>Local SEO for 70+ hospital locations</li>
-                      <li>Doctor profile pages with E-E-A-T signals</li>
-                      <li>FAQ schema & medical content strategy</li>
-                      <li>Conversion rate optimization for lead forms</li>
-                    </ul>
-                  </div>
-                  
-                  <div>
-                    <h4 class="fc-section-title" style="margin-bottom:12px;">Key Results</h4>
-                    <div class="fc-result-row">
-                      <span style="font-size:.75rem;color:var(--muted);">Monthly Leads</span>
-                      <span style="font-size:.75rem;font-weight:600;color:var(--green);">2,800 → 12,000+</span>
-                    </div>
-                    <div class="fc-result-row">
-                      <span style="font-size:.75rem;color:var(--muted);">Organic Traffic</span>
-                      <span style="font-size:.75rem;font-weight:600;color:var(--cyan);">180K → 790K/mo</span>
-                    </div>
-                    <div class="fc-result-row">
-                      <span style="font-size:.75rem;color:var(--muted);">Lead Quality Score</span>
-                      <span style="font-size:.75rem;font-weight:600;color:var(--orange);">62 → 84/100</span>
-                    </div>
-                    <div class="fc-result-row">
-                      <span style="font-size:.75rem;color:var(--muted);">Appointment Rate</span>
-                      <span style="font-size:.75rem;font-weight:600;color:var(--purple);">18% → 34%</span>
-                    </div>
-                  </div>
-                </div>
-                
-                <div class="featured-case-right">
-                  <h4 class="fc-section-title" style="margin-bottom:16px;">Lead Generation Funnel</h4>
-                  <div style="background:var(--bg);border-radius:12px;border:1px solid var(--border);padding:20px;min-height:220px;display:flex;flex-direction:column;justify-content:center;">
-                    <div style="display:flex;flex-direction:column;gap:12px;">
-                      <div style="background:linear-gradient(90deg,var(--green),var(--cyan));border-radius:8px;padding:14px 18px;text-align:center;">
-                        <span style="font-size:1.1rem;font-weight:600;color:var(--bg);">790K</span>
-                        <span style="font-size:.7rem;color:var(--bg);display:block;">Monthly Visitors</span>
-                      </div>
-                      <div style="text-align:center;color:var(--dim);font-size:1.2rem;">↓</div>
-                      <div style="background:linear-gradient(90deg,rgba(74,222,128,.3),rgba(56,189,248,.3));border-radius:8px;padding:12px 18px;text-align:center;width:85%;margin:0 auto;">
-                        <span style="font-size:1rem;font-weight:600;color:var(--green);">47K</span>
-                        <span style="font-size:.7rem;color:var(--muted);display:block;">Form Submissions</span>
-                      </div>
-                      <div style="text-align:center;color:var(--dim);font-size:1.2rem;">↓</div>
-                      <div style="background:linear-gradient(90deg,rgba(74,222,128,.2),rgba(56,189,248,.2));border-radius:8px;padding:12px 18px;text-align:center;width:70%;margin:0 auto;">
-                        <span style="font-size:1rem;font-weight:600;color:var(--cyan);">12K</span>
-                        <span style="font-size:.7rem;color:var(--muted);display:block;">Qualified Leads</span>
-                      </div>
-                      <div style="text-align:center;color:var(--dim);font-size:1.2rem;">↓</div>
-                      <div style="background:var(--card);border:2px solid var(--green);border-radius:8px;padding:12px 18px;text-align:center;width:55%;margin:0 auto;">
-                        <span style="font-size:1rem;font-weight:600;color:var(--green);">4,080</span>
-                        <span style="font-size:.7rem;color:var(--muted);display:block;">Appointments Booked</span>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div class="timeline-wrapper">
-                    <h4 class="fc-section-title" style="margin-bottom:14px;">CPL Reduction Timeline</h4>
-                    <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;">
-                      <div style="text-align:center;">
-                        <div style="font-size:1.1rem;font-weight:600;color:var(--red);">$42</div>
-                        <div style="font-size:.6rem;color:var(--muted);">Before</div>
-                      </div>
-                      <div style="flex:1;height:4px;background:linear-gradient(90deg,var(--red),var(--orange),var(--green));border-radius:2px;"></div>
-                      <div style="text-align:center;">
-                        <div style="font-size:1.1rem;font-weight:600;color:var(--green);">$18</div>
-                        <div style="font-size:.6rem;color:var(--muted);">After</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Case 2: Amerix Cancer Hospital -->
-          <div class="case-carousel-slide" style="min-width:100%;padding:0 10px;box-sizing:border-box;display:flex;">
-            <div class="featured-case-card">
-              <div style="background:linear-gradient(135deg,rgba(249,115,22,.1),rgba(239,68,68,.1));padding:24px 28px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;">
-                <div>
-                  <span style="display:inline-block;padding:4px 12px;background:rgba(249,115,22,.15);border:1px solid rgba(249,115,22,.3);border-radius:20px;font-size:.65rem;color:var(--orange);margin-bottom:8px;">Healthcare / Oncology</span>
-                  <h3 style="font-size:1.4rem;font-weight:600;margin-bottom:4px;">Amerix Cancer Hospital</h3>
-                  <p style="font-size:.85rem;color:var(--muted);">SEO · Google & Meta Ads · Content & Brand Building</p>
-                </div>
-                <div style="display:flex;gap:12px;flex-wrap:wrap;">
-                  <div class="fc-stat-box">
-                    <span class="fc-stat-value" style="color:var(--orange);">+312%</span>
-                    <span class="fc-stat-label">Organic Growth</span>
-                  </div>
-                  <div class="fc-stat-box">
-                    <span class="fc-stat-value" style="color:var(--red);">5.5x</span>
-                    <span class="fc-stat-label">Patient Enquiries</span>
-                  </div>
-                  <div class="fc-stat-box">
-                    <span class="fc-stat-value" style="color:var(--green);">$216K+</span>
-                    <span class="fc-stat-label">Attributed Revenue</span>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="featured-case-grid">
-                <div class="featured-case-left">
-                  <div style="margin-bottom:24px;">
-                    <h4 class="fc-section-title">The Challenge</h4>
-                    <p style="font-size:.85rem;color:#bbb;line-height:1.7;">Amerix, a new entrant in Delhi's competitive oncology market, had limited brand awareness and modest organic traffic (~2.4K/month) with most clicks from brand queries only.</p>
-                  </div>
-                  
-                  <div style="margin-bottom:24px;">
-                    <h4 class="fc-section-title">Strategic Approach</h4>
-                    <ul style="padding-left:16px;font-size:.8rem;color:#bbb;line-height:1.8;">
-                      <li>SEO for oncology service keywords in Delhi NCR</li>
-                      <li>Cancer awareness blogs, FAQs & doctor profiles</li>
-                      <li>Google Ads for high-intent treatment queries</li>
-                      <li>Meta retargeting & patient testimonial videos</li>
-                      <li>Landing page optimization with empathetic CTAs</li>
-                    </ul>
-                  </div>
-                  
-                  <div>
-                    <h4 class="fc-section-title" style="margin-bottom:12px;">Key Results</h4>
-                    <div class="fc-result-row">
-                      <span style="font-size:.75rem;color:var(--muted);">Organic Traffic</span>
-                      <span style="font-size:.75rem;font-weight:600;color:var(--orange);">2.4K → 10K/mo</span>
-                    </div>
-                    <div class="fc-result-row">
-                      <span style="font-size:.75rem;color:var(--muted);">Patient Enquiries</span>
-                      <span style="font-size:.75rem;font-weight:600;color:var(--red);">5.5x Increase</span>
-                    </div>
-                    <div class="fc-result-row">
-                      <span style="font-size:.75rem;color:var(--muted);">Year 1 Revenue</span>
-                      <span style="font-size:.75rem;font-weight:600;color:var(--green);">₹1.8 Cr ($216K+)</span>
-                    </div>
-                    <div class="fc-result-row">
-                      <span style="font-size:.75rem;color:var(--muted);">Brand Status</span>
-                      <span style="font-size:.75rem;font-weight:600;color:var(--cyan);">Recognised Leader</span>
-                    </div>
-                  </div>
-                </div>
-                
-                <div class="featured-case-right">
-                  <h4 class="fc-section-title" style="margin-bottom:16px;">Organic Traffic Growth</h4>
-                  <div style="background:var(--bg);border-radius:12px;border:1px solid var(--border);padding:20px;min-height:220px;display:flex;flex-direction:column;justify-content:center;">
-                    <div style="display:flex;justify-content:space-between;align-items:flex-end;height:160px;padding:0 10px;border-bottom:1px solid var(--border);">
-                      <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
-                        <div style="width:50px;background:linear-gradient(to top,var(--orange),var(--red));border-radius:4px 4px 0 0;height:30px;"></div>
-                        <span style="font-size:.6rem;color:var(--muted);">Before</span>
-                        <span style="font-size:.7rem;font-weight:600;color:var(--orange);">2.4K</span>
-                      </div>
-                      <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
-                        <div style="width:50px;background:linear-gradient(to top,var(--orange),var(--red));border-radius:4px 4px 0 0;height:55px;"></div>
-                        <span style="font-size:.6rem;color:var(--muted);">Month 3</span>
-                        <span style="font-size:.7rem;font-weight:600;color:var(--orange);">4.2K</span>
-                      </div>
-                      <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
-                        <div style="width:50px;background:linear-gradient(to top,var(--orange),var(--red));border-radius:4px 4px 0 0;height:90px;"></div>
-                        <span style="font-size:.6rem;color:var(--muted);">Month 6</span>
-                        <span style="font-size:.7rem;font-weight:600;color:var(--orange);">7.1K</span>
-                      </div>
-                      <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
-                        <div style="width:50px;background:linear-gradient(to top,var(--green),var(--cyan));border-radius:4px 4px 0 0;height:140px;"></div>
-                        <span style="font-size:.6rem;color:var(--muted);">Month 8</span>
-                        <span style="font-size:.7rem;font-weight:600;color:var(--green);">10K+</span>
-                      </div>
-                    </div>
-                    <div style="text-align:center;padding-top:12px;">
-                      <span style="font-size:.75rem;font-weight:600;color:var(--green);">+312% Growth in 8 Months</span>
-                    </div>
-                  </div>
-                  
-                  <div class="timeline-wrapper">
-                    <h4 class="fc-section-title" style="margin-bottom:14px;">Multi-Channel Impact</h4>
-                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
-                      <div style="padding:14px;background:var(--card);border-radius:8px;border:1px solid var(--border);text-align:center;">
-                        <div style="font-size:.65rem;color:var(--muted);margin-bottom:4px;">Google Ads ROAS</div>
-                        <div style="font-size:1.2rem;font-weight:700;color:var(--orange);">6-8x</div>
-                      </div>
-                      <div style="padding:14px;background:var(--card);border-radius:8px;border:1px solid var(--border);text-align:center;">
-                        <div style="font-size:.65rem;color:var(--muted);margin-bottom:4px;">Meta Retargeting</div>
-                        <div style="font-size:1.2rem;font-weight:700;color:var(--pink);">3.2x ROAS</div>
-                      </div>
-                      <div style="padding:14px;background:var(--card);border-radius:8px;border:1px solid var(--border);text-align:center;">
-                        <div style="font-size:.65rem;color:var(--muted);margin-bottom:4px;">Call Enquiries</div>
-                        <div style="font-size:1.2rem;font-weight:700;color:var(--green);">+420%</div>
-                      </div>
-                      <div style="padding:14px;background:var(--card);border-radius:8px;border:1px solid var(--border);text-align:center;">
-                        <div style="font-size:.65rem;color:var(--muted);margin-bottom:4px;">Form Submissions</div>
-                        <div style="font-size:1.2rem;font-weight:700;color:var(--cyan);">+380%</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Case 3: Bombay Shirts -->
-          <div class="case-carousel-slide" style="min-width:100%;padding:0 10px;box-sizing:border-box;display:flex;">
-            <div class="featured-case-card">
-              <div style="background:linear-gradient(135deg,rgba(168,85,247,.1),rgba(236,72,153,.1));padding:24px 28px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;">
-                <div>
-                  <span style="display:inline-block;padding:4px 12px;background:rgba(168,85,247,.15);border:1px solid rgba(168,85,247,.3);border-radius:20px;font-size:.65rem;color:var(--purple);margin-bottom:8px;">D2C / Fashion Ecommerce</span>
-                  <h3 style="font-size:1.4rem;font-weight:600;margin-bottom:4px;">Bombay Shirts</h3>
-                  <p style="font-size:.85rem;color:var(--muted);">SEO Strategy · Content Marketing · Technical Optimization</p>
-                </div>
-                <div style="display:flex;gap:12px;flex-wrap:wrap;">
-                  <div class="fc-stat-box">
-                    <span class="fc-stat-value" style="color:var(--purple);">100x</span>
-                    <span class="fc-stat-label">Traffic Growth</span>
-                  </div>
-                  <div class="fc-stat-box">
-                    <span class="fc-stat-value" style="color:var(--pink);">$125K+</span>
-                    <span class="fc-stat-label">Monthly Revenue</span>
-                  </div>
-                  <div class="fc-stat-box">
-                    <span class="fc-stat-value" style="color:var(--cyan);">2,400+</span>
-                    <span class="fc-stat-label">Orders/Month</span>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="featured-case-grid">
-                <div class="featured-case-left">
-                  <div style="margin-bottom:24px;">
-                    <h4 class="fc-section-title">The Challenge</h4>
-                    <p style="font-size:.85rem;color:#bbb;line-height:1.7;">Bombay Shirts, a premium custom shirt brand, struggled with organic visibility in a crowded D2C fashion market dominated by established players and aggregators.</p>
-                  </div>
-                  
-                  <div style="margin-bottom:24px;">
-                    <h4 class="fc-section-title">Strategic Approach</h4>
-                    <ul style="padding-left:16px;font-size:.8rem;color:#bbb;line-height:1.8;">
-                      <li>Product page SEO with rich schema markup</li>
-                      <li>Long-tail keyword strategy for custom shirts</li>
-                      <li>Content hub for style guides & fit tutorials</li>
-                      <li>Category architecture optimization</li>
-                      <li>Mobile-first UX improvements for conversions</li>
-                    </ul>
-                  </div>
-                  
-                  <div>
-                    <h4 class="fc-section-title" style="margin-bottom:12px;">Key Results</h4>
-                    <div class="fc-result-row">
-                      <span style="font-size:.75rem;color:var(--muted);">Organic Traffic</span>
-                      <span style="font-size:.75rem;font-weight:600;color:var(--purple);">1K → 100K+/mo</span>
-                    </div>
-                    <div class="fc-result-row">
-                      <span style="font-size:.75rem;color:var(--muted);">SEO Revenue</span>
-                      <span style="font-size:.75rem;font-weight:600;color:var(--pink);">$1.2K → $125K/mo</span>
-                    </div>
-                    <div class="fc-result-row">
-                      <span style="font-size:.75rem;color:var(--muted);">Conversion Rate</span>
-                      <span style="font-size:.75rem;font-weight:600;color:var(--cyan);">1.2% → 2.4%</span>
-                    </div>
-                    <div class="fc-result-row">
-                      <span style="font-size:.75rem;color:var(--muted);">Avg Order Value</span>
-                      <span style="font-size:.75rem;font-weight:600;color:var(--green);">$48 → $52</span>
-                    </div>
-                  </div>
-                </div>
-                
-                <div class="featured-case-right">
-                  <h4 class="fc-section-title" style="margin-bottom:16px;">Growth Visualization</h4>
-                  <div style="background:var(--bg);border-radius:12px;border:1px solid var(--border);padding:20px;min-height:220px;display:flex;flex-direction:column;justify-content:center;">
-                    <div style="display:flex;justify-content:space-between;align-items:flex-end;height:180px;padding:0 10px;border-bottom:1px solid var(--border);">
-                      <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
-                        <div style="width:40px;background:linear-gradient(to top,var(--purple),var(--pink));border-radius:4px 4px 0 0;height:15px;"></div>
-                        <span style="font-size:.6rem;color:var(--muted);">Month 1</span>
-                      </div>
-                      <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
-                        <div style="width:40px;background:linear-gradient(to top,var(--purple),var(--pink));border-radius:4px 4px 0 0;height:35px;"></div>
-                        <span style="font-size:.6rem;color:var(--muted);">Month 3</span>
-                      </div>
-                      <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
-                        <div style="width:40px;background:linear-gradient(to top,var(--purple),var(--pink));border-radius:4px 4px 0 0;height:65px;"></div>
-                        <span style="font-size:.6rem;color:var(--muted);">Month 6</span>
-                      </div>
-                      <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
-                        <div style="width:40px;background:linear-gradient(to top,var(--purple),var(--pink));border-radius:4px 4px 0 0;height:110px;"></div>
-                        <span style="font-size:.6rem;color:var(--muted);">Month 9</span>
-                      </div>
-                      <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
-                        <div style="width:40px;background:linear-gradient(to top,var(--purple),var(--pink));border-radius:4px 4px 0 0;height:160px;"></div>
-                        <span style="font-size:.6rem;color:var(--muted);">Month 12</span>
-                      </div>
-                    </div>
-                    <div style="text-align:center;padding-top:12px;">
-                      <span style="font-size:.7rem;color:var(--muted);">Monthly Organic Traffic Growth</span>
-                    </div>
-                  </div>
-                  
-                  <div class="timeline-wrapper">
-                    <h4 class="fc-section-title" style="margin-bottom:14px;">Revenue Milestones</h4>
-                    <div style="display:flex;flex-direction:column;gap:10px;">
-                      <div style="display:flex;align-items:center;gap:12px;">
-                        <div style="width:10px;height:10px;border-radius:50%;background:var(--purple);flex-shrink:0;"></div>
-                        <div style="flex:1;height:1px;background:var(--border);"></div>
-                        <span style="font-size:.75rem;color:var(--muted);">$10K MRR</span>
-                        <span style="font-size:.7rem;color:var(--dim);">Month 4</span>
-                      </div>
-                      <div style="display:flex;align-items:center;gap:12px;">
-                        <div style="width:10px;height:10px;border-radius:50%;background:var(--pink);flex-shrink:0;"></div>
-                        <div style="flex:1;height:1px;background:var(--border);"></div>
-                        <span style="font-size:.75rem;color:var(--muted);">$50K MRR</span>
-                        <span style="font-size:.7rem;color:var(--dim);">Month 8</span>
-                      </div>
-                      <div style="display:flex;align-items:center;gap:12px;">
-                        <div style="width:10px;height:10px;border-radius:50%;background:var(--green);flex-shrink:0;"></div>
-                        <div style="flex:1;height:1px;background:var(--border);"></div>
-                        <span style="font-size:.75rem;color:var(--green);">$125K MRR</span>
-                        <span style="font-size:.7rem;color:var(--dim);">Month 12</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
+    <!-- More Case Studies -->
+    <div class="sec-header anim" style="margin-top:50px">
+      <span class="sec-label">More Case Studies</span>
+      <h2 class="sec-title">Proven <span class="serif">Results</span></h2>
+    </div>
+    <div class="case-grid">
+      <article class="case-card green anim d1">
+        <div class="case-header"><span class="case-badge">Healthcare</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+        <div class="case-body">
+          <div class="case-title">Healthcare Content Engine</div>
+          <div class="case-meta">Amish Hospital · SEO + Content Strategy</div>
+          <div class="case-section-title">Actions</div>
+          <ul><li>SEO driven service page architecture</li><li>CMS content workflow optimization</li><li>Technical SEO and structured data</li></ul>
+          <div class="metrics"><span class="metric"><span>15K to 120K+</span> visits</span><span class="metric"><span>1.8% to 5.6%</span> CVR</span><span class="metric"><span>50K+</span> followers</span></div>
         </div>
-        
-        <!-- Carousel Navigation Arrows -->
-        <div class="carousel-arrows" style="top:50%;">
-          <button onclick="moveCase(-1)">‹</button>
-          <button onclick="moveCase(1)">›</button>
+      </article>
+      <article class="case-card cyan anim d2">
+        <div class="case-header"><span class="case-badge">Ecommerce</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18"/></svg></div>
+        <div class="case-body">
+          <div class="case-title">DTC Fashion Scale Up</div>
+          <div class="case-meta">Bombay Shirt Company · SEO + Content</div>
+          <div class="case-section-title">Actions</div>
+          <ul><li>Product page SEO optimization</li><li>Category content architecture</li><li>Internal linking strategy</li></ul>
+          <div class="metrics"><span class="metric"><span>100s to 100K+</span> visits</span><span class="metric"><span>40%</span> YoY growth</span><span class="metric"><span>35%</span> lead lift</span></div>
         </div>
-      </div>
-      
-      <!-- Carousel Dots -->
-      <div class="carousel-nav" id="caseNav" style="margin-top:20px;">
-        <button class="active"></button>
-        <button></button>
-        <button></button>
-      </div>
-      
-      <!-- Case Study Labels -->
-      <div style="display:flex;justify-content:center;gap:24px;margin-top:16px;flex-wrap:wrap;">
-        <button onclick="goCase(0)" style="background:none;border:none;cursor:pointer;padding:8px 16px;border-radius:20px;font-size:.75rem;color:var(--muted);transition:all .3s;" class="case-label active-label" id="caseLabel0">
-          <span style="display:inline-block;width:8px;height:8px;background:var(--green);border-radius:50%;margin-right:6px;"></span>Apollo Hospitals
-        </button>
-        <button onclick="goCase(1)" style="background:none;border:none;cursor:pointer;padding:8px 16px;border-radius:20px;font-size:.75rem;color:var(--muted);transition:all .3s;" class="case-label" id="caseLabel1">
-          <span style="display:inline-block;width:8px;height:8px;background:var(--orange);border-radius:50%;margin-right:6px;"></span>Amerix Cancer Hospital
-        </button>
-        <button onclick="goCase(2)" style="background:none;border:none;cursor:pointer;padding:8px 16px;border-radius:20px;font-size:.75rem;color:var(--muted);transition:all .3s;" class="case-label" id="caseLabel2">
-          <span style="display:inline-block;width:8px;height:8px;background:var(--purple);border-radius:50%;margin-right:6px;"></span>Bombay Shirts
-        </button>
-      </div>
+      </article>
+      <article class="case-card orange anim d3">
+        <div class="case-header"><span class="case-badge">Fintech</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 12h20"/></svg></div>
+        <div class="case-body">
+          <div class="case-title">B2B Fintech Growth</div>
+          <div class="case-meta">Xflow · SEO + Content Strategy</div>
+          <div class="case-section-title">Actions</div>
+          <ul><li>Intent driven content strategy</li><li>Technical SEO audit and fixes</li><li>Content workflow optimization</li></ul>
+          <div class="metrics"><span class="metric"><span>5K to 95K+</span> visits</span><span class="metric"><span>46%</span> CPL reduction</span><span class="metric"><span>15K+</span> LinkedIn</span></div>
+        </div>
+      </article>
     </div>
 
     <div class="website-carousel anim" style="margin-top:40px">
       <div class="sec-header" style="margin-bottom:18px">
         <span class="sec-label">Portfolio</span>
-        <h2 class="sec-title">UX & Landing Pages <span class="serif">I've Built</span></h2>
-        <p class="sec-sub">High-converting pages designed for maximum impact.</p>
+        <h2 class="sec-title">Landing Pages <span class="serif">I Built</span></h2>
+        <p class="sec-sub">High converting pages optimized for SEO and user experience.</p>
       </div>
       <div class="carousel-container">
         <div class="carousel-track" id="webTrack">
           <div class="carousel-slide">
             <div class="browser-chrome"><div class="browser-dots"><span></span><span></span><span></span></div><div class="browser-url"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>amishospital.com</div></div>
             <div class="website-frame"><iframe src="https://amishospital.com/" loading="lazy" sandbox="allow-scripts allow-same-origin"></iframe><div class="website-overlay"></div></div>
-            <div class="website-info"><div><h4>AMI Hospital</h4><p>Healthcare · Service Pages</p></div><a href="https://amishospital.com/" target="_blank">Visit →</a></div>
+            <div class="website-info"><div><h4>Amish Hospital</h4><p>Healthcare · Service Pages</p></div><a href="https://amishospital.com/" target="_blank">Visit</a></div>
           </div>
           <div class="carousel-slide">
             <div class="browser-chrome"><div class="browser-dots"><span></span><span></span><span></span></div><div class="browser-url"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>snitch.co.in</div></div>
             <div class="website-frame"><iframe src="https://www.snitch.co.in/" loading="lazy" sandbox="allow-scripts allow-same-origin"></iframe><div class="website-overlay"></div></div>
-            <div class="website-info"><div><h4>Snitch</h4><p>Ecommerce · PDPs</p></div><a href="https://www.snitch.co.in/" target="_blank">Visit →</a></div>
+            <div class="website-info"><div><h4>Snitch</h4><p>Ecommerce · PDPs</p></div><a href="https://www.snitch.co.in/" target="_blank">Visit</a></div>
           </div>
           <div class="carousel-slide">
             <div class="browser-chrome"><div class="browser-dots"><span></span><span></span><span></span></div><div class="browser-url"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>xflowpay.com</div></div>
             <div class="website-frame"><iframe src="https://www.xflowpay.com/" loading="lazy" sandbox="allow-scripts allow-same-origin"></iframe><div class="website-overlay"></div></div>
-            <div class="website-info"><div><h4>Xflow</h4><p>Fintech · B2B Solutions</p></div><a href="https://www.xflowpay.com/" target="_blank">Visit →</a></div>
+            <div class="website-info"><div><h4>Xflow</h4><p>Fintech · B2B Solutions</p></div><a href="https://www.xflowpay.com/" target="_blank">Visit</a></div>
           </div>
         </div>
         <div class="carousel-arrows"><button onclick="moveWeb(-1)">‹</button><button onclick="moveWeb(1)">›</button></div>
       </div>
       <div class="carousel-nav" id="webNav"><button class="active"></button><button></button><button></button></div>
+    </div>
+  </div>
+</section>
+
+<!-- Copywriting Section -->
+<section id="copywriting" style="background:linear-gradient(180deg,transparent,rgba(168,85,247,.03),transparent)">
+  <div class="container">
+    <div class="sec-header anim">
+      <span class="sec-label">Copywriting</span>
+      <h2 class="sec-title">Words That <span class="serif">Convert</span></h2>
+      <p class="sec-sub">Before and after examples showing how strategic copy transforms messaging into revenue.</p>
+    </div>
+    
+    <div class="copy-grid">
+      <div class="copy-card anim d1">
+        <div class="copy-card-header">
+          <div><h4>SaaS Landing Page</h4><p>B2B Project Management Tool</p></div>
+          <span class="copy-metric">+47% Signups</span>
+        </div>
+        <div class="copy-body">
+          <div class="copy-before">
+            <div class="copy-label">Before</div>
+            <p class="copy-text">"Welcome to ProjectFlow. We offer project management software with features like task tracking, team collaboration, and reporting dashboards. Sign up today."</p>
+            <p class="copy-issues">Issues: Feature focused, no clear value prop, weak CTA</p>
+          </div>
+          <div class="copy-after">
+            <div class="copy-label">After</div>
+            <p class="copy-text"><strong>"Ship projects 40% faster.</strong><br>Stop drowning in Slack threads and scattered spreadsheets. ProjectFlow gives your team one source of truth so you can spend less time chasing updates and more time building."</p>
+            <p class="copy-issues" style="color:var(--green);">Why it works: Leads with outcome, addresses pain, benefit driven</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="copy-card anim d2">
+        <div class="copy-card-header">
+          <div><h4>Healthcare Email Campaign</h4><p>Medical Crowdfunding Platform</p></div>
+          <span class="copy-metric">+62% Open Rate</span>
+        </div>
+        <div class="copy-body">
+          <div class="copy-before">
+            <div class="copy-label">Before</div>
+            <p class="copy-text">Subject: Your fundraising update<br><br>"Dear User, Your campaign has received 3 new donations totaling $150. Log in to your dashboard to view details."</p>
+            <p class="copy-issues">Issues: Generic subject, impersonal, transactional tone</p>
+          </div>
+          <div class="copy-after">
+            <div class="copy-label">After</div>
+            <p class="copy-text">Subject: 3 people just said "I believe in you"<br><br>"Sarah, something beautiful happened while you were sleeping. Three strangers found your story and decided to help. You are now $150 closer to Maya's treatment."</p>
+            <p class="copy-issues" style="color:var(--green);">Why it works: Emotional hook, personalized, story driven</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="copy-card anim d3">
+        <div class="copy-card-header">
+          <div><h4>DTC Product Page</h4><p>Premium Fashion Brand</p></div>
+          <span class="copy-metric">+38% Add to Cart</span>
+        </div>
+        <div class="copy-body">
+          <div class="copy-before">
+            <div class="copy-label">Before</div>
+            <p class="copy-text">Slim Fit Oxford Shirt Navy<br><br>"This oxford shirt is made from 100% cotton. Features include button down collar, chest pocket, and adjustable cuffs. Available in sizes S to XXL."</p>
+            <p class="copy-issues">Issues: Spec heavy, no lifestyle appeal, boring</p>
+          </div>
+          <div class="copy-after">
+            <div class="copy-label">After</div>
+            <p class="copy-text"><strong>The Boardroom to Bar Oxford</strong><br><br>"Look put together without trying too hard. Our best selling oxford is engineered to stay crisp through 12 hour days because you should not have to choose between the 9am pitch and the 9pm reservation."</p>
+            <p class="copy-issues" style="color:var(--green);">Why it works: Lifestyle positioning, solves real problem</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="copy-card anim d4">
+        <div class="copy-card-header">
+          <div><h4>EV Product Messaging</h4><p>Automotive Copy Example</p></div>
+          <span class="copy-metric">Brand Voice</span>
+        </div>
+        <div class="copy-body">
+          <div class="copy-before">
+            <div class="copy-label">Standard Approach</div>
+            <p class="copy-text">"The Model Y is an electric SUV with advanced features including autopilot, long range battery, and spacious interior. Order yours today."</p>
+            <p class="copy-issues">Typical automotive copy: feature list, generic CTA</p>
+          </div>
+          <div class="copy-after">
+            <div class="copy-label">Premium Voice</div>
+            <p class="copy-text"><strong>Model Y</strong><br>Built for safety. Designed for efficiency.<br><br>With up to 330 miles of range, seating for up to seven, and advanced driver assistance features, Model Y is engineered to make every drive safer, smoother, and more sustainable.</p>
+            <p class="copy-issues" style="color:var(--green);">Premium style: Minimal, confident, benefit driven, no fluff</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="copy-principles anim">
+      <div class="copy-principle">
+        <div class="copy-principle-icon">🎯</div>
+        <h5>Lead with Outcome</h5>
+        <p>Benefits over features, always</p>
+      </div>
+      <div class="copy-principle">
+        <div class="copy-principle-icon">💔</div>
+        <h5>Address the Pain</h5>
+        <p>Show you understand the struggle</p>
+      </div>
+      <div class="copy-principle">
+        <div class="copy-principle-icon">⚡</div>
+        <h5>Create Urgency</h5>
+        <p>Give reasons to act now</p>
+      </div>
+      <div class="copy-principle">
+        <div class="copy-principle-icon">🗣️</div>
+        <h5>Sound Human</h5>
+        <p>Write like you talk, not a robot</p>
+      </div>
     </div>
   </div>
 </section>
@@ -1106,21 +749,21 @@
     </div>
     <div class="testimonial-grid">
       <div class="testimonial-card anim d1">
-        <p class="testimonial-text">"Transformed our organic channel from an afterthought to our #1 revenue driver. The strategic thinking combined with flawless execution is rare."</p>
+        <p class="testimonial-text">"Transformed our organic channel from an afterthought to our number one revenue driver. The strategic thinking combined with flawless execution is rare."</p>
         <div class="testimonial-author">
           <div class="testimonial-avatar">SK</div>
           <div class="testimonial-info"><h5>Sarah Kim</h5><p>VP Marketing, HealthTech Startup</p></div>
         </div>
       </div>
       <div class="testimonial-card anim d2">
-        <p class="testimonial-text">"Built our social presence from 5K to 200K+ followers while maintaining quality leads. Reduced CAC by 42% scaling spend 3x. Remarkable."</p>
+        <p class="testimonial-text">"Built our content system from scratch and scaled SEO revenue to $240K+ in under 4 months. Remarkable speed and quality."</p>
         <div class="testimonial-author">
           <div class="testimonial-avatar">MR</div>
-          <div class="testimonial-info"><h5>Michael Roberts</h5><p>CEO, DTC Ecommerce Brand</p></div>
+          <div class="testimonial-info"><h5>Michael Roberts</h5><p>CEO, Crowdfunding Platform</p></div>
         </div>
       </div>
       <div class="testimonial-card anim d3">
-        <p class="testimonial-text">"Built our entire GTM engine from scratch. The frameworks and systems are still driving results 2 years later. A true growth architect."</p>
+        <p class="testimonial-text">"Built our entire content engine from scratch. The frameworks and systems are still driving results 2 years later. A true content architect."</p>
         <div class="testimonial-author">
           <div class="testimonial-avatar">AP</div>
           <div class="testimonial-info"><h5>Anita Patel</h5><p>Founder, B2B SaaS Platform</p></div>
@@ -1136,7 +779,6 @@
       <span class="sec-label">Creative Portfolio</span>
       <h2 class="sec-title">Visual <span class="serif">Creatives</span></h2>
     </div>
-
     <div class="creative-gallery anim">
       <div class="gallery-row" id="row1">
         <div class="gallery-item"><img src="https://raw.githubusercontent.com/sanalpillai/sanalpillai/main/graphics/display-ad-creative-1.png" alt="Display Ad 1"/><span class="label">Display Ad</span></div>
@@ -1161,7 +803,6 @@
         <div class="gallery-item"><img src="https://raw.githubusercontent.com/sanalpillai/sanalpillai/main/graphics/event-banner-1.png" alt="Event"/><span class="label">Event</span></div>
       </div>
     </div>
-
     <div class="video-row anim">
       <div class="video-card">
         <div class="video-header youtube"><svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg><span>YouTube</span></div>
@@ -1179,15 +820,15 @@
   <div class="container">
     <div class="sec-header anim">
       <span class="sec-label">Credentials</span>
-      <h2 class="sec-title">Certifications & <span class="serif">Training</span></h2>
+      <h2 class="sec-title">Certifications and <span class="serif">Training</span></h2>
     </div>
     <div class="cert-grid anim">
       <div class="cert-badge"><svg viewBox="0 0 24 24" fill="none" stroke="var(--yellow)" stroke-width="1.5"><circle cx="12" cy="12" r="10"/></svg><p>Google Ads</p></div>
       <div class="cert-badge"><svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.5"><path d="M18 20V10M12 20V4M6 20v-6"/></svg><p>GA4 Certified</p></div>
-      <div class="cert-badge"><svg viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="1.5"><circle cx="12" cy="12" r="10"/></svg><p>HubSpot Inbound</p></div>
-      <div class="cert-badge"><svg viewBox="0 0 24 24" fill="none" stroke="var(--pink)" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg><p>Meta Blueprint</p></div>
-      <div class="cert-badge"><svg viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/></svg><p>Semrush SEO</p></div>
-      <div class="cert-badge"><svg viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/></svg><p>CXL Growth</p></div>
+      <div class="cert-badge"><svg viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="1.5"><circle cx="12" cy="12" r="10"/></svg><p>UC Davis SEO</p></div>
+      <div class="cert-badge"><svg viewBox="0 0 24 24" fill="none" stroke="var(--pink)" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg><p>Meta Digital</p></div>
+      <div class="cert-badge"><svg viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/></svg><p>Google UX</p></div>
+      <div class="cert-badge"><svg viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/></svg><p>CSPO</p></div>
     </div>
   </div>
 </section>
@@ -1196,11 +837,10 @@
   <div class="container">
     <div class="sec-header anim">
       <span class="sec-label">Tech Expertise</span>
-      <h2 class="sec-title">Tools & <span class="serif">Platforms</span></h2>
+      <h2 class="sec-title">Tools and <span class="serif">Platforms</span></h2>
     </div>
-
     <div class="tool-category anim">
-      <h3>Analytics & Tracking</h3>
+      <h3>Analytics and Tracking</h3>
       <div class="tools-grid">
         <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>Google Analytics</div>
         <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><circle cx="11" cy="11" r="8"/></svg>Search Console</div>
@@ -1208,101 +848,61 @@
         <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10"/></svg>GTM</div>
         <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--pink)" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>Hotjar</div>
         <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--yellow)" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>Mixpanel</div>
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8"/></svg>Amplitude</div>
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2"><path d="M12 20V10M18 20V4M6 20v-4"/></svg>Heap</div>
       </div>
     </div>
-
     <div class="tool-category anim">
-      <h3>SEO & Content</h3>
+      <h3>SEO and Content</h3>
       <div class="tools-grid">
         <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>Semrush</div>
         <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07"/></svg>Ahrefs</div>
         <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/></svg>Screaming Frog</div>
         <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="2"><path d="M17 3a2.828 2.828 0 114 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>Surfer SEO</div>
         <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--pink)" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"/></svg>Frase.io</div>
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--yellow)" stroke-width="2"><circle cx="12" cy="12" r="3"/></svg>Clearscope</div>
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/></svg>MarketMuse</div>
         <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>Moz Pro</div>
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>SpyFu</div>
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/></svg>SE Ranking</div>
       </div>
     </div>
-
     <div class="tool-category anim">
-      <h3>Social Media Marketing</h3>
+      <h3>CMS Platforms</h3>
       <div class="tools-grid">
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--pink)" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/></svg>Instagram</div>
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1"/></svg>TikTok</div>
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>YouTube</div>
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2"/></svg>LinkedIn</div>
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>Sprout Social</div>
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/></svg>Hootsuite</div>
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>Buffer</div>
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--pink)" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8"/></svg>Later</div>
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>Brandwatch</div>
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--yellow)" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/></svg>Influencer.co</div>
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>Social Blade</div>
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>Creator Studio</div>
+        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>WordPress</div>
+        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="2"><path d="M12 2a10 10 0 1010 10 4 4 0 01-5-5 4 4 0 01-5-5"/></svg>Drupal</div>
+        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/></svg>Shopify</div>
+        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>Webflow</div>
+        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--pink)" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/></svg>Contentful</div>
+        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--yellow)" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/></svg>HubSpot CMS</div>
       </div>
     </div>
-
     <div class="tool-category anim">
-      <h3>Paid Media & Ads</h3>
+      <h3>Paid Media</h3>
       <div class="tools-grid">
         <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--yellow)" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>Google Ads</div>
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/></svg>Google Shopping</div>
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>Performance Max</div>
         <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--pink)" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>Meta Ads</div>
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/></svg>Instagram Ads</div>
         <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2"/></svg>LinkedIn Ads</div>
         <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2"><path d="M23 3a10.9 10.9 0 01-3.14 1.53"/></svg>TikTok Ads</div>
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--pink)" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/></svg>Pinterest Ads</div>
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>Snapchat Ads</div>
+        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>Performance Max</div>
+        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/></svg>Google Shopping</div>
       </div>
     </div>
-
     <div class="tool-category anim">
-      <h3>AI & Automation</h3>
+      <h3>AI and Automation</h3>
       <div class="tools-grid">
         <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>ChatGPT</div>
         <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2"><path d="M12 2a10 10 0 1010 10 4 4 0 01-5-5 4 4 0 01-5-5"/></svg>Claude AI</div>
         <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/></svg>Jasper AI</div>
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><path d="M17 3a2.828 2.828 0 114 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>Copy.ai</div>
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--pink)" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>Midjourney</div>
         <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0"/></svg>Zapier</div>
         <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>Make</div>
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="2"><path d="M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z"/></svg>Perplexity</div>
         <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/></svg>Gemini</div>
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--yellow)" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/></svg>DALL-E</div>
       </div>
     </div>
-
     <div class="tool-category anim">
-      <h3>CRM & Email</h3>
+      <h3>Development</h3>
       <div class="tools-grid">
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2"><path d="M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z"/></svg>HubSpot</div>
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><path d="M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z"/></svg>Salesforce</div>
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--yellow)" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4"/></svg>Mailchimp</div>
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2"><path d="M22 6l-10 7L2 6"/></svg>Klaviyo</div>
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8"/></svg>Intercom</div>
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--pink)" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>ActiveCampaign</div>
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/></svg>Sendgrid</div>
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4"/></svg>Brevo</div>
-      </div>
-    </div>
-
-    <div class="tool-category anim">
-      <h3>Design & Creative</h3>
-      <div class="tools-grid">
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="2"><path d="M5 3h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2z"/></svg>Figma</div>
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>Canva</div>
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--pink)" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>Photoshop</div>
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/></svg>Illustrator</div>
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>Premiere Pro</div>
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>After Effects</div>
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/></svg>Loom</div>
-        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--yellow)" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4"/></svg>CapCut</div>
+        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>HTML/CSS</div>
+        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--yellow)" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/></svg>JavaScript</div>
+        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>Python</div>
+        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/></svg>SQL</div>
+        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>JIRA</div>
+        <div class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="var(--pink)" stroke-width="2"><path d="M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z"/></svg>GCP/AWS</div>
       </div>
     </div>
   </div>
@@ -1312,8 +912,8 @@
   <div class="container anim">
     <span class="sec-label">Contact</span>
     <h2>Let's <span class="serif">Connect</span></h2>
-    <p>Open to Marketing Manager, Growth Lead, and Performance Marketing roles.</p>
-    <a href="mailto:sanalpillai6297@gmail.com" class="contact-btn">Get in Touch</a>
+    <p>Open to SEO Manager, Growth Marketing, and Digital Marketing roles.</p>
+    <a href="mailto:sanalpillai6297@gmail.com" class="contact-btn">Start a Conversation</a>
     <div class="contact-info">
       <div class="contact-item"><span>Email</span><a href="mailto:sanalpillai6297@gmail.com">sanalpillai6297@gmail.com</a></div>
       <div class="contact-item"><span>LinkedIn</span><a href="https://www.linkedin.com/in/sanalpillai97/" target="_blank">linkedin.com/in/sanalpillai97</a></div>
@@ -1321,14 +921,12 @@
   </div>
 </section>
 
-<footer><span>© <span id="year"></span> Marketing Portfolio</span></footer>
+<footer><span>© <span id="year"></span> SEO Portfolio</span></footer>
 
 <script>
 document.getElementById("year").textContent=new Date().getFullYear();
 const obs=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting)el.target.classList.add('visible')})},{threshold:.1});
 document.querySelectorAll('.anim').forEach(el=>obs.observe(el));
-
-// Website Carousel
 let webIdx=0;
 const webTrack=document.getElementById('webTrack');
 const webNav=document.getElementById('webNav');
@@ -1336,37 +934,10 @@ function goWeb(i){webIdx=i;webTrack.style.transform=`translateX(-${i*100}%)`;web
 function moveWeb(d){webIdx=(webIdx+d+3)%3;goWeb(webIdx);}
 webNav.querySelectorAll('button').forEach((b,i)=>b.onclick=()=>goWeb(i));
 setInterval(()=>moveWeb(1),4000);
-
-// Case Studies Carousel
-let caseIdx=0;
-const caseTrack=document.getElementById('caseTrack');
-const caseNavBtns=document.querySelectorAll('#caseNav button');
-const caseLabels=[document.getElementById('caseLabel0'),document.getElementById('caseLabel1'),document.getElementById('caseLabel2')];
-function goCase(i){
-  caseIdx=i;
-  caseTrack.style.transform=`translateX(-${i*100}%)`;
-  caseNavBtns.forEach((b,j)=>b.classList.toggle('active',i===j));
-  caseLabels.forEach((l,j)=>{
-    l.style.background=i===j?'var(--card)':'none';
-    l.style.border=i===j?'1px solid var(--border)':'none';
-    l.style.color=i===j?'var(--text)':'var(--muted)';
-  });
-}
-function moveCase(d){caseIdx=(caseIdx+d+3)%3;goCase(caseIdx);}
-caseNavBtns.forEach((b,i)=>b.onclick=()=>goCase(i));
-
-// GSC Carousel
 let gscIdx=0;
 const gscTrack=document.getElementById('gscTrack');
 const gscNavBtns=document.querySelectorAll('#gscNav button');
-function goGSC(i){
-  gscIdx=i;
-  gscTrack.style.transform=`translateX(-${i*100}%)`;
-  gscNavBtns.forEach((b,j)=>{
-    b.style.background=i===j?'var(--green)':'var(--dim)';
-    b.style.transform=i===j?'scale(1.3)':'scale(1)';
-  });
-}
+function goGSC(i){gscIdx=i;gscTrack.style.transform=`translateX(-${i*100}%)`;gscNavBtns.forEach((b,j)=>{b.style.background=i===j?'var(--green)':'var(--dim)';b.style.transform=i===j?'scale(1.3)':'scale(1)';});}
 gscNavBtns.forEach((b,i)=>b.onclick=()=>goGSC(i));
 setInterval(()=>{gscIdx=(gscIdx+1)%3;goGSC(gscIdx);},5000);
 </script>
