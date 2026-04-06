@@ -524,6 +524,102 @@
   </div>
 </section>
 
+<!-- PLANNED PROJECTS -->
+<section style="background:linear-gradient(180deg,transparent,rgba(168,85,247,.04),transparent)">
+  <div class="container">
+    <div class="sec-header anim">
+      <span class="sec-label">Planned Projects</span>
+      <h2 class="sec-title">What I'm <span class="serif">Building Next</span></h2>
+      <p class="sec-sub">Automation-first tools at the intersection of AI, SEO, and workflow engineering.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px" class="planned-grid">
+
+      <!-- Card 1 -->
+      <div class="plan-card anim d1" style="background:var(--card);border:1px solid var(--border);border-radius:18px;overflow:hidden;transition:all .4s">
+        <div style="height:6px;background:linear-gradient(90deg,var(--purple),var(--cyan))"></div>
+        <div style="padding:22px">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
+            <span style="font-size:1.6rem">🤖</span>
+            <span style="padding:4px 10px;background:rgba(168,85,247,.15);border:1px solid rgba(168,85,247,.3);border-radius:20px;font-size:.6rem;color:var(--purple);letter-spacing:.08em">In Planning</span>
+          </div>
+          <h3 style="font-size:.95rem;font-weight:600;margin-bottom:8px;line-height:1.4">AI Citation Tracker for LLMs</h3>
+          <p style="font-size:.78rem;color:#bbb;line-height:1.7;margin-bottom:16px">An automated workflow that runs target queries across ChatGPT, Perplexity, and Claude via their APIs, logs brand mentions, sentiment, and competitor presence, and outputs to a live dashboard on a schedule.</p>
+          <div style="margin-bottom:14px">
+            <p style="font-size:.6rem;text-transform:uppercase;letter-spacing:.12em;color:var(--dim);margin-bottom:8px">Stack</p>
+            <div style="display:flex;flex-wrap:wrap;gap:5px">
+              <span style="padding:4px 9px;background:var(--bg);border:1px solid var(--border);border-radius:6px;font-size:.65rem;color:var(--muted)">n8n</span>
+              <span style="padding:4px 9px;background:var(--bg);border:1px solid var(--border);border-radius:6px;font-size:.65rem;color:var(--muted)">Claude API</span>
+              <span style="padding:4px 9px;background:var(--bg);border:1px solid var(--border);border-radius:6px;font-size:.65rem;color:var(--muted)">Google Sheets</span>
+              <span style="padding:4px 9px;background:var(--bg);border:1px solid var(--border);border-radius:6px;font-size:.65rem;color:var(--muted)">ChatGPT API</span>
+              <span style="padding:4px 9px;background:var(--bg);border:1px solid var(--border);border-radius:6px;font-size:.65rem;color:var(--muted)">Perplexity API</span>
+            </div>
+          </div>
+          <div style="padding:12px;background:rgba(168,85,247,.06);border:1px solid rgba(168,85,247,.15);border-radius:10px">
+            <p style="font-size:.7rem;color:var(--muted);line-height:1.6"><span style="color:var(--purple);font-weight:600">Use case:</span> GEO monitoring at scale. Know exactly when and how LLMs mention your brand without manual prompting.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="plan-card anim d2" style="background:var(--card);border:1px solid var(--border);border-radius:18px;overflow:hidden;transition:all .4s">
+        <div style="height:6px;background:linear-gradient(90deg,var(--orange),var(--pink))"></div>
+        <div style="padding:22px">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
+            <span style="font-size:1.6rem">👁️</span>
+            <span style="padding:4px 10px;background:rgba(249,115,22,.15);border:1px solid rgba(249,115,22,.3);border-radius:20px;font-size:.6rem;color:var(--orange);letter-spacing:.08em">In Planning</span>
+          </div>
+          <h3 style="font-size:.95rem;font-weight:600;margin-bottom:8px;line-height:1.4">Reddit Sentiment Monitor + Response Suggester</h3>
+          <p style="font-size:.78rem;color:#bbb;line-height:1.7;margin-bottom:16px">An n8n workflow that watches relevant subreddits for brand or topic mentions, scores sentiment, and drafts suggested responses using Claude. Flags posts needing attention in real time.</p>
+          <div style="margin-bottom:14px">
+            <p style="font-size:.6rem;text-transform:uppercase;letter-spacing:.12em;color:var(--dim);margin-bottom:8px">Stack</p>
+            <div style="display:flex;flex-wrap:wrap;gap:5px">
+              <span style="padding:4px 9px;background:var(--bg);border:1px solid var(--border);border-radius:6px;font-size:.65rem;color:var(--muted)">n8n</span>
+              <span style="padding:4px 9px;background:var(--bg);border:1px solid var(--border);border-radius:6px;font-size:.65rem;color:var(--muted)">Reddit API</span>
+              <span style="padding:4px 9px;background:var(--bg);border:1px solid var(--border);border-radius:6px;font-size:.65rem;color:var(--muted)">Claude API</span>
+              <span style="padding:4px 9px;background:var(--bg);border:1px solid var(--border);border-radius:6px;font-size:.65rem;color:var(--muted)">Webhooks</span>
+            </div>
+          </div>
+          <div style="padding:12px;background:rgba(249,115,22,.06);border:1px solid rgba(249,115,22,.15);border-radius:10px">
+            <p style="font-size:.7rem;color:var(--muted);line-height:1.6"><span style="color:var(--orange);font-weight:600">Use case:</span> Always-on community listening with AI-drafted replies ready to review, not hours later but in minutes.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="plan-card anim d3" style="background:var(--card);border:1px solid var(--border);border-radius:18px;overflow:hidden;transition:all .4s">
+        <div style="height:6px;background:linear-gradient(90deg,var(--green),var(--cyan))"></div>
+        <div style="padding:22px">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
+            <span style="font-size:1.6rem">📖</span>
+            <span style="padding:4px 10px;background:rgba(74,222,128,.15);border:1px solid rgba(74,222,128,.3);border-radius:20px;font-size:.6rem;color:var(--green);letter-spacing:.08em">In Planning</span>
+          </div>
+          <h3 style="font-size:.95rem;font-weight:600;margin-bottom:8px;line-height:1.4">Programmatic Word Tools Site</h3>
+          <p style="font-size:.78rem;color:#bbb;line-height:1.7;margin-bottom:16px">A vocabulary utility site where every page is auto-generated from a template covering definitions, synonyms, usage examples, and word origins. Claude handles content generation while n8n orchestrates the full pipeline from keyword list to CMS publishing to internal linking. GSC API monitors which pages gain traction and auto-prioritises similar keyword variations to expand next.</p>
+          <div style="margin-bottom:14px">
+            <p style="font-size:.6rem;text-transform:uppercase;letter-spacing:.12em;color:var(--dim);margin-bottom:8px">Stack</p>
+            <div style="display:flex;flex-wrap:wrap;gap:5px">
+              <span style="padding:4px 9px;background:var(--bg);border:1px solid var(--border);border-radius:6px;font-size:.65rem;color:var(--muted)">n8n</span>
+              <span style="padding:4px 9px;background:var(--bg);border:1px solid var(--border);border-radius:6px;font-size:.65rem;color:var(--muted)">Claude API</span>
+              <span style="padding:4px 9px;background:var(--bg);border:1px solid var(--border);border-radius:6px;font-size:.65rem;color:var(--muted)">CMS</span>
+              <span style="padding:4px 9px;background:var(--bg);border:1px solid var(--border);border-radius:6px;font-size:.65rem;color:var(--muted)">GSC API</span>
+              <span style="padding:4px 9px;background:var(--bg);border:1px solid var(--border);border-radius:6px;font-size:.65rem;color:var(--muted)">SEO</span>
+            </div>
+          </div>
+          <div style="padding:12px;background:rgba(74,222,128,.06);border:1px solid rgba(74,222,128,.15);border-radius:10px">
+            <p style="font-size:.7rem;color:var(--muted);line-height:1.6"><span style="color:var(--green);font-weight:600">Use case:</span> Programmatic SEO with a feedback loop. Pages that rank inform which keywords to build next, automatically.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<style>
+  .plan-card:hover{border-color:var(--border-h);transform:translateY(-5px)}
+  @media(max-width:1024px){.planned-grid{grid-template-columns:1fr!important}}
+  @media(max-width:768px){.planned-grid{grid-template-columns:1fr!important}}
+</style>
+
 <!-- CORE CAPABILITIES -->
 <section>
   <div class="container">
